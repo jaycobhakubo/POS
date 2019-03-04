@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>D:\GameTech\Common\EliteMCP.exe</StartProgram>
+    <StartWorkingDirectory>D:\GameTech\Common</StartWorkingDirectory>
+    <StartArguments>-window -runonce -guid={579CD3C2-C6B2-46f1-AEC1-D0EC59C87F04} -server=devserver</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartArguments>-window -runonce -guid={579CD3C2-C6B2-46f1-AEC1-D0EC59C87F04} -server=10.0.11.107</StartArguments>
+    <StartProgram>D:\GameTech\Common\EliteMCP.exe</StartProgram>
+    <StartWorkingDirectory>D:\GameTech\Common</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

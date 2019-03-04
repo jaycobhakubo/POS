@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92BDA3B6-C1A8-4C91-8465-4C650FA713ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTI.Modules.POS</RootNamespace>
+    <AssemblyName>POS</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>POSKey.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Res\POS.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/POS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="StarIO">
+      <HintPath>..\..\3rdParty\StarIO_Csharp_SDK_Win_v220\Software\StarIO_Csharp_SDK\Dependencies\x86\StarIO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\B3Credit.cs" />
+    <Compile Include="Business\B3SaleButton.cs" />
+    <Compile Include="Business\B3Session.cs" />
+    <Compile Include="Business\CrystalBall.cs" />
+    <Compile Include="Business\Discount.cs" />
+    <Compile Include="Business\DiscountButton.cs" />
+    <Compile Include="Business\FunctionButton.cs" />
+    <Compile Include="Business\GuardianWrapper.cs" />
+    <Compile Include="Business\IGTIModule.cs" />
+    <Compile Include="Business\PaperExchangeItem.cs" />
+    <Compile Include="Business\PaperUsageItem.cs" />
+    <Compile Include="Business\PaperUsageReceipt.cs" />
+    <Compile Include="Business\PointOfSale.cs" />
+    <Compile Include="Business\POSAsynchEvents.cs" />
+    <Compile Include="Business\POSMenu.cs" />
+    <Compile Include="Business\MenuButton.cs" />
+    <Compile Include="Business\PackageButton.cs" />
+    <Compile Include="Business\POSModule.cs" />
+    <Compile Include="Business\POSException.cs" />
+    <Compile Include="Business\POSSettings.cs" />
+    <Compile Include="Business\PrePrintedPack.cs" />
+    <Compile Include="Business\Product.cs" />
+    <Compile Include="Business\Sale.cs" />
+    <Compile Include="Business\Package.cs" />
+    <Compile Include="Business\SaleItem.cs" />
+    <Compile Include="Business\Security.cs" />
+    <Compile Include="Business\SessionInfo.cs" />
+    <Compile Include="Business\TenderItem.cs" />
+    <Compile Include="Data\ActivateForm.cs" />
+    <Compile Include="Data\B3AddSaleMessage.cs" />
+    <Compile Include="Data\AddBingoCardSaleMessage.cs" />
+    <Compile Include="Data\AddCBBCardSaleMessage.cs" />
+    <Compile Include="Data\AddReceiptPinNumberMessage.cs" />
+    <Compile Include="Data\AddSaleMessage.cs" />
+    <Compile Include="Data\CashOutPlayerMessage.cs" />
+    <Compile Include="Data\CheckForClosedBankMessage.cs" />
+    <Compile Include="Data\CheckMaxCardsMessage.cs" />
+    <Compile Include="Data\CheckPaperStartNumbersMessage.cs" />
+    <Compile Include="Data\BankDropMessage.cs" />
+    <Compile Include="Data\B3RetrieveAccountMessage.cs" />
+    <Compile Include="Data\B3RedeemAccountMessage.cs" />
+    <Compile Include="Data\B3UnlockAccountMessage.cs" />
+    <Compile Include="Data\B3CancelAccountTransactionMessage.cs" />
+    <Compile Include="Data\B3JackpotAccountMessage.cs" />
+    <Compile Include="Data\B3GetSettingsMessage.cs" />
+    <Compile Include="Data\AwardAutoPlayerCouponMessage.cs" />
+    <Compile Include="Data\GetBankDenomsMessage.cs" />
+    <Compile Include="Data\GetPreSaleStaffMenusMessage.cs" />
+    <Compile Include="Data\GetDiscountUsageBySessionMessage.cs" />
+    <Compile Include="Data\GetMachinePaperUsageMessage.cs" />
+    <Compile Include="Data\GetPaperExchangeDataMessage.cs" />
+    <Compile Include="Data\GetRepeatSaleInfoMessage.cs" />
+    <Compile Include="Data\GetScheduledSalesMessage.cs" />
+    <Compile Include="Data\SetMachinePaperUsageMessage.cs" />
+    <Compile Include="Data\FireForm.cs" />
+    <Compile Include="Data\CheckSerialAuditNumbersMessage.cs" />
+    <Compile Include="Data\GetB3SessionListMessage.cs" />
+    <Compile Include="Data\GetCurrentBankAmountMessage.cs" />
+    <Compile Include="Data\GetPaperStartNumbersMessage.cs" />
+    <Compile Include="Data\GetProductByBarcode.cs" />
+    <Compile Include="Data\GetStaffMenusMessage.cs" />
+    <Compile Include="Data\PaySuperTicketMessage.cs" />
+    <Compile Include="Data\PlayerCardSwipeMessage.cs" />
+    <Compile Include="Data\DbValues.cs" />
+    <Compile Include="Data\FinishSaleMessage.cs" />
+    <Compile Include="Data\BankIssueMessage.cs" />
+    <Compile Include="Data\ReopenBankMessage.cs" />
+    <Compile Include="Data\UpdateMachinePaperUsageLevelsMessage.cs" />
+    <Compile Include="Data\ValidateSuperPickTicketMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.es.Designer.cs">
+      <DependentUpon>Resources.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdjustBankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdjustBankForm.Designer.cs">
+      <DependentUpon>AdjustBankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\B3KioskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\B3KioskForm.Designer.cs">
+      <DependentUpon>B3KioskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\B3RetrieveAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\B3RetrieveAccountForm.Designer.cs">
+      <DependentUpon>B3RetrieveAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BarcodedPaperInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BarcodedPaperInputForm.Designer.cs">
+      <DependentUpon>BarcodedPaperInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\CloseDropBankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\CloseDropBankForm.Designer.cs">
+      <DependentUpon>CloseDropBankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\DenomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\DenomControl.Designer.cs">
+      <DependentUpon>DenomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\StaffSummaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CloseDropBankForm\StaffSummaryControl.Designer.cs">
+      <DependentUpon>StaffSummaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreditCashOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreditCashOutForm.Designer.cs">
+      <DependentUpon>CreditCashOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CrystalBallHandPickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CrystalBallHandPickForm.Designer.cs">
+      <DependentUpon>CrystalBallHandPickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CrystalBallPromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CrystalBallPromptForm.Designer.cs">
+      <DependentUpon>CrystalBallPromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CrystalBallScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CrystalBallScanForm.Designer.cs">
+      <DependentUpon>CrystalBallScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CurrencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CurrencyForm.Designer.cs">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InitialBankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InitialBankForm.Designer.cs">
+      <DependentUpon>InitialBankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\KioskKeypadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\KioskKeypadForm.designer.cs">
+      <DependentUpon>KioskKeypadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageAddItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageAddItemForm.Designer.cs">
+      <DependentUpon>PaperUsageAddItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\POSMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\POSMessageForm.designer.cs">
+      <DependentUpon>POSMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\POSNumericInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\POSNumericInputForm.designer.cs">
+      <DependentUpon>POSNumericInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaperRangeScanner\BaseConverter.cs" />
+    <Compile Include="UI\PaperRangeScanner\PaperRangeScannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaperRangeScanner\PaperRangeScannerForm.designer.cs">
+      <DependentUpon>PaperRangeScannerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageDamageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageDamageForm.Designer.cs">
+      <DependentUpon>PaperUsageDamageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageForm.Designer.cs">
+      <DependentUpon>PaperUsageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PaperUsage\PaperUsageItemControl.Designer.cs">
+      <DependentUpon>PaperUsageItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\PaperUsageUnscannedChangedEventArgs.cs" />
+    <Compile Include="UI\PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordForm.Designer.cs">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PayCouponForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PayCouponForm4.Designer.cs">
+      <DependentUpon>PayCouponForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PlayWithPaperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PlayWithPaperForm.Designer.cs">
+      <DependentUpon>PlayWithPaperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrePrintedPackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PrePrintedPackForm.Designer.cs">
+      <DependentUpon>PrePrintedPackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaleStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SaleStatusForm.Designer.cs">
+      <DependentUpon>SaleStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FlexTenderingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FlexTenderingForm.Designer.cs">
+      <DependentUpon>FlexTenderingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SimpleKioskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SimpleKioskForm.Designer.cs">
+      <DependentUpon>SimpleKioskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewPlayerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ViewPlayerInfoForm.Designer.cs">
+      <DependentUpon>ViewPlayerInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PayReceiptsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PayReceiptsForm.Designer.cs">
+      <DependentUpon>PayReceiptsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\KeypadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\KeypadForm.Designer.cs">
+      <DependentUpon>KeypadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\POSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\POSForm.Designer.cs">
+      <DependentUpon>POSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SellingForm.Designer.cs">
+      <DependentUpon>SellingForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdjustBankForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdjustBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\B3KioskForm.resx">
+      <DependentUpon>B3KioskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\B3RetrieveAccountForm.resx">
+      <DependentUpon>B3RetrieveAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BarcodedPaperInputForm.resx">
+      <DependentUpon>BarcodedPaperInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CloseDropBankForm\CloseDropBankForm.resx">
+      <DependentUpon>CloseDropBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CloseDropBankForm\DenomControl.resx">
+      <DependentUpon>DenomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CloseDropBankForm\StaffSummaryControl.resx">
+      <DependentUpon>StaffSummaryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreditCashOutForm.resx">
+      <DependentUpon>CreditCashOutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallHandPickForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallHandPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallHandPickForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallHandPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallPromptForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallPromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallPromptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallPromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallScanForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CrystalBallScanForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalBallScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CurrencyForm.resx">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InitialBankForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InitialBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InitialBankForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InitialBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\KioskKeypadForm.resx">
+      <DependentUpon>KioskKeypadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PaperUsage\PaperUsageAddItemForm.resx">
+      <DependentUpon>PaperUsageAddItemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\POSMessageForm.resx">
+      <DependentUpon>POSMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\POSNumericInputForm.resx">
+      <DependentUpon>POSNumericInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PaperRangeScanner\PaperRangeScannerForm.resx">
+      <DependentUpon>PaperRangeScannerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PaperUsage\PaperUsageDamageForm.resx">
+      <DependentUpon>PaperUsageDamageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PaperUsage\PaperUsageForm.resx">
+      <DependentUpon>PaperUsageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PaperUsage\PaperUsageItemControl.resx">
+      <DependentUpon>PaperUsageItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordForm.resx">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PayCouponForm4.resx">
+      <DependentUpon>PayCouponForm4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PlayWithPaperForm.resx">
+      <DependentUpon>PlayWithPaperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PrePrintedPackForm.resx">
+      <DependentUpon>PrePrintedPackForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SaleStatusForm.resx">
+      <DependentUpon>SaleStatusForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FlexTenderingForm.resx">
+      <DependentUpon>FlexTenderingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SimpleKioskForm.resx">
+      <DependentUpon>SimpleKioskForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewPlayerInfoForm.es.resx">
+      <DependentUpon>ViewPlayerInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewPlayerInfoForm.resx">
+      <DependentUpon>ViewPlayerInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PayReceiptsForm.es.resx">
+      <DependentUpon>PayReceiptsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PayReceiptsForm.resx">
+      <DependentUpon>PayReceiptsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\KeypadForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KeypadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\POSForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>POSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SellingForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SellingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Res\POSBack1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\POSBack1024Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\TextBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\ArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\ArrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\RemoveLineDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\RemoveLineUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\StartOverDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\StartOverUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\GrayButtonUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\BlueButtonDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\BlueButtonUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\GrayButtonDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\MainSellingListTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\MainSellingListBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\POSBack800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallRemoveLineDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallRemoveLineUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallStartOverUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallStartOverDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallExitDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallExitUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallMainSellingListTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\SmallMainSellingListBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\POSBack800Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Waiting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\MessageBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\GuardianConnectionLost.png" />
+    <None Include="Res\MainSellingListMiddle.png" />
+    <None Include="Res\PaperUsageAddItem.png" />
+    <None Include="Resources\PaperUsageAddItem.png" />
+    <Content Include="StarIOPort.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Res\POSBack1024Green.png" />
+    <None Include="Res\POSBack800Green.png" />
+    <None Include="Res\B3RetrieveAccoutnBackground800.png" />
+    <None Include="Res\POSBack800Yellow.png" />
+    <None Include="Res\POSBack1024Yellow.png" />
+    <None Include="Res\BankClosingBG800.png" />
+    <None Include="Res\WhiteButtonUpSmall.png" />
+    <None Include="Res\WhiteButtonDownSmall.png" />
+    <None Include="Res\InventoryPOS800.png" />
+    <None Include="Res\BankClosing1024.png" />
+    <None Include="Res\PaperExchangeBackground.png" />
+    <None Include="Res\SplitTenderingBackBig2.png" />
+    <None Include="Res\PaperExchangeBackground.png" />
+    <None Include="Res\SplitTenderingBackBig2Left.png" />
+    <None Include="Res\Cash.png" />
+    <None Include="Res\Check.png" />
+    <None Include="Res\CreditCard.png" />
+    <None Include="Res\DebitCard.png" />
+    <None Include="Res\GiftCard.png" />
+    <None Include="Res\DarkOrangeButtonUp.png" />
+    <None Include="Res\DarkOrangeButtonDown.png" />
+    <None Include="Res\CouponBack.png" />
+    <None Include="Res\CouponCheck.png" />
+    <None Include="Res\BackSymbol.png" />
+    <None Include="Res\Home.png" />
+    <None Include="Res\Coupon.png" />
+    <None Include="Res\AddAndUse.png" />
+    <None Include="Res\DevicePackUp87MB.png" />
+    <None Include="Res\ArrowUpRed.png" />
+    <None Include="Res\ArrowDownRed.png" />
+    <None Include="Resources\TEDE271v2.png" />
+    <None Include="Resources\TEDE271v2Down.png" />
+    <None Include="Res\AnimatedPlayerCard%28Small%29.gif" />
+    <None Include="Res\AnimatedPlayerCard%28large%29.gif" />
+    <None Include="Res\AnimatedReceiptScan%28large%29.gif" />
+    <None Include="Res\DeviceExplorerDown200x90.png" />
+    <None Include="Res\DeviceExplorerUp200x90.png" />
+    <None Include="Res\DeviceFixedDown200x90.png" />
+    <None Include="Res\DeviceFixedUp200x90.png" />
+    <None Include="Res\DevicePackDown200x90.png" />
+    <None Include="Res\DevicePackUp200x90.png" />
+    <None Include="Res\DeviceTEDEDown200x90.png" />
+    <None Include="Res\DeviceTEDEUp200x90.png" />
+    <None Include="Res\DeviceTrackerDown200x90.png" />
+    <None Include="Res\DeviceTrackerUp200x90.png" />
+    <None Include="Res\DeviceTraveler2Down200x90.png" />
+    <None Include="Res\DeviceTraveler2Up200x90.png" />
+    <None Include="Res\DeviceTravelerDown200x90.png" />
+    <None Include="Res\DeviceTravelerUp200x90.png" />
+    <None Include="Res\AnimatedReceiptScan%28small%29.gif" />
+    <None Include="Res\AnimatedBuyAgain%28small%29.gif" />
+    <None Include="Res\AnimatedScanPaper%28small%29.gif" />
+    <None Include="Res\AnimatedScanPaper%28large%29.gif" />
+    <None Include="Res\AnimatedStopWatch.gif" />
+    <None Include="Res\AnimatedWorking.gif" />
+    <None Include="Res\CreditCardUnit.png" />
+    <None Include="Res\CouponBackWide.png" />
+    <None Include="Res\CBBHandPickBackWide.png" />
+    <None Include="Res\CreditCardUnit2.png" />
+    <None Include="Res\B3KioskLogo.png" />
+    <None Include="Res\BingoLogo.png" />
+    <None Include="Res\B3KioskButton.png" />
+    <None Include="Res\BigBlueButtonDown.png" />
+    <None Include="Res\BigBlueButtonUp.png" />
+    <None Include="Res\CBBKioskLogo.png" />
+    <Content Include="Res\FlatButtons\FlatBlackButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatBlackButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatBlueButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatBlueButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatBrownButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatBrownButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatGoldButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatGoldButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatGrayButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatGrayButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatGreenButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatGreenButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatLavenderButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatLavenderButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatOrangeButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatOrangeButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatOrchidButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatOrchidButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatPinkButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatPinkButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatRainbowButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatRainbowButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatRedButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatRedButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatTanButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatTanButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatWhiteButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatWhiteButtonUp.png" />
+    <Content Include="Res\FlatButtons\FlatYellowButtonDown.png" />
+    <Content Include="Res\FlatButtons\FlatYellowButtonUp.png" />
+    <None Include="Res\FnetWall.png" />
+    <None Include="Res\GameTechLogoForKiosk.png" />
+    <Content Include="Res\GelButtons\BlackButtonDown.png" />
+    <Content Include="Res\GelButtons\BlackButtonUp.png" />
+    <Content Include="Res\GelButtons\BlueButtonDown.png" />
+    <Content Include="Res\GelButtons\BlueButtonUp.png" />
+    <Content Include="Res\GelButtons\BrownButtonDown.png" />
+    <Content Include="Res\GelButtons\BrownButtonUp.png" />
+    <Content Include="Res\GelButtons\GoldButtonDown.png" />
+    <Content Include="Res\GelButtons\GoldButtonUp.png" />
+    <Content Include="Res\GelButtons\GrayButtonDown.png" />
+    <Content Include="Res\GelButtons\GrayButtonUp.png" />
+    <Content Include="Res\GelButtons\GreenButtonDown.png" />
+    <Content Include="Res\GelButtons\GreenButtonUp.png" />
+    <Content Include="Res\GelButtons\LavenderButtonDown.png" />
+    <Content Include="Res\GelButtons\LavenderButtonUp.png" />
+    <Content Include="Res\GelButtons\OrangeButtonDown.png" />
+    <Content Include="Res\GelButtons\OrangeButtonUp.png" />
+    <Content Include="Res\GelButtons\OrchidButtonDown.png" />
+    <Content Include="Res\GelButtons\OrchidButtonUp.png" />
+    <Content Include="Res\GelButtons\PinkButtonDown.png" />
+    <Content Include="Res\GelButtons\PinkButtonUp.png" />
+    <Content Include="Res\GelButtons\RainbowButtonDown.png" />
+    <Content Include="Res\GelButtons\RainbowButtonUp.png" />
+    <Content Include="Res\GelButtons\RedButtonDown.png" />
+    <Content Include="Res\GelButtons\RedButtonUp.png" />
+    <Content Include="Res\GelButtons\TanButtonDown.png" />
+    <Content Include="Res\GelButtons\TanButtonUp.png" />
+    <Content Include="Res\GelButtons\WhiteButtonDown.png" />
+    <Content Include="Res\GelButtons\WhiteButtonUp.png" />
+    <Content Include="Res\GelButtons\YellowButtonDown.png" />
+    <Content Include="Res\GelButtons\YellowButtonUp.png" />
+    <None Include="Res\PaperUsageDamages.png" />
+    <None Include="Res\PaperInputBack.png" />
+    <Resource Include="Res\WarningIcon.png" />
+    <None Include="Res\GenericTender.png" />
+    <None Include="Res\NoSplitTenderingBackBig2.png" />
+    <None Include="Res\NoSplitTenderingBackBig2Left.png" />
+    <None Include="Res\PaperBrownButtonDown.png" />
+    <None Include="Res\PaperGreenButtonDown.png" />
+    <None Include="Res\PaperGreenButtonUp.png" />
+    <None Include="Res\PaperOrangeButtonDown.png" />
+    <None Include="Res\PaperOrangeButtonUp.png" />
+    <None Include="Res\PaperPurpleButtonDown.png" />
+    <None Include="Res\PaperPurpleButtonUp.png" />
+    <None Include="Res\PaperRainbowButtonDown.png" />
+    <None Include="Res\PaperRainbowButtonUp.png" />
+    <None Include="Res\PaperRedButtonDown.png" />
+    <None Include="Res\PaperRedButtonUp.png" />
+    <None Include="Res\PaperTanButtonDown.png" />
+    <None Include="Res\PaperTanButtonUp.png" />
+    <None Include="Res\PaperWhiteButtonDown.png" />
+    <None Include="Res\PaperWhiteButtonUp.png" />
+    <None Include="Res\PaperBrownButtonUp.png" />
+    <None Include="Res\HelpBackBig.png" />
+    <None Include="Res\HelpScreen1a.png" />
+    <None Include="Res\POSBackWide.png" />
+    <None Include="Res\POSBackWideGreen.png" />
+    <None Include="Res\POSBackWideRed.png" />
+    <None Include="Res\POSBackWideYellow.png" />
+    <None Include="Res\POSBackWide.png" />
+    <None Include="Res\POSBackWideGreen.png" />
+    <None Include="Res\POSBackWideRed.png" />
+    <None Include="Res\POSBackWideYellow.png" />
+    <None Include="Res\HelpScreen0a.png" />
+    <None Include="Res\HelpScreen3a.png" />
+    <None Include="Res\HelpScreen2a.png" />
+    <None Include="Res\PlayerCard.png" />
+    <None Include="Res\Kiosk1.png" />
+    <None Include="Res\Kiosk1Wide.png" />
+    <None Include="Res\Kiosk2.png" />
+    <None Include="Res\Kiosk2Wide.png" />
+    <None Include="Res\Plain800x600Back.png" />
+    <None Include="Res\HelpScreen4a.png" />
+    <None Include="Res\HelpScreen6a.png" />
+    <None Include="Res\HelpScreen5a.png" />
+    <None Include="Res\HelpScreenOrderingFromButtons.png" />
+    <None Include="Res\HelpScreenOrderingPaper.png" />
+    <None Include="Res\HelpScreenOrderingReceipt.png" />
+    <None Include="Res\HelpScreenOrderingReceiptHybrid.png" />
+    <None Include="Res\HelpScreenCouponsHybrid.png" />
+    <None Include="Res\SorryClosed.png" />
+    <None Include="Res\HelpScreenAutoCoupons.png" />
+    <None Include="Res\HelpScreenAutoCouponsWithCouponButton.png" />
+    <None Include="Res\KioskKeypadBack.png" />
+    <None Include="Res\HelpScreenQuantityControl.png" />
+    <None Include="Res\PaperRangeScannerBack.png" />
+    <None Include="Res\HelpPaymentAdvancedKioskSimpleForm.png" />
+    <None Include="Res\PaperUsageBackground800.png" />
+    <None Include="Res\GuardianGears.png" />
+    <None Include="Res\PrintingCBBSheets.png" />
+    <None Include="Res\Working.gif" />
+    <None Include="Res\loading.gif" />
+    <Content Include="Selection.png" />
+    <None Include="Res\WhiteButtonUp.png" />
+    <None Include="Res\WhiteButtonDown.png" />
+    <None Include="Res\YellowButtonUp.png" />
+    <None Include="Res\YellowButtonDown.png" />
+    <None Include="POSKey.snk" />
+    <None Include="Res\PayCouponsBack1024.png" />
+    <None Include="Res\PayCouponsBack800.png" />
+    <None Include="Res\NoPic.png" />
+    <None Include="Res\PayCouponsBG800.PNG" />
+    <None Include="Res\BackDown.png" />
+    <None Include="Res\BackUp.png" />
+    <None Include="Res\CheckDown.png" />
+    <None Include="Res\CheckUp.png" />
+    <None Include="Res\InitialBankBack800.png" />
+    <None Include="Res\InitialBankBack1024.png" />
+    <None Include="Res\KeyPadBack.png" />
+    <None Include="Res\CBBHandPickBack1024.png" />
+    <None Include="Res\CBBHandPickBack800.png" />
+    <None Include="Res\DeviceTrackerUp271.png" />
+    <None Include="Res\DeviceTravelerDown64.png" />
+    <None Include="Res\DeviceTravelerDown87.png" />
+    <None Include="Res\DeviceTravelerDown133.png" />
+    <None Include="Res\DeviceTravelerDown271.png" />
+    <None Include="Res\DeviceTravelerUp64.png" />
+    <None Include="Res\DeviceTravelerUp87.png" />
+    <None Include="Res\DeviceTravelerUp133.png" />
+    <None Include="Res\DeviceTravelerUp271.png" />
+    <None Include="Res\DeviceFixedDown64.png" />
+    <None Include="Res\DeviceFixedDown87.png" />
+    <None Include="Res\DeviceFixedDown133.png" />
+    <None Include="Res\DeviceFixedDown271.png" />
+    <None Include="Res\DeviceFixedUp64.png" />
+    <None Include="Res\DeviceFixedUp87.png" />
+    <None Include="Res\DeviceFixedUp133.png" />
+    <None Include="Res\DeviceFixedUp271.png" />
+    <None Include="Res\DevicePackDown64.png" />
+    <None Include="Res\DevicePackDown87.png" />
+    <None Include="Res\DevicePackDown133.png" />
+    <None Include="Res\DevicePackDown271.png" />
+    <None Include="Res\DevicePackUp64.png" />
+    <None Include="Res\DevicePackUp87.png" />
+    <None Include="Res\DevicePackUp133.png" />
+    <None Include="Res\DevicePackUp271.png" />
+    <None Include="Res\DeviceTrackerDown64.png" />
+    <None Include="Res\DeviceTrackerDown87.png" />
+    <None Include="Res\DeviceTrackerDown133.png" />
+    <None Include="Res\DeviceTrackerDown271.png" />
+    <None Include="Res\DeviceTrackerUp64.png" />
+    <None Include="Res\DeviceTrackerUp87.png" />
+    <None Include="Res\DeviceTrackerUp133.png" />
+    <None Include="Res\InputBack.png" />
+    <None Include="Res\AdjustBankBack800.png" />
+    <None Include="Res\AdjustBankBack1024.png" />
+    <None Include="Res\PaperButtonDown.png" />
+    <None Include="Res\PaperButtonUp.png" />
+    <None Include="Res\BookButtonDown.png" />
+    <None Include="Res\BookButtonUp.png" />
+    <None Include="Res\CreditButtonDown.png" />
+    <None Include="Res\CreditButtonUp.png" />
+    <None Include="Res\DiscountButtonDown.png" />
+    <None Include="Res\DiscountButtonUp.png" />
+    <None Include="Res\DeviceTraveler2Up271.png" />
+    <None Include="Res\DeviceTraveler2Down64.png" />
+    <None Include="Res\DeviceTraveler2Down87.png" />
+    <None Include="Res\DeviceTraveler2Down133.png" />
+    <None Include="Res\DeviceTraveler2Down271.png" />
+    <None Include="Res\DeviceTraveler2Up64.png" />
+    <None Include="Res\DeviceTraveler2Up87.png" />
+    <None Include="Res\DeviceTraveler2Up133.png" />
+    <None Include="Res\MerchandiseButtonDown.png" />
+    <None Include="Res\MerchandiseButtonUp.png" />
+    <None Include="Res\ConcessionButtonDown.png" />
+    <None Include="Res\ConcessionButtonUp.png" />
+    <None Include="Res\ElectronicButtonDown.png" />
+    <None Include="Res\ElectronicButtonUp.png" />
+    <None Include="Res\DeviceExplorerUp271.png" />
+    <None Include="Res\DeviceExplorerDown64.png" />
+    <None Include="Res\DeviceExplorerDown87.png" />
+    <None Include="Res\DeviceExplorerDown133.png" />
+    <None Include="Res\DeviceExplorerDown271.png" />
+    <None Include="Res\DeviceExplorerUp64.png" />
+    <None Include="Res\DeviceExplorerUp87.png" />
+    <None Include="Res\DeviceExplorerUp133.png" />
+    <None Include="Res\KeyPadBack800.png" />
+    <None Include="Res\GreenButtonDown.png" />
+    <None Include="Res\GreenButtonUp.png" />
+    <None Include="Res\OrangeButtonDown.png" />
+    <None Include="Res\OrangeButtonUp.png" />
+    <None Include="Res\BrownButtonDown.png" />
+    <None Include="Res\BrownButtonUp.png" />
+    <None Include="Res\DeviceTabletUp271.png" />
+    <None Include="Res\DeviceTabletDown271.png" />
+    <None Include="Resources\DeviceTabletUp271.png" />
+    <None Include="Resources\DeviceTabletDown271.png" />
+    <None Include="Resources\TEDE87_down.png" />
+    <None Include="Resources\TEDE133.png" />
+    <None Include="Resources\TEDE133_down.png" />
+    <None Include="Resources\TEDE271.png" />
+    <None Include="Resources\TEDE271_down.png" />
+    <None Include="Resources\TEDE64.png" />
+    <None Include="Resources\TEDE64_down.png" />
+    <None Include="Resources\TEDE87.png" />
+    <None Include="Res\AbortUp.png" />
+    <None Include="Res\AbortDown.png" />
+    <None Include="Resources\CashDrawer.gif" />
+    <Content Include="Res\PaperControl1024.png" />
+    <Content Include="Res\PaperPackBack.png" />
+    <Content Include="Res\PayReceiptsBack1024.png" />
+    <Content Include="Res\PayReceiptsBack800.PNG" />
+    <None Include="Res\ScanCard.gif" />
+    <None Include="Res\PickPaperUp.png" />
+    <None Include="Res\PickElecDown.png" />
+    <None Include="Res\PickElecUp.png" />
+    <None Include="Res\PickPaperDown.png" />
+    <None Include="Res\SmallPickPaperUp.png" />
+    <None Include="Res\SmallPickElecDown.png" />
+    <None Include="Res\SmallPickElecUp.png" />
+    <None Include="Res\SmallPickPaperDown.png" />
+    <None Include="Res\POS.ico" />
+    <None Include="Res\RedButtonUp.png" />
+    <None Include="Res\RedButtonDown.png" />
+    <None Include="Res\PlusMinusUp.png" />
+    <None Include="Res\PlusMinusDown.png" />
+    <None Include="Res\SaleStatusBack.png" />
+    <None Include="Res\SetButtonDown.png" />
+    <None Include="Res\SetButtonUp.png" />
+    <None Include="Res\SaleStatusField.png" />
+    <None Include="Res\PrePrintedPackBack.png" />
+    <None Include="Res\PlayWithPaperBack.png" />
+    <None Include="Res\PurpleButtonDown.png" />
+    <None Include="Res\PurpleButtonUp.png" />
+    <None Include="Res\RainbowButtonDown.png" />
+    <None Include="Res\RainbowButtonUp.png" />
+    <Content Include="Res\CouponSelected5.png" />
+    <Content Include="Res\Selection.png" />
+    <None Include="Res\SplitTenderingBack.png" />
+    <None Include="Res\Tender_CardDown.png" />
+    <None Include="Res\Tender_CardUp.png" />
+    <None Include="Res\Tender_CashDown.png" />
+    <None Include="Res\Tender_CashUp.png" />
+    <None Include="Res\Tender_CheckDown.png" />
+    <None Include="Res\Tender_CheckUp.png" />
+    <None Include="Res\Tender_StartOverDown.png" />
+    <None Include="Res\Tender_StartOverUp.png" />
+    <Content Include="Res\ViewPlayerInfoBack.PNG" />
+    <None Include="Res\XUp.png" />
+    <None Include="Res\XDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLLs\Board\Board.csproj">
+      <Project>{137E18F7-77E9-40CF-B2F4-7BF99AA8C72A}</Project>
+      <Name>Board</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\EliteBase\EliteBase.csproj">
+      <Project>{D4D6E9F2-A627-413E-9B45-A20E29680A84}</Project>
+      <Name>EliteBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\EliteCreditCards\EliteCreditCards.csproj">
+      <Project>{C92E79FF-A41D-4D31-825B-62D5F74DFFFE}</Project>
+      <Name>EliteCreditCards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\EliteOpticalMarkReaders\EliteOpticalMarkReaders.csproj">
+      <Project>{02A7D732-B25A-43DB-A8C7-503B0580A4C9}</Project>
+      <Name>EliteOpticalMarkReaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\FortunetLogger\FortunetLogger.csproj">
+      <Project>{4BF9523E-FE89-4752-9056-F09414734192}</Project>
+      <Name>FortunetLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\GTIControls\GTIControls.csproj">
+      <Project>{A2B9C7C4-AE7E-48DC-B39C-C9442CF017F6}</Project>
+      <Name>GTIControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\GTIDevices\GTIDevices.vbproj">
+      <Project>{33D5AB40-F15B-4D0F-B98C-2BC7754BC90A}</Project>
+      <Name>GTIDevices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\GuardianClientServer\GuardianClientServer.csproj">
+      <Project>{9C3DDA94-474B-4A65-9C56-8D38B4F30B20}</Project>
+      <Name>GuardianClientServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\Guardian\Guardian.csproj">
+      <Project>{DE31DFE9-EB41-4C6F-8B01-B26559EE8100}</Project>
+      <Name>Guardian</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLLs\ManagedEliteModule\ManagedEliteModule.csproj">
+      <Project>{308EF933-6B4E-48B2-9C54-85318FE50C63}</Project>
+      <Name>ManagedEliteModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayerCenter\PlayerCenter.csproj">
+      <Project>{DA9C5336-0D07-4E3D-875C-4733331E1965}</Project>
+      <Name>PlayerCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReceiptMgmt\ReceiptMgmt.csproj">
+      <Project>{584F2385-19FD-4A78-860D-1273B85643E3}</Project>
+      <Name>ReceiptMgmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitMgmt\UnitMgmt.csproj">
+      <Project>{CE95ACDD-55C8-4977-B4FB-A4177556AF49}</Project>
+      <Name>UnitMgmt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)ThirdParty\libdpci.dll" "$(TargetDir)" /Y
+xcopy "$(SolutionDir)ThirdParty\GenericIO.dll" "$(TargetDir)" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

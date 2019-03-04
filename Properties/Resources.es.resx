@@ -1,0 +1,1302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddSaleErrorGameLocked" xml:space="preserve">
+    <value>One or more games in the sale are locked.</value>
+  </data>
+  <data name="AddSaleErrorMaxCards" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The account will have more than the maximum card limit.</value>
+  </data>
+  <data name="AddSaleErrorNotEnoughCreditMachine" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The machine doesn't have enough credit.</value>
+  </data>
+  <data name="AddSaleErrorNotEnoughCreditPlayer" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The player doesn't have enough credit.</value>
+  </data>
+  <data name="AddSaleErrorNotEnoughPoints" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The player doesn't have enough points.</value>
+  </data>
+  <data name="AddSaleErrorSessionLocked" xml:space="preserve">
+    <value>One or more sessions in the sale are locked.</value>
+  </data>
+  <data name="AddSaleFailed" xml:space="preserve">
+    <value>Falla a agregar venta en el servidor.
+
+Razón: {0}</value>
+  </data>
+  <data name="AdjustBankButNoReceipt" xml:space="preserve">
+    <value>The adjustment succeeded, but the receipt failed to print.
+
+Reason: {0}</value>
+  </data>
+  <data name="AdjustBankButtonText" xml:space="preserve">
+    <value>Adjust Bank Amount</value>
+  </data>
+  <data name="AdjustBankFailed" xml:space="preserve">
+    <value>Failed to adjust the bank amount on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="AmountWon" xml:space="preserve">
+    <value>Cantidad Ganada:</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ButtonPointsText" xml:space="preserve">
+    <value>Ptos.</value>
+  </data>
+  <data name="ButtonsPerPage" xml:space="preserve">
+    <value>La cantidad de botones por pagina no pueden ser menor de cero.</value>
+  </data>
+  <data name="CashOutBalance" xml:space="preserve">
+    <value>Cash Out Balance</value>
+  </data>
+  <data name="CashOutButNoReceipt" xml:space="preserve">
+    <value>The cash out succeeded, but the receipt failed to print.
+
+Reason: {0}</value>
+  </data>
+  <data name="CashOutErrorInvalidAmount" xml:space="preserve">
+    <value>The amount you specified was invalid, please try again.</value>
+  </data>
+  <data name="CashOutErrorNoAccount" xml:space="preserve">
+    <value>No credit account found.</value>
+  </data>
+  <data name="CashOutFailed" xml:space="preserve">
+    <value>Failed to cash out the account on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="CBBCardsScanned" xml:space="preserve">
+    <value>{0} / {1} Tarjetas Escaneadas</value>
+  </data>
+  <data name="CBBCurrentCard" xml:space="preserve">
+    <value>Tarjeta {0} / {1}</value>
+  </data>
+  <data name="CBBDuplicateCards" xml:space="preserve">
+    <value>A duplicate card has been detected. Do you wish to add anyway?</value>
+  </data>
+  <data name="CBBGame" xml:space="preserve">
+    <value>Juego: </value>
+  </data>
+  <data name="CBBHandPickNotDone" xml:space="preserve">
+    <value>One or more cards do not have the required amount of numbers selected.</value>
+  </data>
+  <data name="CBBNumbersChosen" xml:space="preserve">
+    <value>{0} / {1} Números Escogidos</value>
+  </data>
+  <data name="CBBNumbersRequired" xml:space="preserve">
+    <value>Numbers Required: </value>
+  </data>
+  <data name="CBBReadError" xml:space="preserve">
+    <value>An error occurred while trying to scan Crystal Ball cards: {0}</value>
+  </data>
+  <data name="ChangeMenuFailed" xml:space="preserve">
+    <value>Failed to change the menu.
+
+Reason: {0}</value>
+  </data>
+  <data name="CheckPermissionFailed" xml:space="preserve">
+    <value>Failed to retrieve the staff's permission from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="CompRedeemCompQuest" xml:space="preserve">
+    <value>Desea redimir este premio?</value>
+  </data>
+  <data name="CrateModuleNoConnection" xml:space="preserve">
+    <value>No se puede conectar al servicio de cajas.</value>
+  </data>
+  <data name="CreditCashOutAmount" xml:space="preserve">
+    <value>Current Credit: {0:N}
+How much would you like to cash out?</value>
+  </data>
+  <data name="CreditCashOutButtonText" xml:space="preserve">
+    <value>Cash Out Credit</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="DuplicateProducts" xml:space="preserve">
+    <value>Cannot add duplicate products to a package!</value>
+  </data>
+  <data name="EnterOverride" xml:space="preserve">
+    <value>Do you wish to enter a manager override?</value>
+  </data>
+  <data name="FinishSaleFailed" xml:space="preserve">
+    <value>Falla al finalizar la venta en el sevidor.
+
+Razón: {0}</value>
+  </data>
+  <data name="GamingDateChange" xml:space="preserve">
+    <value>The gaming date has changed or
+an override was sent, please log in again.</value>
+  </data>
+  <data name="GetBingoGameCardsFailed" xml:space="preserve">
+    <value>Falla al generar cartones de Bingo.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetCardLevelsFailed" xml:space="preserve">
+    <value>Failed to retrieve the card level information from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetCreditFailed" xml:space="preserve">
+    <value>Failed to retrieve the credit information from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetDeviceInfoFailed" xml:space="preserve">
+    <value>Falla al recuperar el numero de dispositivo y/o maquina.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetDevicesFailed" xml:space="preserve">
+    <value>Failed to retrieve the available devices from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetFeaturesFailed" xml:space="preserve">
+    <value>Failed to retrieve the enabled features from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetGamingDateFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor la fecha de juego.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetHardwareAttribsFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor los atributos del dispositivo.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetMachineFailed" xml:space="preserve">
+    <value>Failed to retrieve the machine's information from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetMenusFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor los menús del operador.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetOperatorDataFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor información del operador.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetPlayerFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor información del jugador.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetReportFailed" xml:space="preserve">
+    <value>Failed to retrieve the report from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetSettingsFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor información de esta estación de trabajo.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetStaffDataFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor información del personal.
+
+Razón: {0}</value>
+  </data>
+  <data name="GetStaffPermsFailed" xml:space="preserve">
+    <value>Failed to retrieve your permissions from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="GetSuperPickListFailed" xml:space="preserve">
+    <value>Falla al recuperar del servidor información de el(los) Super Pick(s).
+
+Razón: {0}</value>
+  </data>
+  <data name="InitialBankFailed" xml:space="preserve">
+    <value>Failed to query/set initial bank amount(s).
+
+Reason: {0}</value>
+  </data>
+  <data name="InputRequired" xml:space="preserve">
+    <value>Input is required.</value>
+  </data>
+  <data name="InvalidCBBSelectionType" xml:space="preserve">
+    <value>Invalid Crystal Ball selection type.</value>
+  </data>
+  <data name="InvalidDiscountLine" xml:space="preserve">
+    <value>Invalid discount line number.</value>
+  </data>
+  <data name="InvalidPage" xml:space="preserve">
+    <value>Página inválida!</value>
+  </data>
+  <data name="InvalidPosition" xml:space="preserve">
+    <value>Posición inválida!</value>
+  </data>
+  <data name="InvalidSetting" xml:space="preserve">
+    <value>Invalid setting {0}. Value: {1}.</value>
+  </data>
+  <data name="InvalidStaff" xml:space="preserve">
+    <value>Invalid login and/or password.</value>
+  </data>
+  <data name="LoadingGameDate" xml:space="preserve">
+    <value>Recuperando la fecha actual de juego.</value>
+  </data>
+  <data name="LoadingMachineInfo" xml:space="preserve">
+    <value>Recuperando información de esta estación de trabajo.</value>
+  </data>
+  <data name="LoadingMenus" xml:space="preserve">
+    <value>Recuperando menus.</value>
+  </data>
+  <data name="LoadingOperatorInfo" xml:space="preserve">
+    <value>Recuperando información del operador.</value>
+  </data>
+  <data name="LoadingPlayerCenter" xml:space="preserve">
+    <value>Loading Player Center.</value>
+  </data>
+  <data name="LoadingReceiptMgmt" xml:space="preserve">
+    <value>Loading Receipt Management.</value>
+  </data>
+  <data name="LoadingSellingScreen" xml:space="preserve">
+    <value>Empezando POS...</value>
+  </data>
+  <data name="LoadingStaffInfo" xml:space="preserve">
+    <value>Recuperando su información.</value>
+  </data>
+  <data name="LogFailed" xml:space="preserve">
+    <value>Falla al crear el registro.
+
+Razón: {0}</value>
+  </data>
+  <data name="MachineRequired" xml:space="preserve">
+    <value>A machine is required.</value>
+  </data>
+  <data name="MachineSetFailed" xml:space="preserve">
+    <value>Could not set the machine.
+
+Reason: {0}</value>
+  </data>
+  <data name="ManagePlayersButtonText" xml:space="preserve">
+    <value>Administra Jugadores</value>
+  </data>
+  <data name="MaxCardLimitReached" xml:space="preserve">
+    <value>This would exceed the card limit for game category {0}.
+The package cannot be added.</value>
+  </data>
+  <data name="MessageName" xml:space="preserve">
+    <value>Message: {0}</value>
+  </data>
+  <data name="NoCompsAvailable" xml:space="preserve">
+    <value>No hay Premios Disponibles.</value>
+  </data>
+  <data name="NoLastReceipt" xml:space="preserve">
+    <value>No hay recibo previo para imprimir.</value>
+  </data>
+  <data name="NoLastSale" xml:space="preserve">
+    <value>No hay venta previa para repetir.</value>
+  </data>
+  <data name="NoMachineFound" xml:space="preserve">
+    <value>No machine found.</value>
+  </data>
+  <data name="NoMenu" xml:space="preserve">
+    <value>Menú no encontrado!</value>
+  </data>
+  <data name="NoMenus" xml:space="preserve">
+    <value>No hay menús definidos para este operdor. Favor de crear uno o mas menús y trate de ingresar al sistema otra vez.</value>
+  </data>
+  <data name="NoPlayersFound" xml:space="preserve">
+    <value>Ningun jugador fue encontrado con esa tarjeta.</value>
+  </data>
+  <data name="NoPortableSales" xml:space="preserve">
+    <value>Selling portables will be disabled.</value>
+  </data>
+  <data name="NoSaleItems" xml:space="preserve">
+    <value>Favor de aggregar al menos un producto a la venta antes de terminarla.</value>
+  </data>
+  <data name="NoSuperPickList" xml:space="preserve">
+    <value>No hay Super Picks en la lista. Favor de proporcionar recibo para leer lista de Super Picks</value>
+  </data>
+  <data name="NoSuperPickPlayerInfo" xml:space="preserve">
+    <value>No hay información disponible del jugador, favor de proporcionar numero de recibo válido y trate otra vez.</value>
+  </data>
+  <data name="NoSuperPicksFound" xml:space="preserve">
+    <value>No se encontraron Super Picks para este recibo.</value>
+  </data>
+  <data name="NoSuperPickText" xml:space="preserve">
+    <value>No hay Super Picks</value>
+  </data>
+  <data name="NoSuperPickWinnerSelected" xml:space="preserve">
+    <value>No hay Super Pick ganador seleccionado. Favor de seleccionar uno y trate otra vez.</value>
+  </data>
+  <data name="NotAClass" xml:space="preserve">
+    <value>El obj no es un</value>
+  </data>
+  <data name="NotAllowed" xml:space="preserve">
+    <value>You do not have permission to perform this action.</value>
+  </data>
+  <data name="OpenCreditAmount" xml:space="preserve">
+    <value>Please enter the credit amount:
+({0})</value>
+  </data>
+  <data name="OpenDiscountAmount" xml:space="preserve">
+    <value>Please enter the discount amount:
+({0})</value>
+  </data>
+  <data name="PackButtonText" xml:space="preserve">
+    <value>Pack</value>
+  </data>
+  <data name="PayCouponsButtonText" xml:space="preserve">
+    <value>Pagar Cupones</value>
+  </data>
+  <data name="PayReceiptsButtonText" xml:space="preserve">
+    <value>Pagar Recibos</value>
+  </data>
+  <data name="PercentDiscount" xml:space="preserve">
+    <value>% Descuento</value>
+  </data>
+  <data name="PermissionLogin" xml:space="preserve">
+    <value>Please enter a login number or swipe a magnetic card:</value>
+  </data>
+  <data name="PermissionPassword" xml:space="preserve">
+    <value>Please enter a password:</value>
+  </data>
+  <data name="PlayerNotEnoughPoints" xml:space="preserve">
+    <value>El jugador actual no tiene suficientes puntos para ese producto.
+    
+{0} punto(s) necesario, {1} punto(s) disponible.</value>
+  </data>
+  <data name="PlayerRequired" xml:space="preserve">
+    <value>Un jugador es requerido para ese producto.</value>
+  </data>
+  <data name="PlayerSetFailed" xml:space="preserve">
+    <value>Could not set the player. Reason: {0}</value>
+  </data>
+  <data name="POSError" xml:space="preserve">
+    <value>Un error ha ocurrido. El modulo de POS se dara de baja ahora.
+    
+Error: {0}</value>
+  </data>
+  <data name="POSName" xml:space="preserve">
+    <value>Sistema de Punto de Venta</value>
+  </data>
+  <data name="PrintLastReceiptButtonText" xml:space="preserve">
+    <value>Imprimir Ultimo Recibo</value>
+  </data>
+  <data name="QuantitySaleButtonText" xml:space="preserve">
+    <value>Cantidad
+Venta</value>
+  </data>
+  <data name="RegisterReportButtonText" xml:space="preserve">
+    <value>Register Sales Report</value>
+  </data>
+  <data name="RepeatLastSaleButtonText" xml:space="preserve">
+    <value>Repetir Ultima Venta</value>
+  </data>
+  <data name="ReturnButtonText" xml:space="preserve">
+    <value>Devolución</value>
+  </data>
+  <data name="SaleButNoReceipt" xml:space="preserve">
+    <value>The sale succeeded, but the receipt failed to print.
+
+Reason: {0}</value>
+  </data>
+  <data name="ScanMachine" xml:space="preserve">
+    <value>Scan Machine</value>
+  </data>
+  <data name="ScanMachineMessage" xml:space="preserve">
+    <value>Please type or barcode scan the machine's number.</value>
+  </data>
+  <data name="ScanPlayerCard" xml:space="preserve">
+    <value>Enter
+Player Card
+Number</value>
+  </data>
+  <data name="ScanPlayerCardMessage" xml:space="preserve">
+    <value>Please type or barcode scan the player's magnetic card number.</value>
+  </data>
+  <data name="SelectSuperPickItem" xml:space="preserve">
+    <value>No hay Super Pick seleccionado. Favor de seleccionar uno de la lista y trate otra vez.</value>
+  </data>
+  <data name="SellingFormFinish" xml:space="preserve">
+    <value>Terminar</value>
+  </data>
+  <data name="SellingFormGamingDate" xml:space="preserve">
+    <value>Fecha Juego: {0} - </value>
+  </data>
+  <data name="SellingFormMachine" xml:space="preserve">
+    <value>Machine:</value>
+  </data>
+  <data name="SellingFormPlayer" xml:space="preserve">
+    <value>Jugador:</value>
+  </data>
+  <data name="SellingFormPlayerBirthday" xml:space="preserve">
+    <value>Cumpleaños del Jugador!</value>
+  </data>
+  <data name="SellingFormPlayerJoinDate" xml:space="preserve">
+    <value>Fecha de Alta: {0}</value>
+  </data>
+  <data name="SellingFormPlayerLastVisit" xml:space="preserve">
+    <value>Ultima Visita: {0}</value>
+  </data>
+  <data name="SellingFormPlayerNonRefundableCredit" xml:space="preserve">
+    <value>Non-Refundable Credit: {0}</value>
+  </data>
+  <data name="SellingFormPlayerPoints" xml:space="preserve">
+    <value>Balance Ptos.: {0}</value>
+  </data>
+  <data name="SellingFormPlayerRefundableCredit" xml:space="preserve">
+    <value>Refundable Credit: {0}</value>
+  </data>
+  <data name="SellingFormPlayerVisitCount" xml:space="preserve">
+    <value>Cuenta Visitas: {0}</value>
+  </data>
+  <data name="SellingFormTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="SellToCrateFailed" xml:space="preserve">
+    <value>Falla al vender dispositivo.</value>
+  </data>
+  <data name="ServerCommFailed" xml:space="preserve">
+    <value>La comunicacion con el servidor se ha perdido.</value>
+  </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>Dando de baja el sistema...</value>
+  </data>
+  <data name="StaffInactive" xml:space="preserve">
+    <value>That staff member has been deactivated.</value>
+  </data>
+  <data name="StaffNotAuthorized" xml:space="preserve">
+    <value>The specified staff member is not authorized.</value>
+  </data>
+  <data name="StaffNotFound" xml:space="preserve">
+    <value>Staff not found.</value>
+  </data>
+  <data name="StaffPasswordExpired" xml:space="preserve">
+    <value>That staff member's password has expired.</value>
+  </data>
+  <data name="SuperPickDoubleText" xml:space="preserve">
+    <value>Doble</value>
+  </data>
+  <data name="SuperPickInvalidText" xml:space="preserve">
+    <value>Invalido</value>
+  </data>
+  <data name="SuperPickSingleText" xml:space="preserve">
+    <value>Solo</value>
+  </data>
+  <data name="TenderError" xml:space="preserve">
+    <value>The amount tendered cannot be below the total.</value>
+  </data>
+  <data name="TenderWarning" xml:space="preserve">
+    <value>The amount tendered is below the total. Continue with the sale?</value>
+  </data>
+  <data name="TooBig" xml:space="preserve">
+    <value> is too big.</value>
+  </data>
+  <data name="TryOverride" xml:space="preserve">
+    <value>Do you wish to override?</value>
+  </data>
+  <data name="UnitAssignmentText" xml:space="preserve">
+    <value>Unit Assignment</value>
+  </data>
+  <data name="UnknownButton" xml:space="preserve">
+    <value>Tipo de botón desconocido recibido del servidor.</value>
+  </data>
+  <data name="UnknownDiscount" xml:space="preserve">
+    <value>Unknown discount type received from server.</value>
+  </data>
+  <data name="VerifyPlayerId" xml:space="preserve">
+    <value>Por favor verifique identidad del jugador.</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versión </value>
+  </data>
+  <data name="ViewReceiptsButtonText" xml:space="preserve">
+    <value>Ver Recibos</value>
+  </data>
+  <data name="WaitFormAdjustingBank" xml:space="preserve">
+    <value>Adjusting bank, please wait.</value>
+  </data>
+  <data name="WaitFormCashOut" xml:space="preserve">
+    <value>Cashing out, please wait.</value>
+  </data>
+  <data name="WaitFormCheckingPermission" xml:space="preserve">
+    <value>Checking permission, please wait.</value>
+  </data>
+  <data name="WaitFormFindingSuperPicks" xml:space="preserve">
+    <value>Buscando números de Super Pick, favor de esperar.</value>
+  </data>
+  <data name="WaitFormFinishingPayingSuperPicks" xml:space="preserve">
+    <value>Terminando pago de Super Picks, favor de esperar.</value>
+  </data>
+  <data name="WaitFormFinishingSale" xml:space="preserve">
+    <value>Terminando venta, favor de esperar.</value>
+  </data>
+  <data name="WaitFormGettingBank" xml:space="preserve">
+    <value>Getting current bank, please wait.</value>
+  </data>
+  <data name="WaitFormGettingCards" xml:space="preserve">
+    <value>Getting bingo cards, please wait.</value>
+  </data>
+  <data name="WaitFormGettingMachine" xml:space="preserve">
+    <value>Getting machine data, please wait.</value>
+  </data>
+  <data name="WaitFormGettingPlayer" xml:space="preserve">
+    <value>Leyendo datos del jugador, favor de esperar.</value>
+  </data>
+  <data name="WaitFormMakeSale" xml:space="preserve">
+    <value>Realizando venta, favor de esperar.</value>
+  </data>
+  <data name="WaitFormPrinting" xml:space="preserve">
+    <value>Imprimiendo, favor de esperar.</value>
+  </data>
+  <data name="WrongGamingDate" xml:space="preserve">
+    <value>Fecha de Juego Incorrecta.</value>
+  </data>
+  <data name="WrongSize" xml:space="preserve">
+    <value> is the wrong size.</value>
+  </data>
+  <data name="SellingFormTender" xml:space="preserve">
+    <value>Cobro</value>
+  </data>
+  <data name="ChangeDue" xml:space="preserve">
+    <value>Change Due: {0}</value>
+  </data>
+  <data name="UnitNumber" xml:space="preserve">
+    <value>Unit #: {0}</value>
+  </data>
+  <data name="AddBingoCardsFailed" xml:space="preserve">
+    <value>Failed to create the bingo cards on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="CompRedeemNoComp" xml:space="preserve">
+    <value>Please select a comp.</value>
+  </data>
+  <data name="LoadingUnitMgmt" xml:space="preserve">
+    <value>Loading Unit Management.</value>
+  </data>
+  <data name="CBBLoadError" xml:space="preserve">
+    <value>Failed to load Crystal Ball bingo data.
+
+Reason: {0}</value>
+  </data>
+  <data name="LoadingBingoData" xml:space="preserve">
+    <value>Retrieving bingo data.</value>
+  </data>
+  <data name="AmountDue" xml:space="preserve">
+    <value>Amount Due: {0}</value>
+  </data>
+  <data name="QuantitySalePrompt" xml:space="preserve">
+    <value>Please enter the number of sales to perform.</value>
+  </data>
+  <data name="InvalidQuantity" xml:space="preserve">
+    <value>Quantity must be between {0} and {1}.</value>
+  </data>
+  <data name="NoElecSaleItems" xml:space="preserve">
+    <value>The sale must have at least one electronic item before it can be completed.</value>
+  </data>
+  <data name="WaitFormUpdatingMenus" xml:space="preserve">
+    <value>Reloading menus, please wait.</value>
+  </data>
+  <data name="CreatePlayer" xml:space="preserve">
+    <value>Would you like to create a new account?</value>
+  </data>
+  <data name="OptionalProductPrompt" xml:space="preserve">
+    <value>Would you like to add {0} for an additional {1}?</value>
+  </data>
+  <data name="MagLoadError" xml:space="preserve">
+    <value>Failed to load the magnetic card reader.
+
+Reason: {0}</value>
+  </data>
+  <data name="RefreshMenusFailed" xml:space="preserve">
+    <value>Failed to refresh the menus.
+
+Reason: {0}</value>
+  </data>
+  <data name="AddSaleErrorNoCards" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+There are not enough cards available for purchase.</value>
+  </data>
+  <data name="AddSaleErrorMissingSerial" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+There is missing serial number information.</value>
+  </data>
+  <data name="AddSaleErrorSessionSync" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The session is out of sync.</value>
+  </data>
+  <data name="CheckMaxCardsFailed" xml:space="preserve">
+    <value>Failed to check the max card limit on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="AddCBBCardsFailed" xml:space="preserve">
+    <value>Failed to create the Crystal Ball cards on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="AddSaleErrorFailedToSaveCards" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+Failed to save the cards to the database.</value>
+  </data>
+  <data name="AddSaleErrorInvalidPerm" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+Invalid perm range specified.</value>
+  </data>
+  <data name="CBBFavoritePrompt" xml:space="preserve">
+    <value>Does the player want to use his/her favorite cards for {0}?</value>
+  </data>
+  <data name="SaveCBBFavorites" xml:space="preserve">
+    <value>Does the player want these Crystal Ball cards to be his/her favorites?</value>
+  </data>
+  <data name="InvalidPrePrintedData" xml:space="preserve">
+    <value>Checksum failed.</value>
+  </data>
+  <data name="PrePrintedDecodeFailed" xml:space="preserve">
+    <value>Failed to decode the pre-printed pack info. Please check the barcode.</value>
+  </data>
+  <data name="WaitFormRecordAttendance" xml:space="preserve">
+    <value>Recording attendance, please wait.</value>
+  </data>
+  <data name="AddSaleErrorInvalidHallId" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The specified hall id is invalid.</value>
+  </data>
+  <data name="PlayerAlerts" xml:space="preserve">
+    <value>The player has the following alerts:
+{0}</value>
+  </data>
+  <data name="QuantitySaleCounter" xml:space="preserve">
+    <value>
+({0}/{1})</value>
+  </data>
+  <data name="QuantitySaleCancel" xml:space="preserve">
+    <value>{0} sale(s) completed before cancel.</value>
+  </data>
+  <data name="CardSwipeFailed" xml:space="preserve">
+    <value>Failed to record the attendance of the player.
+
+Reason: {0}</value>
+  </data>
+  <data name="AddSaleErrorFailedToSaveCBBCards" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+Failed to save the CBB cards to the database.</value>
+  </data>
+  <data name="AddSaleErrorNoCBBCards" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+There are not enough CBB cards available for purchase.</value>
+  </data>
+  <data name="AddSaleErrorPackInUse" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The pack is already in use.</value>
+  </data>
+  <data name="GetHallInfoFailed" xml:space="preserve">
+    <value>Failed to retrieve hall information from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="CloseBankFailed" xml:space="preserve">
+    <value>Failed to close the bank on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="ConfirmCloseBank" xml:space="preserve">
+    <value>Closing the bank will finalize all sales associated with it and exit the POS.
+Do you want to continue?</value>
+  </data>
+  <data name="WaitFormClosingBank" xml:space="preserve">
+    <value>Closing bank, please wait.</value>
+  </data>
+  <data name="CloseBankButtonText" xml:space="preserve">
+    <value>Close Bank</value>
+  </data>
+  <data name="StartNumberInvalid" xml:space="preserve">
+    <value>* Please enter a valid number.</value>
+  </data>
+  <data name="RequiredStartNumbers" xml:space="preserve">
+    <value>{0} Number(s) Required</value>
+  </data>
+  <data name="ErrorsDetected" xml:space="preserve">
+    <value>{0} Error(s) Detected</value>
+  </data>
+  <data name="GetStartNumbersFailed" xml:space="preserve">
+    <value>Failed to retrieve the start numbers from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="WaitFormCheckingStartNumbers" xml:space="preserve">
+    <value>Checking start numbers, please wait.</value>
+  </data>
+  <data name="WaitFormGettingStartNumbers" xml:space="preserve">
+    <value>Getting start numbers, please wait.</value>
+  </data>
+  <data name="CheckStartNumbersFailed" xml:space="preserve">
+    <value>Failed to check the start numbers on the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="StartNumberDuplicate" xml:space="preserve">
+    <value>* Duplicate card number.</value>
+  </data>
+  <data name="StartNumberInvalidCard" xml:space="preserve">
+    <value>* Invalid card number.</value>
+  </data>
+  <data name="StartNumberOutside" xml:space="preserve">
+    <value>* Outside of perm range.</value>
+  </data>
+  <data name="StartNumberUnknownError" xml:space="preserve">
+    <value>* Unknown error: {0}</value>
+  </data>
+  <data name="PackageNameAndSession" xml:space="preserve">
+    <value>{0} (Session {1})</value>
+  </data>
+  <data name="AddSaleErrorMissingPerm" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+The perm. library is missing.</value>
+  </data>
+  <data name="GetStartNumbersErrorMissingPerm" xml:space="preserve">
+    <value>Cannot get the next start number(s). The perm. library is missing.</value>
+  </data>
+  <data name="GetCurrenciesFailed" xml:space="preserve">
+    <value>Failed to get the currency information from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="LoadingCurrencies" xml:space="preserve">
+    <value>Retrieving currency information.</value>
+  </data>
+  <data name="RatesNotSet" xml:space="preserve">
+    <value>The exchange rates have not been set today. No sales can be made.</value>
+  </data>
+  <data name="NoBank" xml:space="preserve">
+    <value>You do not have a bank. Please have a bank issued to you and try logging in again.</value>
+  </data>
+  <data name="VaultNotFound" xml:space="preserve">
+    <value>Unable the find the vault bank.</value>
+  </data>
+  <data name="Vault" xml:space="preserve">
+    <value>Vault</value>
+  </data>
+  <data name="CurrencyName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="SelectSaleCurrency" xml:space="preserve">
+    <value>Please select the sale currency.</value>
+  </data>
+  <data name="NoBankFound" xml:space="preserve">
+    <value>No bank found.</value>
+  </data>
+  <data name="InitialBankButNoReceipt" xml:space="preserve">
+    <value>Setting the initial bank succeeded, but the receipt failed to print.
+
+Reason: {0}</value>
+  </data>
+  <data name="NoErrorsDetected" xml:space="preserve">
+    <value>No Errors Detected</value>
+  </data>
+  <data name="SelectChangeCurrency" xml:space="preserve">
+    <value>Please select the change currency.</value>
+  </data>
+  <data name="SelectCashOutCurrency" xml:space="preserve">
+    <value>Please select the cash out currency.</value>
+  </data>
+  <data name="AddSaleInvalidGameCategory" xml:space="preserve">
+    <value>The sale cannot be completed.
+
+There are no games for one or more products in the sale.</value>
+  </data>
+  <data name="CBBCardScanError" xml:space="preserve">
+    <value>The current card has both quick pick and hand pick numbers. 
+Please use a different card.</value>
+  </data>
+  <data name="LicenseFileExpiring" xml:space="preserve">
+    <value>WARNING: Your system license file will expire in {0} day(s).</value>
+  </data>
+  <data name="SaleGreaterThanZero" xml:space="preserve">
+    <value>The total has to be greater than 0.</value>
+  </data>
+  <data name="SaleZeroOrGreater" xml:space="preserve">
+    <value>The total cannot be negative.</value>
+  </data>
+  <data name="StaffLocked" xml:space="preserve">
+    <value>That staff member has been locked.</value>
+  </data>
+  <data name="LoadingCharities" xml:space="preserve">
+    <value>Receiving charity list.</value>
+  </data>
+  <data name="GetCharityListFailed" xml:space="preserve">
+    <value>Failed to retrieve the charity list from the server.
+
+Reason: {0}</value>
+  </data>
+  <data name="NoActiveMenu" xml:space="preserve">
+    <value>There are no menus defined for you and this operator. Please create one or more menus or assign an active session and try logging in again.</value>
+  </data>
+  <data name="PackageNotFound" xml:space="preserve">
+    <value>Unable to find a package that matches that barcode.</value>
+  </data>
+  <data name="BarcodeAuditNumberError" xml:space="preserve">
+    <value>Audit number {0} does not exist for serial number {1}.</value>
+  </data>
+  <data name="BarcodeMenuButtonError" xml:space="preserve">
+    <value>Can't find a menu button that contains the product "{0}".</value>
+  </data>
+  <data name="BarcodeSerialNumberError" xml:space="preserve">
+    <value>Can't find serial number {0}.
+
+May not be for the pack requested.</value>
+  </data>
+  <data name="BarcodeSerialNumberRetired" xml:space="preserve">
+    <value>Serial number {0} was retired.</value>
+  </data>
+  <data name="InvalidAuditNumber" xml:space="preserve">
+    <value>The audit number must be a valid number.</value>
+  </data>
+  <data name="MaxCardLimitReached_2" xml:space="preserve">
+    <value>The operator's maximum card limit has been exceeded.
+The sale cannot be completed.</value>
+  </data>
+  <data name="CloseCashDrawer" xml:space="preserve">
+    <value>Por favor, cierre la caja.</value>
+  </data>
+  <data name="NoSale" xml:space="preserve">
+    <value>No Venta</value>
+  </data>
+  <data name="QuantitySaleInfo" xml:space="preserve">
+    <value>Cantidad venta</value>
+  </data>
+  <data name="SaleInProgess" xml:space="preserve">
+    <value>Venta en curso.</value>
+  </data>
+  <data name="EnterPlayerCardPIN" xml:space="preserve">
+    <value>Introduzca el PIN</value>
+  </data>
+  <data name="PlayerCardPINEntryCanceled" xml:space="preserve">
+    <value>Introducción de PIN cancelado.</value>
+  </data>
+  <data name="PlayerCardPINError" xml:space="preserve">
+    <value>PIN incorrecto.</value>
+  </data>
+  <data name="PlayerTrackingInterfaceDown" xml:space="preserve">
+    <value>The Player Tracking Interface is down.</value>
+  </data>
+  <data name="WaitFormUpdatingPlayer" xml:space="preserve">
+    <value>Actualización de información , favor de esperar.</value>
+  </data>
+  <data name="B3HandPayReceiptTitle" xml:space="preserve">
+    <value>B3 Hand Pay Receipt</value>
+  </data>
+  <data name="B3RedeemReceiptTitle" xml:space="preserve">
+    <value>B3 Redeem Receipt</value>
+  </data>
+  <data name="B3UnlockReceiptTitle" xml:space="preserve">
+    <value>B3 Unlock Receipt</value>
+  </data>
+  <data name="FeatureNotImplemented" xml:space="preserve">
+    <value>Sorry, feature not implemented.</value>
+  </data>
+  <data name="OverpaymentNotAllowed" xml:space="preserve">
+    <value>Over-tendering is not allowed with this form of payment.</value>
+  </data>
+  <data name="FailedToInitializePaymentProcessor" xml:space="preserve">
+    <value>Failed to initialize payment processor.</value>
+  </data>
+  <data name="InvalidEntry" xml:space="preserve">
+    <value>Invalid Entry</value>
+  </data>
+  <data name="TenderTooSmall" xml:space="preserve">
+    <value>The minimum that may be tendered with this currency is {0}.</value>
+  </data>
+  <data name="CreditOrDebitCard" xml:space="preserve">
+    <value>Crédito/Débito</value>
+  </data>
+  <data name="LoadingPaymentProcessing" xml:space="preserve">
+    <value>Initializing payment processing.</value>
+  </data>
+  <data name="PartialTenderApproved" xml:space="preserve">
+    <value>Only part of the requested amount was approved.</value>
+  </data>
+  <data name="AdditionalPayment" xml:space="preserve">
+    <value>Additional Payment</value>
+  </data>
+  <data name="WarningAdditionalPayment" xml:space="preserve">
+    <value>Additional payment(s) must be made due to payment processing problems.</value>
+  </data>
+  <data name="ClosingLane" xml:space="preserve">
+    <value>Closing Lane</value>
+  </data>
+  <data name="TenderingFailure" xml:space="preserve">
+    <value>Problem Tendering</value>
+  </data>
+  <data name="PlayerCouponButtonText" xml:space="preserve">
+    <value>Coupons</value>
+  </data>
+  <data name="CouponUsedForOtherProduct" xml:space="preserve">
+    <value>This coupon is being used for another package:
+
+{0}</value>
+  </data>
+  <data name="CouponValueExceedsTheTotalSaleValue" xml:space="preserve">
+    <value>Coupon value exceeds the total sale value.</value>
+  </data>
+  <data name="PackageMustBeInTheSaleToApplyThisCoupon" xml:space="preserve">
+    <value>The package must be in the sale to apply this coupon.  The package is in another session.</value>
+  </data>
+  <data name="PackageAlreadyHasACoupon" xml:space="preserve">
+    <value>Package:
+{0}
+
+is already using coupon:
+{1}</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ReceiptCompactPaperPacksSoldHeader" xml:space="preserve">
+    <value>Sess Serial# Pack numbers</value>
+  </data>
+  <data name="ReceiptSession" xml:space="preserve">
+    <value>Sesión {0}</value>
+  </data>
+  <data name="RepeatPlayerLastSaleButtonText" xml:space="preserve">
+    <value>Repeat Player's Last Sale</value>
+  </data>
+  <data name="PaperInfoAuditNumber" xml:space="preserve">
+    <value>Pack Number</value>
+  </data>
+  <data name="PaperInfoSerialNumberOrBarcodeScan" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="WaitFormGettingSaleInfo" xml:space="preserve">
+    <value>Locating sale, please wait.</value>
+  </data>
+  <data name="UnitSelectionButtonText" xml:space="preserve">
+    <value>Unit Selection</value>
+  </data>
+  <data name="IncompatibleDevice" xml:space="preserve">
+    <value>At least one item in this sale is not compatible with the selected player device.</value>
+  </data>
+  <data name="TooManyCardsForDevice" xml:space="preserve">
+    <value>There are too many cards for the selected player device.</value>
+  </data>
+  <data name="BarcodeAlreadySold" xml:space="preserve">
+    <value>This item has already been  sold.</value>
+  </data>
+  <data name="BarcodeSellAgain" xml:space="preserve">
+    <value>This item has already been sold.
+
+Do you want to sell it again?</value>
+  </data>
+  <data name="BarcodeDamagedItem" xml:space="preserve">
+    <value>This item has been marked as damaged.</value>
+  </data>
+  <data name="BarcodedPaperOnQuantitySale" xml:space="preserve">
+    <value>Barcoded paper is not allowed in a quantity sale.</value>
+  </data>
+  <data name="CashToCustomer" xml:space="preserve">
+    <value>Cash Due to Customer: {0}</value>
+  </data>
+  <data name="FailedToGetPoints" xml:space="preserve">
+    <value>Could not retrieve the player points.
+
+Reason: {0}</value>
+  </data>
+  <data name="PleaseSeeCashier" xml:space="preserve">
+    <value>Please see cashier.</value>
+  </data>
+  <data name="SellingFormPay" xml:space="preserve">
+    <value>CHECKOUT</value>
+  </data>
+  <data name="KioskIdleQuestion" xml:space="preserve">
+    <value>Do you wish to CONTINUE with this transaction?</value>
+  </data>
+  <data name="KioskIdle" xml:space="preserve">
+    <value>Kiosk Sitting Idle</value>
+  </data>
+  <data name="CancelSaleQuestion" xml:space="preserve">
+    <value>Do you wish to CANCEL this transaction?</value>
+  </data>
+  <data name="UnableToUpdateDiscounts" xml:space="preserve">
+    <value>Unable to update automatic discount. {0}</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>GRATIS</value>
+  </data>
+  <data name="RepeatLastPurchase" xml:space="preserve">
+    <value>Repeat last purchase</value>
+  </data>
+  <data name="CancelSale" xml:space="preserve">
+    <value>Cancel Sale</value>
+  </data>
+  <data name="LookAtCoupons" xml:space="preserve">
+    <value>Coupons</value>
+  </data>
+  <data name="NoThanks" xml:space="preserve">
+    <value>No thanks</value>
+  </data>
+  <data name="ShowCouponsQuestion" xml:space="preserve">
+    <value>You have COUPONS available.
+
+Do you want to check them out?</value>
+  </data>
+  <data name="ShowCouponsQuestion1" xml:space="preserve">
+    <value>You have COUPONS available.
+
+Would you like to view them?</value>
+  </data>
+  <data name="PleaseScanPaper" xml:space="preserve">
+    <value>Please scan the barcode
+on the following paper pack:
+
+{0}</value>
+  </data>
+  <data name="PaperNotAllowedAtKiosk" xml:space="preserve">
+    <value>Paper not allowed at Kiosk.</value>
+  </data>
+  <data name="CBBNoScannerDefined" xml:space="preserve">
+    <value>There is no Crystal Ball Bingo scanner defined.</value>
+  </data>
+  <data name="CBBHowWouldYouLikeToEnterYourNumbers" xml:space="preserve">
+    <value>How would you like to enter your numbers?</value>
+  </data>
+  <data name="SaveCBBCardsAsFavorites" xml:space="preserve">
+    <value>Save Favorites</value>
+  </data>
+  <data name="SaveCBBFavoritesAtKiosk" xml:space="preserve">
+    <value>Would you like to save these CRYSTAL BALL cards as your favorites?</value>
+  </data>
+  <data name="CBBHowWouldYouLikeToEnterYourNumbers2" xml:space="preserve">
+    <value>How would you like to enter the rest of your numbers?</value>
+  </data>
+  <data name="UseFavorites" xml:space="preserve">
+    <value>Use Favorites</value>
+  </data>
+  <data name="PleaseEnterTheNumberOfItemsToAddToTheOrder" xml:space="preserve">
+    <value>Please enter the number of items to add to the order.</value>
+  </data>
+  <data name="KioskWarningAdditionalPayment" xml:space="preserve">
+    <value>Please take your receipt to a cashier for the remainder of your money.</value>
+  </data>
+  <data name="OutstandingChangeDue" xml:space="preserve">
+    <value>Change Due:</value>
+  </data>
+  <data name="POSKioskName" xml:space="preserve">
+    <value>Point of Sale Kiosk</value>
+  </data>
+  <data name="NegativeSaleWarning" xml:space="preserve">
+    <value>The sale is for a negative amount. Continue with the sale?</value>
+  </data>
+  <data name="TenderErrorNegativeSale" xml:space="preserve">
+    <value>The sale cannot be for a negative amount.</value>
+  </data>
+  <data name="VoidReceiptsButtonText" xml:space="preserve">
+    <value>Void Receipts
+(Approval Needed)</value>
+  </data>
+  <data name="PeripheralLoadError" xml:space="preserve">
+    <value>Failed to initialize the Guardian.
+
+ Reason: {0}</value>
+  </data>
+  <data name="MessageFormAbort" xml:space="preserve">
+    <value>&amp;Abort</value>
+  </data>
+  <data name="MessageFormCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="MessageFormContinue" xml:space="preserve">
+    <value>C&amp;ontinue</value>
+  </data>
+  <data name="MessageFormForce" xml:space="preserve">
+    <value>&amp;Force</value>
+  </data>
+  <data name="MessageFormIgnore" xml:space="preserve">
+    <value>&amp;Ignore</value>
+  </data>
+  <data name="MessageFormNo" xml:space="preserve">
+    <value>&amp;No</value>
+  </data>
+  <data name="MessageFormOk" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="MessageFormRetry" xml:space="preserve">
+    <value>&amp;Retry</value>
+  </data>
+  <data name="MessageFormYes" xml:space="preserve">
+    <value>&amp;Yes</value>
+  </data>
+  <data name="PrintReceipt" xml:space="preserve">
+    <value>Print Receipt</value>
+  </data>
+  <data name="NoItemsFoundForRepeatSale" xml:space="preserve">
+    <value>No items on the receipt are avaiable for repeat purchase.</value>
+  </data>
+  <data name="CBBNoCardsToPrint" xml:space="preserve">
+    <value>There were no crystal ball cards found to print.</value>
+  </data>
+  <data name="PleaseCloseTheCashDrawer" xml:space="preserve">
+    <value>Please close the cash drawer.</value>
+  </data>
+  <data name="CheckingCashDrawer" xml:space="preserve">
+    <value>Checking cash drawer...</value>
+  </data>
+  <data name="ScannedItemIsOnALockedButton" xml:space="preserve">
+    <value>The button for the scanned item is locked.</value>
+  </data>
+  <data name="DuplicateAuditNumber" xml:space="preserve">
+    <value>Duplicate audit number {0}</value>
+  </data>
+  <data name="BingoSalesClosed" xml:space="preserve">
+    <value>Bingo sales closed</value>
+  </data>
+  <data name="MaxCardLimitReached3" xml:space="preserve">
+    <value>This would exceed the card limit for a game.
+The package cannot be added.</value>
+  </data>
+</root>

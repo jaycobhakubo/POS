@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="m_kioskIdleTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_panelMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_prevLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="m_prevLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_prevLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 75</value>
+  </data>
+  <data name="m_prevLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 60</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_prevLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="m_prevLabel.Text" xml:space="preserve">
+    <value>Previous Card</value>
+  </data>
+  <data name="m_prevLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="m_prevLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_prevLabel.Name" xml:space="preserve">
+    <value>m_prevLabel</value>
+  </data>
+  <data name="&gt;&gt;m_prevLabel.Type" xml:space="preserve">
+    <value>GTI.Controls.OutlinedLabel, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_prevLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_prevLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_nextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="m_nextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_nextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>772, 75</value>
+  </data>
+  <data name="m_nextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 60</value>
+  </data>
+  <data name="m_nextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="m_nextLabel.Text" xml:space="preserve">
+    <value>Next Card</value>
+  </data>
+  <data name="m_nextLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="m_nextLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_nextLabel.Name" xml:space="preserve">
+    <value>m_nextLabel</value>
+  </data>
+  <data name="&gt;&gt;m_nextLabel.Type" xml:space="preserve">
+    <value>GTI.Controls.OutlinedLabel, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_nextLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_nextLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_timeoutProgress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="m_timeoutProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_timeoutProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 656</value>
+  </data>
+  <data name="m_timeoutProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 10</value>
+  </data>
+  <data name="m_timeoutProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="m_timeoutProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Name" xml:space="preserve">
+    <value>m_timeoutProgress</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_bingoNumberBoard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="m_bingoNumberBoard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 179</value>
+  </data>
+  <data name="m_bingoNumberBoard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>978, 370</value>
+  </data>
+  <data name="m_bingoNumberBoard.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;m_bingoNumberBoard.Name" xml:space="preserve">
+    <value>m_bingoNumberBoard</value>
+  </data>
+  <data name="&gt;&gt;m_bingoNumberBoard.Type" xml:space="preserve">
+    <value>GTI.Controls.BingoFlashBoard, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_bingoNumberBoard.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_bingoNumberBoard.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_clearCurrentButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="m_clearCurrentButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_clearCurrentButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 694</value>
+  </data>
+  <data name="m_clearCurrentButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_clearCurrentButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_clearCurrentButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="m_clearCurrentButton.Text" xml:space="preserve">
+    <value>Clear Current Card</value>
+  </data>
+  <data name="&gt;&gt;m_clearCurrentButton.Name" xml:space="preserve">
+    <value>m_clearCurrentButton</value>
+  </data>
+  <data name="&gt;&gt;m_clearCurrentButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_clearCurrentButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_clearCurrentButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_numbersChosenLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="m_numbersChosenLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_numbersChosenLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>637, 20</value>
+  </data>
+  <data name="m_numbersChosenLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 23</value>
+  </data>
+  <data name="m_numbersChosenLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_numbersChosenLabel.Text" xml:space="preserve">
+    <value>0 / 0 Numbers Chosen</value>
+  </data>
+  <data name="m_numbersChosenLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;m_numbersChosenLabel.Name" xml:space="preserve">
+    <value>m_numbersChosenLabel</value>
+  </data>
+  <data name="&gt;&gt;m_numbersChosenLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_numbersChosenLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_numbersChosenLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_currentCardLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="m_currentCardLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_currentCardLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 20</value>
+  </data>
+  <data name="m_currentCardLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 23</value>
+  </data>
+  <data name="m_currentCardLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_currentCardLabel.Text" xml:space="preserve">
+    <value>Card 0 / 0</value>
+  </data>
+  <data name="m_currentCardLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;m_currentCardLabel.Name" xml:space="preserve">
+    <value>m_currentCardLabel</value>
+  </data>
+  <data name="&gt;&gt;m_currentCardLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_currentCardLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_currentCardLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="m_nextCardButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_nextCardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_nextCardButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>937, 75</value>
+  </data>
+  <data name="m_nextCardButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_nextCardButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_nextCardButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;m_nextCardButton.Name" xml:space="preserve">
+    <value>m_nextCardButton</value>
+  </data>
+  <data name="&gt;&gt;m_nextCardButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_nextCardButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_nextCardButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="m_prevCardButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_prevCardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_prevCardButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 75</value>
+  </data>
+  <data name="m_prevCardButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_prevCardButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_prevCardButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_prevCardButton.Name" xml:space="preserve">
+    <value>m_prevCardButton</value>
+  </data>
+  <data name="&gt;&gt;m_prevCardButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_prevCardButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_prevCardButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="m_clearAllButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_clearAllButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_clearAllButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 694</value>
+  </data>
+  <data name="m_clearAllButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_clearAllButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_clearAllButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_clearAllButton.Text" xml:space="preserve">
+    <value>Clear All Cards</value>
+  </data>
+  <data name="&gt;&gt;m_clearAllButton.Name" xml:space="preserve">
+    <value>m_clearAllButton</value>
+  </data>
+  <data name="&gt;&gt;m_clearAllButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_clearAllButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_clearAllButton.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="m_cancelButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_cancelButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>862, 694</value>
+  </data>
+  <data name="m_cancelButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;m_cancelButton.Name" xml:space="preserve">
+    <value>m_cancelButton</value>
+  </data>
+  <data name="&gt;&gt;m_cancelButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_cancelButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_cancelButton.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="m_finishedButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_finishedButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_finishedButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 694</value>
+  </data>
+  <data name="m_finishedButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_finishedButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_finishedButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_finishedButton.Text" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="&gt;&gt;m_finishedButton.Name" xml:space="preserve">
+    <value>m_finishedButton</value>
+  </data>
+  <data name="&gt;&gt;m_finishedButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1033, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_finishedButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_finishedButton.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="m_panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="m_panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Name" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Crystal Ball Hand Pick</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Name" xml:space="preserve">
+    <value>m_kioskIdleTimer</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CrystalBallHandPickForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GTI.Modules.POS.UI.POSForm, POS, Version=1.11.0.2, Culture=neutral, PublicKeyToken=5016b6e2829afc8a</value>
+  </data>
+</root>

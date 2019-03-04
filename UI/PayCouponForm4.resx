@@ -1,0 +1,862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTaxedCouponTotals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTaxedCouponTotals.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTaxedCouponTotals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 55</value>
+  </data>
+  <data name="lblTaxedCouponTotals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 18</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTaxedCouponTotals.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblTaxedCouponTotals.Text" xml:space="preserve">
+    <value>-$50.00</value>
+  </data>
+  <data name="lblTaxedCouponTotals.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponTotals.Name" xml:space="preserve">
+    <value>lblTaxedCouponTotals</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponTotals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponTotals.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponTotals.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblTaxedCouponLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTaxedCouponLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblTaxedCouponLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTaxedCouponLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 53</value>
+  </data>
+  <data name="lblTaxedCouponLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lblTaxedCouponLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblTaxedCouponLabel.Text" xml:space="preserve">
+    <value>Coupons:</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponLabel.Name" xml:space="preserve">
+    <value>lblTaxedCouponLabel</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblTaxedCouponLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDevice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>764, 108</value>
+  </data>
+  <data name="lblDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 23</value>
+  </data>
+  <data name="lblDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblDevice.Text" xml:space="preserve">
+    <value>Traveler II</value>
+  </data>
+  <data name="&gt;&gt;lblDevice.Name" xml:space="preserve">
+    <value>lblDevice</value>
+  </data>
+  <data name="&gt;&gt;lblDevice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDevice.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblDevice.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblStatus.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 14.25pt, style=Bold</value>
+  </data>
+  <data name="lblStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 246</value>
+  </data>
+  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 134</value>
+  </data>
+  <data name="lblStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>Coupon value exceeds
+the total sale value.</value>
+  </data>
+  <data name="lblStatus.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Name" xml:space="preserve">
+    <value>lblStatus</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 138</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 18</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.Text" xml:space="preserve">
+    <value>-$50.00</value>
+  </data>
+  <data name="lblNonTaxedCouponTotals.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponTotals.Name" xml:space="preserve">
+    <value>lblNonTaxedCouponTotals</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponTotals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponTotals.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponTotals.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 136</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblNonTaxedCouponLabel.Text" xml:space="preserve">
+    <value>Coupons:</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponLabel.Name" xml:space="preserve">
+    <value>lblNonTaxedCouponLabel</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblNonTaxedCouponLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>903, 178</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 16</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>____________</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblTaxesAndFees.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblTaxesAndFees.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTaxesAndFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>835, 84</value>
+  </data>
+  <data name="lblTaxesAndFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 18</value>
+  </data>
+  <data name="lblTaxesAndFees.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblTaxesAndFees.Text" xml:space="preserve">
+    <value>$1.00</value>
+  </data>
+  <data name="lblTaxesAndFees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblTaxesAndFees.Name" xml:space="preserve">
+    <value>lblTaxesAndFees</value>
+  </data>
+  <data name="&gt;&gt;lblTaxesAndFees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTaxesAndFees.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblTaxesAndFees.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblTotal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblTotal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>787, 200</value>
+  </data>
+  <data name="lblTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 18</value>
+  </data>
+  <data name="lblTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblTotal.Text" xml:space="preserve">
+    <value>$5.00</value>
+  </data>
+  <data name="lblTotal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblTotal.Name" xml:space="preserve">
+    <value>lblTotal</value>
+  </data>
+  <data name="&gt;&gt;lblTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTotal.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblTotal.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblOrderSubTotals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblOrderSubTotals.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblOrderSubTotals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 23</value>
+  </data>
+  <data name="lblOrderSubTotals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 18</value>
+  </data>
+  <data name="lblOrderSubTotals.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblOrderSubTotals.Text" xml:space="preserve">
+    <value>$5.00</value>
+  </data>
+  <data name="lblOrderSubTotals.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblOrderSubTotals.Name" xml:space="preserve">
+    <value>lblOrderSubTotals</value>
+  </data>
+  <data name="&gt;&gt;lblOrderSubTotals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOrderSubTotals.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;lblOrderSubTotals.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 85</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 18</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Taxes/Fees:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 200</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 21</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 18</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Subtotal:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="FinishSaleButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 18pt, style=Bold</value>
+  </data>
+  <data name="FinishSaleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>830, 690</value>
+  </data>
+  <data name="FinishSaleButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="FinishSaleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 57</value>
+  </data>
+  <data name="FinishSaleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="FinishSaleButton.Text" xml:space="preserve">
+    <value>&amp;Continue</value>
+  </data>
+  <data name="&gt;&gt;FinishSaleButton.Name" xml:space="preserve">
+    <value>FinishSaleButton</value>
+  </data>
+  <data name="&gt;&gt;FinishSaleButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;FinishSaleButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;FinishSaleButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ContinueSaleButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt, style=Bold</value>
+  </data>
+  <data name="ContinueSaleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ContinueSaleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>731, 690</value>
+  </data>
+  <data name="ContinueSaleButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="ContinueSaleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 57</value>
+  </data>
+  <data name="ContinueSaleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ContinueSaleButton.Name" xml:space="preserve">
+    <value>ContinueSaleButton</value>
+  </data>
+  <data name="&gt;&gt;ContinueSaleButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;ContinueSaleButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;ContinueSaleButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CompName.Text" xml:space="preserve">
+    <value>       Coupon</value>
+  </data>
+  <data name="CompName.Width" type="System.Int32, mscorlib">
+    <value>380</value>
+  </data>
+  <data name="CompExprDate.Text" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="CompExprDate.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="CompValue.Text" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="CompValue.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="CompValue.Width" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="CouponListDownButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CouponListDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 313</value>
+  </data>
+  <data name="CouponListDownButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="CouponListDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="CouponListDownButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;CouponListDownButton.Name" xml:space="preserve">
+    <value>CouponListDownButton</value>
+  </data>
+  <data name="&gt;&gt;CouponListDownButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;CouponListDownButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;CouponListDownButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gtiListViewPlayerCoupon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 14.25pt</value>
+  </data>
+  <data name="gtiListViewPlayerCoupon.LabelWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gtiListViewPlayerCoupon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 74</value>
+  </data>
+  <data name="gtiListViewPlayerCoupon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>626, 678</value>
+  </data>
+  <data name="gtiListViewPlayerCoupon.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="CouponListUpButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CouponListUpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 135</value>
+  </data>
+  <data name="CouponListUpButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="CouponListUpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="CouponListUpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;CouponListUpButton.Name" xml:space="preserve">
+    <value>CouponListUpButton</value>
+  </data>
+  <data name="&gt;&gt;CouponListUpButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;CouponListUpButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;CouponListUpButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gtiListViewPlayerCoupon.Name" xml:space="preserve">
+    <value>gtiListViewPlayerCoupon</value>
+  </data>
+  <data name="&gt;&gt;gtiListViewPlayerCoupon.Type" xml:space="preserve">
+    <value>GTI.Controls.GTIListView, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;gtiListViewPlayerCoupon.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;gtiListViewPlayerCoupon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="m_kioskIdleTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="m_timeoutProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 755</value>
+  </data>
+  <data name="m_timeoutProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>625, 10</value>
+  </data>
+  <data name="m_timeoutProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="m_timeoutProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Name" xml:space="preserve">
+    <value>m_timeoutProgress</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="m_panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="m_panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Name" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Type" xml:space="preserve">
+    <value>GTI.Controls.EliteGradientPanel, GTIControls, Version=1.3.11.925, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPrepaidLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrepaidLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblPrepaidLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrepaidLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 168</value>
+  </data>
+  <data name="lblPrepaidLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 18</value>
+  </data>
+  <data name="lblPrepaidLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblPrepaidLabel.Text" xml:space="preserve">
+    <value>Prepaid:</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaidLabel.Name" xml:space="preserve">
+    <value>lblPrepaidLabel</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaidLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaidLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaidLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPrepaid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblPrepaid.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrepaid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 168</value>
+  </data>
+  <data name="lblPrepaid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 18</value>
+  </data>
+  <data name="lblPrepaid.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblPrepaid.Text" xml:space="preserve">
+    <value>-$5.00</value>
+  </data>
+  <data name="lblPrepaid.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaid.Name" xml:space="preserve">
+    <value>lblPrepaid</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPrepaid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Redeem Comps</value>
+  </data>
+  <data name="&gt;&gt;CompName.Name" xml:space="preserve">
+    <value>CompName</value>
+  </data>
+  <data name="&gt;&gt;CompName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CompExprDate.Name" xml:space="preserve">
+    <value>CompExprDate</value>
+  </data>
+  <data name="&gt;&gt;CompExprDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CompValue.Name" xml:space="preserve">
+    <value>CompValue</value>
+  </data>
+  <data name="&gt;&gt;CompValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Name" xml:space="preserve">
+    <value>m_kioskIdleTimer</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PayCouponForm4</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GTI.Modules.Shared.EliteGradientForm, ManagedEliteModule, Version=1.3.42.925, Culture=neutral, PublicKeyToken=f7ab3ec26b04c7cf</value>
+  </data>
+</root>

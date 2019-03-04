@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project version='8' encrypted='1'>
+	<steps type='0'>
+		<step action='Group'>
+			<condexpr>%POS_BUILD%</condexpr>
+			<name>POS</name>
+		</step>
+		<step action='Make VS 2010'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|x86</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\POS\POS.sln</Filename>
+			<Force type='3'>1</Force>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%RELEASE_BUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Build POS (Release)</name>
+		</step>
+		<step action='Make VS 2010'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|x86</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\POS\POS.sln</Filename>
+			<Force type='3'>1</Force>
+			<VersionSel type='3'>1</VersionSel>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%RELEASE_BUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Build POS (Buddy Build)</name>
+		</step>
+		<step action='Delete Folder'>
+			<Path>%BUILD_PATH%\Client\POS\Latest</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\POS\Latest</DestDir>
+			<Ext>*.dll</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\POS\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\POS\Latest\PDB</DestDir>
+			<Ext>*.PDB</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\POS\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<description>Copy the Program Database files to the latest pdb folder</description>
+			<indent type='3'>1</indent>
+			<name>Copy PDB files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\POS\Latest</DestDir>
+			<Ext>*.ttf</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\POS\</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Font To Latest Folder</name>
+		</step>
+		<step action='Run Program'>
+			<command>%PACKAGER% "%SRC_ROOT%\Dev\ClientModules\POS\POS.gtp" -generate</command>
+			<indent type='3'>1</indent>
+			<name>Run Packager</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%SRC_ROOT%\Dev\ClientModules\POS\</startin>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\POS\Latest</DestDir>
+			<Ext>*.gtipackage</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<Move type='11'>-1</Move>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\POS\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Move Package To Latest</name>
+		</step>
+		<step action='VS.NET Get Version'>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\POS\POS.csproj</Filename>
+			<indent type='3'>1</indent>
+			<name>Get POS Version Number</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\POS\%VSNET_ASSEM_VER%</DestDir>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%BUILD_PATH%\Client\POS\Latest</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Version Folder</name>
+		</step>
+		<step action='Group'>
+			<name>Player Center</name>
+		</step>
+		<step action='Delete Folder'>
+			<Path>%BUILD_PATH%\Client\Player Center\Latest</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Player Center\Latest</DestDir>
+			<ExclExt>EliteMCPLib.dll</ExclExt>
+			<Ext>*.dll</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\PlayerCenter\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Player Center\Latest\PDB</DestDir>
+			<Ext>*.PDB</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\PlayerCenter\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<description>Copy the Program Database files to the latest pdb folder</description>
+			<indent type='3'>1</indent>
+			<name>Copy PDB files To Latest Folder</name>
+		</step>
+		<step action='Run Program'>
+			<command>%PACKAGER% "%SRC_ROOT%\Dev\ClientModules\PlayerCenter\PlayerCenter.gtp" -generate</command>
+			<indent type='3'>1</indent>
+			<name>Run Packager</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%SRC_ROOT%\Dev\ClientModules\PlayerCenter\</startin>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Player Center\Latest</DestDir>
+			<Ext>*.gtipackage</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<Move type='11'>-1</Move>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\PlayerCenter\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Move Package To Latest</name>
+		</step>
+		<step action='VS.NET Get Version'>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\PlayerCenter\PlayerCenter.csproj</Filename>
+			<indent type='3'>1</indent>
+			<name>Get Player Center Version Number</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Player Center\%VSNET_ASSEM_VER%</DestDir>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%BUILD_PATH%\Client\Player Center\Latest</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Version Folder</name>
+		</step>
+		<step action='Group'>
+			<name>Receipt Management</name>
+		</step>
+		<step action='Delete Folder'>
+			<Path>%BUILD_PATH%\Client\Receipt Management\Latest</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Receipt Management\Latest</DestDir>
+			<ExclExt>EliteMCPLib.dll</ExclExt>
+			<Ext>*.dll</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Receipt Management\Latest\PDB</DestDir>
+			<Ext>*.PDB</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<description>Copy the Program Database files to the latest pdb folder</description>
+			<indent type='3'>1</indent>
+			<name>Copy PDB files To Latest Folder</name>
+		</step>
+		<step action='Run Program'>
+			<command>%PACKAGER% "%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\ReceiptMgmt.gtp" -generate</command>
+			<indent type='3'>1</indent>
+			<name>Run Packager</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\</startin>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Receipt Management\Latest</DestDir>
+			<Ext>*.gtipackage</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<Move type='11'>-1</Move>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Move Package To Latest</name>
+		</step>
+		<step action='VS.NET Get Version'>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\ReceiptMgmt\ReceiptMgmt.csproj</Filename>
+			<indent type='3'>1</indent>
+			<name>Get Reciept Management Version Number</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Receipt Management\%VSNET_ASSEM_VER%</DestDir>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%BUILD_PATH%\Client\Receipt Management\Latest</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Version Folder</name>
+		</step>
+		<step action='Group'>
+			<name>Unit Management</name>
+		</step>
+		<step action='Delete Folder'>
+			<Path>%BUILD_PATH%\Client\Unit Management\Latest</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Unit Management\Latest</DestDir>
+			<ExclExt>EliteMCPLib.dll</ExclExt>
+			<Ext>*.dll</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Unit Management\Latest\PDB</DestDir>
+			<Ext>*.PDB</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<description>Copy the Program Database files to the latest pdb folder</description>
+			<indent type='3'>1</indent>
+			<name>Copy PDB files To Latest Folder</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Unit Management\Latest</DestDir>
+			<Ext>*.ttf</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Font To Latest Folder</name>
+		</step>
+		<step action='Run Program'>
+			<command>%PACKAGER% "%SRC_ROOT%\Dev\ClientModules\UnitMgmt\UnitMgmt.gtp" -generate</command>
+			<indent type='3'>1</indent>
+			<name>Run Packager</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\</startin>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Unit Management\Latest</DestDir>
+			<Ext>*.gtipackage</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<Move type='11'>-1</Move>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\bin\Release</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Move Package To Latest</name>
+		</step>
+		<step action='VS.NET Get Version'>
+			<Filename>%SRC_ROOT%\Dev\ClientModules\UnitMgmt\UnitMgmt.csproj</Filename>
+			<indent type='3'>1</indent>
+			<name>Get Unit Management Version Number</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BUILD_PATH%\Client\Unit Management\%VSNET_ASSEM_VER%</DestDir>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<Retries>10</Retries>
+			<SourceDir>%BUILD_PATH%\Client\Unit Management\Latest</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<indent type='3'>1</indent>
+			<name>Copy Files To Version Folder</name>
+		</step></steps>
+	<steps type='2'>
+		<step action='Send Mail'>
+			<From>AutoBuild@gtiemail.com</From>
+			<HTML type='11'>-1</HTML>
+			<Message><![CDATA[An unexpected error occured while building the project: <br /> <br />
+
+<b>Failstep Name:</b> <br />
+%FAILSTEP_NAME%<br /> <br />
+
+<b>Failstep Output:</b> <br />
+%FAILSTEP_OUTPUT%<br /> <br />
+
+<b>Failstep Status:</b> <br />
+%FAILSTEP_STATUS%<br /> <br />
+
+<b>Previous Step:</b> <br />
+%LASTSTEP_NAME%<br /> <br />]]></Message>
+			<Password encrypted='1'>TM3DPOg8beGBari4q6E=</Password>
+			<Priority type='3'>1</Priority>
+			<Server>OCEANUS.GameTech-Reno.com</Server>
+			<Subject>Build Machine: Error Occured</Subject>
+			<Timeout>30</Timeout>
+			<To>%TO_EMAIL%</To>
+			<UserName>AutoBuild</UserName>
+			<name>Send Error E-Mail</name>
+		</step></steps>
+</project>

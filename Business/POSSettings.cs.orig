@@ -1,0 +1,2054 @@
+#region Copyright
+// This is an unpublished work protected under the copyright laws of the
+// United States and other countries.  All rights reserved.  Should
+// publication occur the following will apply:  © 2013 FortuNet, Inc.
+//
+// US2828 Adding support for allowing the user to set
+//  an active session for sales
+// US4028 Adding support for checking card counts when each product is
+//  added
+//US4338: (US1592) POS: Redeem B3 Receipt requires to get B3 settings for double account flag
+#endregion
+
+using System;
+using System.Globalization;
+using GTI.Modules.Shared;
+using GTI.Modules.POS.Data;
+using GTI.Modules.POS.Properties;
+
+namespace GTI.Modules.POS.Business
+{
+    /// <summary>
+    /// Contains all the different settings for the POS module.
+    /// </summary>
+    internal class POSSettings
+    {
+        #region Member Variables
+        protected object m_syncRoot = new object();
+        protected DisplayMode m_displayMode;
+        protected SentinelPair[] m_sentinels;
+        protected bool m_showCursor;
+        protected string m_receiptPrinterName;
+        protected byte[] m_drawerCode;
+        protected string m_crateServerName;
+        protected TenderSalesMode m_tender;
+        protected string m_dbServer;
+        protected string m_dbName;
+        protected string m_dbUser;
+        protected string m_dbPassword;
+        protected bool m_forceEnglish;
+        private bool m_swipeEntersRaffle; // Rally US658
+        protected bool m_enableLogging;
+        protected int m_cbbScannerPort;
+        protected string m_cbbSheetDef;
+        protected bool m_cbbEnableFavorites; //US2418
+        protected bool m_allowNoSale;
+        protected bool m_allowReturns;
+        protected bool m_printNonElecReceipt;
+        protected bool m_promptForPlayerCreation; // PDTS 1044
+        protected CBBPlayItSheetType m_cbbPlayItSheetType; // Rally US505 - Create the ability to sell CBB cards.
+        protected bool m_printFacesToGlobalPrinter;
+        protected string m_printerName;
+        protected float m_cardFacePointSize;
+        protected bool m_printPlayerPoints;
+        protected bool m_printSignatureLine;
+        protected CBBPlayItSheetPrintMode m_cbbPlayItSheetPrintMode; // Rally US505
+        protected bool m_allowElectronicSales;
+        protected short m_receiptCopies = 1;
+        protected string m_receiptDisclaimer1;
+        protected string m_receiptDisclaimer2;
+        protected string m_receiptDisclaimer3;
+        protected int m_loggingLevel;
+        protected int m_fileLogRecycleDays;
+        protected string m_clientInstallDrive;
+        protected string m_clientInstallRootDir;
+        protected bool m_allowUnitCrossTransfers;
+        protected bool m_enableUnitAssignment; // TTP 50114
+        protected bool m_creditEnabled; // TTP 50138, TA7897
+        protected bool m_enableAnonymousMachineAccounts; // TTP 50114
+        protected bool m_printStaffFirstNameOnly; // TTP 50097
+        protected short m_payoutReceiptCopies = 2; // TTP 50114
+        protected bool m_allowQuantitySale; // PDTS 571
+        protected bool m_printQuantitySaleReceipts; // PDTS 571
+        protected int m_maxPlayerQuantitySale; // PDTS 571
+        protected bool m_printProductNames; // PDTS 964
+        protected bool m_mainStageMode; // PDTS 964
+        protected MagneticCardReaderMode m_magCardMode; // PDTS 1064
+        protected string m_magCardModeSettings; // PDTS 1064
+        protected bool m_stripNonAlphanumeric; // Rally DE130
+        protected BingoPlayType m_playType = BingoPlayType.Bingo; // Rally US419 - Display BINGO or LOTTO on all applicable elements on screen.
+        protected bool m_usePrePrintedPacks; // Rally US510
+        protected bool m_playWithPaper; // Rally TA5748
+        protected bool m_forcePacksToPlayer; // Rally TA6050 - Allow not forcing a pack to a player.
+        protected bool m_allowSpecialGames; // Rally TA6385
+        // FIX: TA4779
+        protected int m_maxCardLimit;
+        protected bool m_printCardFaces;
+        protected PrintCardNumberMode m_printCardNumbers; // Rally TA5749
+        protected string m_receiptHeaderLine1;
+        protected string m_receiptHeaderLine2;
+        protected string m_receiptHeaderLine3;
+        protected string m_receiptFooterLine1;
+        protected string m_receiptFooterLine2;
+        protected string m_receiptFooterLine3;
+        // END: TA4779
+        protected bool m_cbbEnabled; // Rally TA7897
+        protected bool m_cbbQuickPickEnabled; // FIX: DE4052 - Don't show quick picks if disabled in the license file.
+        protected bool m_multiCurrency; // Rally TA7465
+        protected bool m_useExchangeRateOnSale; // Rally US1658
+        protected bool m_enableRegisterClosingReport; // Rally US1650
+        protected MinimumSaleAllowed m_minimumSaleAllowed = MinimumSaleAllowed.All; // Rally US1854
+        protected bool m_usePasswordKeypad; // US2057
+        protected bool m_printPtsRedeemed; // US2139
+        protected bool m_printRegisterSalesByPackage; // US1808
+        protected bool m_hasFixed;
+        protected bool m_hasTraveler;
+        protected bool m_hasTracker;
+        protected bool m_hasExplorer; // Rally TA7729
+        protected bool m_hasTraveler2; // PDTS 964, Rally US765
+        protected bool m_hasTablet; // US2908
+        protected short m_travelerMaxCards;
+        protected short m_trackerMaxCards;
+        protected short m_fixedMaxCards;
+        protected short m_explorerMaxCards; // Rally TA7729
+        protected short m_traveler2MaxCards; // PDTS 964, Rally US765
+        protected decimal m_taxRate; // FIX: DE1938
+        protected bool m_enableActiveSession; // US2828 
+        protected bool m_checkProductCardCount;  //4028
+        protected bool m_isCouponManagement;
+        protected bool m_rCouponTaxable; 
+        protected int m_playerPinLength;
+        protected bool m_northDakotaSalesMode;
+        protected bool m_enableB3Management; //US4380
+        protected bool m_enableProductValidation;//US3509
+        protected int m_productValidationCardCount;//US3509
+        protected int m_productValidationMaxQuantity;//US3509
+        protected bool m_autoIssueBank;
+        #endregion
+
+        #region Member Methods
+        /// <summary>
+        /// Parses a setting from the server and loads it into the 
+        /// POSSettings, if valid.
+        /// </summary>
+        /// <param name="setting">The setting to parse.</param>
+        public void LoadSetting(SettingValue setting)
+        {
+            Setting param = (Setting)setting.Id;
+
+            try
+            {
+                switch(param)
+                {
+                    case Setting.MagneticCardSentinels:
+                        m_sentinels = SentinelPair.CreatePairs(setting.Value);
+                        
+                        // TTP 50351
+                        if(m_sentinels == null || m_sentinels.Length == 0)
+                            throw new ArgumentException();
+
+                        break;
+
+                    case Setting.ShowMouseCursor:
+                        m_showCursor = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.POSReceiptPrinterName:
+                        m_receiptPrinterName = setting.Value;
+                        break;
+
+                    case Setting.CashDrawerEjectCode:
+                        string[] codes = setting.Value.Split(new char[] { ',' });
+
+                        if(codes != null && codes.Length > 0)
+                        {
+                            m_drawerCode = new byte[codes.Length];
+
+                            for(int x = 0; x < codes.Length; x++)
+                            {
+                                try
+                                {
+                                    m_drawerCode[x] = Convert.ToByte(codes[x], CultureInfo.InvariantCulture);
+                                }
+                                catch(FormatException)
+                                {
+                                    m_drawerCode = new byte[0];
+                                    break;
+                                }
+                                catch(OverflowException)
+                                {
+                                    m_drawerCode = new byte[0];
+                                    break;
+                                }
+                            }
+                        }
+                        else // PDTS 584
+                            m_drawerCode = new byte[0];
+
+                        break;
+
+                    case Setting.CrateServerAddress:
+                        m_crateServerName = setting.Value;
+                        break;
+
+                    case Setting.TenderSales:
+                        // TTP 50114
+                        m_tender = (TenderSalesMode)Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+
+                        if(!Enum.IsDefined(typeof(TenderSalesMode), m_tender))
+                            throw new ArgumentException();
+
+                        break;
+
+                    case Setting.DatabaseServer:
+                        m_dbServer = setting.Value;
+                        break;
+
+                    case Setting.DatabaseName:
+                        m_dbName = setting.Value;
+                        break;
+
+                    case Setting.DatabaseUser:
+                        m_dbUser = setting.Value;
+                        break;
+
+                    case Setting.DatabasePassword:
+                        m_dbPassword = setting.Value;
+                        break;
+
+                    case Setting.ForceEnglish:
+                        m_forceEnglish = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally US658
+                    case Setting.SwipeEntersRaffle:
+                        m_swipeEntersRaffle = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.EnableLogging:
+                        m_enableLogging = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.CBBScannerPort:
+                        m_cbbScannerPort = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.CBBSheetDefinition:
+                        m_cbbSheetDef = setting.Value;
+                        break;
+
+                    case Setting.EnableCBBFavorites:
+                        m_cbbEnableFavorites = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.OpAllowNoSale:
+                        m_allowNoSale = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.OpAllowReturns:
+                        m_allowReturns = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // PDTS 1044
+                    case Setting.PromptForPlayerCreation:
+                        m_promptForPlayerCreation = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally US505
+                    case Setting.CBBPlayItSheetType:
+                        m_cbbPlayItSheetType = (CBBPlayItSheetType)Enum.Parse(typeof(CBBPlayItSheetType), setting.Value);
+                        break;
+
+                    case Setting.PrintNonElectronicReceipts:
+                        m_printNonElecReceipt = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintFacesToGlobalPrinter:
+                        m_printFacesToGlobalPrinter = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.GlobalPrinterName:
+                        m_printerName = setting.Value;
+                        break;
+
+                    case Setting.CardFacePointSize:
+                        m_cardFacePointSize = Convert.ToSingle(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintPointInfo:
+                        m_printPlayerPoints = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintPlayerSignatureLine:
+                        m_printSignatureLine = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // PDTS 536
+                    // Rally US505
+                    case Setting.PrintCBBCardsToPlayItSheet:
+                        m_cbbPlayItSheetPrintMode = (CBBPlayItSheetPrintMode)Enum.Parse(typeof(CBBPlayItSheetPrintMode), setting.Value);
+                        break;
+
+                    case Setting.SellElectronics:
+                        m_allowElectronicSales = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintRegisterReceiptsNumber:
+                        m_receiptCopies = Convert.ToInt16(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.DisclaimerLine1:
+                        m_receiptDisclaimer1 = setting.Value;
+                        break;
+
+                    case Setting.DisclaimerLine2:
+                        m_receiptDisclaimer2 = setting.Value;
+                        break;
+
+                    case Setting.DisclaimerLine3:
+                        m_receiptDisclaimer3 = setting.Value;
+                        break;
+
+                    case Setting.LoggingLevel:
+                        m_loggingLevel = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.LogRecycleDays:
+                        m_fileLogRecycleDays = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.ClientInstallDrive:
+                        m_clientInstallDrive = setting.Value;
+                        break;
+
+                    case Setting.ClientInstallRootDirectory:
+                        m_clientInstallRootDir = setting.Value;
+                        break;
+
+                    case Setting.AllowUnitCrossTransfers:
+                        m_allowUnitCrossTransfers = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    
+                    // TTP 50114
+                    case Setting.EnableUnitAssignment:
+                        m_enableUnitAssignment = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // TTP 50097
+                    case Setting.PrintStaffFirstNameOnly:
+                        m_printStaffFirstNameOnly = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // TTP 50114
+                    case Setting.NumberOfPayoutReceipts:
+                        m_payoutReceiptCopies = Convert.ToInt16(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                        
+                    // PDTS 571
+                    case Setting.AllowQuantitySale:
+                        m_allowQuantitySale = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintQuantitySaleReceipts:
+                        m_printQuantitySaleReceipts = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.MaxPlayerQuantitySale:
+                        m_maxPlayerQuantitySale = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // PDTS 964
+                    case Setting.PrintProductNames:
+                        m_printProductNames = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // PDTS 1064
+                    case Setting.MagneticCardReaderMode:
+                        m_magCardMode = (MagneticCardReaderMode)Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+
+                        if(!Enum.IsDefined(typeof(MagneticCardReaderMode), m_magCardMode))
+                            throw new ArgumentException();
+
+                        break;
+
+                    case Setting.MagneticCardReaderParameters:
+                        m_magCardModeSettings = setting.Value;
+                        break;
+
+                    // Rally DE130
+                    case Setting.StripNonAlphanumeric:
+                        m_stripNonAlphanumeric = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally US419
+                    case Setting.PlayType:
+                        m_playType = (BingoPlayType)Enum.Parse(typeof(BingoPlayType), setting.Value, true);
+                        break;
+
+                    // FIX: TA4779
+                    case Setting.MaxCardLimit:
+                        m_maxCardLimit = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.PrintCardFaces:
+                        m_printCardFaces = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally TA5749
+                    case Setting.PrintCardNumbers:
+                        m_printCardNumbers = (PrintCardNumberMode)Enum.Parse(typeof(PrintCardNumberMode), setting.Value, true);
+                        break;
+                    // END: TA5749
+
+                    case Setting.ReceiptHeaderLine1:
+                        m_receiptHeaderLine1 = setting.Value;
+                        break;
+
+                    case Setting.ReceiptHeaderLine2:
+                        m_receiptHeaderLine2 = setting.Value;
+                        break;
+
+                    case Setting.ReceiptHeaderLine3:
+                        m_receiptHeaderLine3 = setting.Value;
+                        break;
+
+                    case Setting.ReceiptFooterLine1:
+                        m_receiptFooterLine1 = setting.Value;
+                        break;
+
+                    case Setting.ReceiptFooterLine2:
+                        m_receiptFooterLine2 = setting.Value;
+                        break;
+
+                    case Setting.ReceiptFooterLine3:
+                        m_receiptFooterLine3 = setting.Value;
+                        break;
+                    // END: TA4779
+
+                    // Rally TA6050
+                    case Setting.ForcePackToPlayer:
+                        m_forcePacksToPlayer = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    // END: TA6050
+
+                    // Rally US1658
+                    case Setting.UseExchangeRateOnSale:
+                        m_useExchangeRateOnSale = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally US1650
+                    case Setting.EnableRegisterClosingReport:
+                        m_enableRegisterClosingReport = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // Rally US1854
+                    case Setting.MinimumSaleAllowed:
+                        m_minimumSaleAllowed = (MinimumSaleAllowed)Enum.Parse(typeof(MinimumSaleAllowed), setting.Value, true);
+                        break;
+
+                    // US2057
+                    case Setting.UsePasswordKeypad:
+                        m_usePasswordKeypad = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // US2139
+                    case Setting.PrintPointsRedeemed:
+                        m_printPtsRedeemed = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    // US1808
+                    case Setting.PrintRegisterReportByPackage:
+                        m_printRegisterSalesByPackage = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    //US2828
+                    case Setting.EnableActiveSalesSession:
+                        m_enableActiveSession = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    //US4028
+                    case Setting.CheckProductCardCount:
+                        m_checkProductCardCount = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case Setting.EnableCouponManagement:
+                        m_isCouponManagement = Convert.ToBoolean(setting.Value);
+                        break;
+
+                    case Setting.AreCouponsTaxable:
+                        m_rCouponTaxable = Convert.ToBoolean(setting.Value);
+                        break;
+
+                    //US 4120
+                    case Setting.PlayerPinLength:
+                        m_playerPinLength = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    case Setting.EnableValidation: //US3509
+                        EnabledProductValidation = Convert.ToBoolean(setting.Value);
+                        break;
+                    case Setting.ProductValidationCardCount: //US3509
+                        ProductValidationCardCount = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    case Setting.MaxValidationPerTransaction: //US3509
+                        ProductValidationMaxQuantity = Convert.ToInt32(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    case Setting.AutoIssueBank: // US4434
+                        AutoIssueBank = Convert.ToBoolean(setting.Value);
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                throw new POSException(string.Format(CultureInfo.CurrentCulture, Resources.InvalidSetting, setting.Id, setting.Value), e);
+            }
+        }
+
+        // Rally TA7897
+        /// <summary>
+        /// Parses a license setting from the server and loads it into the 
+        /// POSSettings, if valid.
+        /// </summary>
+        /// <param name="setting">The license setting to parse.</param>
+        public void LoadSetting(LicenseSettingValue setting)
+        {
+            LicenseSetting param = (LicenseSetting)setting.Id;
+
+            try
+            {
+                switch(param)
+                {
+                    case LicenseSetting.EnableAnonymousMachineAccounts:
+                        m_enableAnonymousMachineAccounts = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.MainStageMode:
+                        m_mainStageMode = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.CreditEnabled:
+                        m_creditEnabled = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.UsePrePrintedPacks:
+                        m_usePrePrintedPacks = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.PlayWithPaper:
+                        m_playWithPaper = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.AllowMelangeSpecialGames:
+                        m_allowSpecialGames = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.CBBEnabled:
+                        m_cbbEnabled = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.QuickPickEnabled:
+                        m_cbbQuickPickEnabled = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+
+                    case LicenseSetting.NDSalesMode:
+                        m_northDakotaSalesMode = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                    case LicenseSetting.EnableB3Management:
+                        m_enableB3Management = Convert.ToBoolean(setting.Value, CultureInfo.InvariantCulture);
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                throw new POSException(string.Format(CultureInfo.CurrentCulture, Resources.InvalidSetting, setting.Id, setting.Value), e);
+            }
+        }
+
+        public void LoadB3Settings(B3GetSettingsMessage msg)
+        {
+            B3IsMultiOperator = msg.IsMultiOperator;
+            B3IsCommonRng = msg.IsCommonRng;
+            B3AllowInSessBallChange = msg.AllowInSessBallChange;
+            B3EnforceMix = msg.EnforceMix;
+            B3IsDoubleAccount = msg.IsDoubleAccount;
+        }
+
+        #endregion
+
+        #region Member Properties
+        /// <summary>
+        /// Gets an object that can be used to synchronize access to 
+        /// the settings.
+        /// </summary>
+        public object SyncRoot
+        {
+            get
+            {
+                return m_syncRoot;
+            }
+        }
+        
+        /// <summary>
+        /// Gets or sets the display mode to use for user interfaces.
+        /// </summary>
+        public DisplayMode DisplayMode
+        {
+            get
+            {
+                return m_displayMode;
+            }
+            set
+            {
+                m_displayMode = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets the acceptable magnetic card sentinel character pairs.
+        /// </summary>
+        public SentinelPair[] Sentinels
+        {
+            get
+            {
+                return m_sentinels;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to show the mouse cursor.
+        /// </summary>
+        public bool ShowCursor
+        {
+            get
+            {
+                return m_showCursor;
+            }
+            set
+            {
+                m_showCursor = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the name of the global receipt printer to use.
+        /// </summary>
+        public string ReceiptPrinterName
+        {
+            get
+            {
+                return m_receiptPrinterName;
+            }
+            set
+            {
+                m_receiptPrinterName = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the bytes to send to the printer to open the 
+        /// cash drawer.
+        /// </summary>
+        public byte[] DrawerCode
+        {
+            get
+            {
+                return m_drawerCode;
+            }
+            set
+            {
+                m_drawerCode = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the name of the remote crate server to use.
+        /// </summary>
+        public string CrateServerName
+        {
+            get
+            {
+                return m_crateServerName;
+            }
+            set
+            {
+                m_crateServerName = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to tender sales.
+        /// </summary>
+        public TenderSalesMode Tender
+        {
+            get
+            {
+                return m_tender;
+            }
+            set
+            {
+                m_tender = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the database server name to use for reports.
+        /// </summary>
+        public string DatabaseServer
+        {
+            get
+            {
+                return m_dbServer;
+            }
+            set
+            {
+                m_dbServer = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the database name to use for reports.
+        /// </summary>
+        public string DatabaseName
+        {
+            get
+            {
+                return m_dbName;
+            }
+            set
+            {
+                m_dbName = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the database user to use for reports.
+        /// </summary>
+        public string DatabaseUser
+        {
+            get
+            {
+                return m_dbUser;
+            }
+            set
+            {
+                m_dbUser = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the database password to use for reports.
+        /// </summary>
+        public string DatabasePassword
+        {
+            get
+            {
+                return m_dbPassword;
+            }
+            set
+            {
+                m_dbPassword = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to force the program to display in the 
+        /// English language.
+        /// </summary>
+        public bool ForceEnglish
+        {
+            get
+            {
+                return m_forceEnglish;
+            }
+            set
+            {
+                m_forceEnglish = value;
+            }
+        }
+
+        // Rally US658
+        /// <summary>
+        /// Gets or sets whether a swipe enters the player in a raffle.
+        /// </summary>
+        public bool SwipeEntersRaffle
+        {
+            get
+            {
+                return m_swipeEntersRaffle;
+            }
+            set
+            {
+                m_swipeEntersRaffle = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to log output.
+        /// </summary>
+        public bool EnableLogging
+        {
+            get
+            {
+                return m_enableLogging;
+            }
+            set
+            {
+                m_enableLogging = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the port used the by the Crystal Ball Bingo scanner.
+        /// </summary>
+        public int CBBScannerPort
+        {
+            get
+            {
+                return m_cbbScannerPort;
+            }
+            set
+            {
+                m_cbbScannerPort = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the sheet definition file used by the Crystal Ball 
+        /// Bingo scanner.
+        /// </summary>
+        public string CBBSheetDefinition
+        {
+            get
+            {
+                return m_cbbSheetDef;
+            }
+            set
+            {
+                m_cbbSheetDef = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to allow an empty sale.
+        /// </summary>
+        public bool AllowNoSale
+        {
+            get
+            {
+                return m_allowNoSale;
+            }
+            set
+            {
+                m_allowNoSale = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether CBB favorites are enabled
+        /// </summary>
+        public bool EnableCBBFavorites
+        {
+            get
+            {
+                return m_cbbEnableFavorites;
+            }
+
+            set
+            {
+                m_cbbEnableFavorites = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to allow returns.
+        /// </summary>
+        public bool AllowReturns
+        {
+            get
+            {
+                return m_allowReturns;
+            }
+            set
+            {
+                m_allowReturns = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print a sales receipt if there are 
+        /// no electronics on it.
+        /// </summary>
+        public bool PrintNonElecReceipt
+        {
+            get
+            {
+                return m_printNonElecReceipt;
+            }
+            set
+            {
+                m_printNonElecReceipt = value;
+            }
+        }
+
+        // PDTS 1044
+        /// <summary>
+        /// Gets or sets whether to prompt to create a new player if one does 
+        /// not exist.
+        /// </summary>
+        public bool PromptForPlayerCreation
+        {
+            get
+            {
+                return m_promptForPlayerCreation;
+            }
+            set
+            {
+                m_promptForPlayerCreation = value;
+            }
+        }
+
+        // Rally US505
+        /// <summary>
+        /// Gets or sets the type of CBB Play-It sheet to print.
+        /// </summary>
+        public CBBPlayItSheetType CBBPlayItSheetType
+        {
+            get
+            {
+                return m_cbbPlayItSheetType;
+            }
+            set
+            {
+                m_cbbPlayItSheetType = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print bingo cards to a normal printer 
+        /// rather than a receipt printer.
+        /// </summary>
+        public bool PrintFacesToGlobalPrinter
+        {
+            get
+            {
+                return m_printFacesToGlobalPrinter;
+            }
+            set
+            {
+                m_printFacesToGlobalPrinter = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the name of the global printer to print to.
+        /// </summary>
+        public string PrinterName
+        {
+            get
+            {
+                return m_printerName;
+            }
+            set
+            {
+                m_printerName = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the point size to use when printing bingo cards to 
+        /// the global printer.
+        /// </summary>
+        public float CardFacePointSize
+        {
+            get
+            {
+                return m_cardFacePointSize;
+            }
+            set
+            {
+                m_cardFacePointSize = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print the player point information on 
+        /// receipts.
+        /// </summary>
+        public bool PrintPlayerPoints
+        {
+            get
+            {
+                return m_printPlayerPoints;
+            }
+            set
+            {
+                m_printPlayerPoints = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print a signature line on a receipt.
+        /// </summary>
+        public bool PrintSignatureLine
+        {
+            get
+            {
+                return m_printSignatureLine;
+            }
+            set
+            {
+                m_printSignatureLine = value;
+            }
+        }
+
+        // Rally US505
+        /// <summary>
+        /// Gets or sets whether to print Crystal Ball cards faces on play-it
+        /// sheets.
+        /// </summary>
+        public CBBPlayItSheetPrintMode CBBPlayItSheetPrintMode
+        {
+            get
+            {
+                return m_cbbPlayItSheetPrintMode;
+            }
+            set
+            {
+                m_cbbPlayItSheetPrintMode = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether this POS can sell electronics.
+        /// </summary>
+        public bool AllowElectronicSales
+        {
+            get
+            {
+                return m_allowElectronicSales;
+            }
+            set
+            {
+                m_allowElectronicSales = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the number of copies of receipts to print.
+        /// </summary>
+        public short ReceiptCopies
+        {
+            get
+            {
+                return m_receiptCopies;
+            }
+            set
+            {
+                m_receiptCopies = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the receipts first disclaimer line.
+        /// </summary>
+        public string ReceiptDisclaimer1
+        {
+            get
+            {
+                return m_receiptDisclaimer1;
+            }
+            set
+            {
+                m_receiptDisclaimer1 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the receipts second disclaimer line.
+        /// </summary>
+        public string ReceiptDisclaimer2
+        {
+            get
+            {
+                return m_receiptDisclaimer2;
+            }
+            set
+            {
+                m_receiptDisclaimer2 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the receipts third disclaimer line.
+        /// </summary>
+        public string ReceiptDisclaimer3
+        {
+            get
+            {
+                return m_receiptDisclaimer3;
+            }
+            set
+            {
+                m_receiptDisclaimer3 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets level of logging.
+        /// </summary>
+        public int LoggingLevel
+        {
+            get
+            {
+                return m_loggingLevel;
+            }
+            set
+            {
+                m_loggingLevel = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the number of days to keep a file log.
+        /// </summary>
+        public int FileLogRecycleDays
+        {
+            get
+            {
+                return m_fileLogRecycleDays;
+            }
+            set
+            {
+                m_fileLogRecycleDays = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the drive letter the client software is installed on.
+        /// </summary>
+        public string ClientInstallDrive
+        {
+            get
+            {
+                return m_clientInstallDrive;
+            }
+            set
+            {
+                m_clientInstallDrive = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the folder the client software is installed in.
+        /// </summary>
+        public string ClientInstallRootDir
+        {
+            get
+            {
+                return m_clientInstallRootDir;
+            }
+            set
+            {
+                m_clientInstallRootDir = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to allow cross transfers of units.
+        /// </summary>
+        public bool AllowUnitCrossTransfers
+        {
+            get
+            {
+                return m_allowUnitCrossTransfers;
+            }
+            set
+            {
+                m_allowUnitCrossTransfers = value;
+            }
+        }
+
+        // TTP 50114
+        /// <summary>
+        /// Gets or sets whether to show the unit assignment button.
+        /// </summary>
+        public bool EnableUnitAssignment
+        {
+            get
+            {
+                return m_enableUnitAssignment;
+            }
+            set
+            {
+                m_enableUnitAssignment = value;
+            }
+        }
+
+        // TTP 50138
+        // Rally TA7897
+        /// <summary>
+        /// Gets or sets whether credit is enabled in this system.
+        /// </summary>
+        public bool CreditEnabled
+        {
+            get
+            {
+                return m_creditEnabled;
+            }
+            set
+            {
+                m_creditEnabled = value;
+            }
+        }
+
+        // TTP 50114
+        /// <summary>
+        /// Gets or sets whether player accounts are tied to a machine.
+        /// </summary>
+        public bool EnableAnonymousMachineAccounts
+        {
+            get
+            {
+                return m_enableAnonymousMachineAccounts;
+            }
+            set
+            {
+                m_enableAnonymousMachineAccounts = value;
+            }
+        }
+
+        // TTP 50097
+        /// <summary>
+        /// Gets or sets whether to only print the staff's first name on a 
+        /// receipt.
+        /// </summary>
+        public bool PrintStaffFirstNameOnly
+        {
+            get
+            {
+                return m_printStaffFirstNameOnly;
+            }
+            set
+            {
+                m_printStaffFirstNameOnly = value;
+            }
+        }
+
+        // PDTS 571
+        /// <summary>
+        /// Gets or sets whether to allow quantity sales.
+        /// </summary>
+        public bool AllowQuantitySale
+        {
+            get
+            {
+                return m_allowQuantitySale;
+            }
+            set
+            {
+                m_allowQuantitySale = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print sales/void receipts for quantity 
+        /// sales.
+        /// </summary>
+        public bool PrintQuantitySaleReceipts
+        {
+            get
+            {
+                return m_printQuantitySaleReceipts;
+            }
+            set
+            {
+                m_printQuantitySaleReceipts = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets how many times a quantity sale can be made to a player 
+        /// account.
+        /// </summary>
+        public int MaxPlayerQuantitySale
+        {
+            get
+            {
+                return m_maxPlayerQuantitySale;
+            }
+            set
+            {
+                m_maxPlayerQuantitySale = value;
+            }
+        }
+
+        // PDTS 964
+        /// <summary>
+        /// Gets or sets whether to print package product item names on a 
+        /// receipt.
+        /// </summary>
+        public bool PrintProductNames
+        {
+            get
+            {
+                return m_printProductNames;
+            }
+            set
+            {
+                m_printProductNames = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether the system is in Main Stage compatibility 
+        /// mode.
+        /// </summary>
+        public bool MainStageMode
+        {
+            get
+            {
+                return m_mainStageMode;
+            }
+            set
+            {
+                m_mainStageMode = value;
+            }
+        }
+
+        // PDTS 1064
+        /// <summary>
+        /// Gets or sets the mode of the MagneticCardReader (which sources 
+        /// are enabled).
+        /// </summary>
+        public MagneticCardReaderMode MagCardMode
+        {
+            get
+            {
+                return m_magCardMode;
+            }
+            set
+            {
+                m_magCardMode = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the setting string for the MagneticCardReader and 
+        /// its sources.
+        /// </summary>
+        public string MagCardModeSettings
+        {
+            get
+            {
+                return m_magCardModeSettings;
+            }
+            set
+            {
+                m_magCardModeSettings = value;
+            }
+        }
+
+        // Rally US419
+        /// <summary>
+        /// Gets or sets the bingo play type (i.e. Bingo or Lotto).
+        /// </summary>
+        public BingoPlayType PlayType
+        {
+            get
+            {
+                return m_playType;
+            }
+            set
+            {
+                m_playType = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether the system can sell to a fixed based unit.
+        /// </summary>
+        public bool HasFixed
+        {
+            get
+            {
+                return m_hasFixed;
+            }
+            set
+            {
+                m_hasFixed = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether the system can sell to a Traveler.
+        /// </summary>
+        public bool HasTraveler
+        {
+            get
+            {
+                return m_hasTraveler;
+            }
+            set
+            {
+                m_hasTraveler = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether the system can sell to a Tracker.
+        /// </summary>
+        public bool HasTracker
+        {
+            get
+            {
+                return m_hasTracker;
+            }
+            set
+            {
+                m_hasTracker = value;
+            }
+        }
+
+        // Rally TA7729
+        /// <summary>
+        /// Gets or sets whether the system can sell to an Explorer.
+        /// </summary>
+        public bool HasExplorer
+        {
+            get
+            {
+                return m_hasExplorer;
+            }
+            set
+            {
+                m_hasExplorer = value;
+            }
+        }
+
+        // PDTS 964
+        // Rally US765
+        /// <summary>
+        /// Gets or sets whether the system can sell to a Traveler II.
+        /// </summary>
+        public bool HasTraveler2
+        {
+            get
+            {
+                return m_hasTraveler2;
+            }
+            set
+            {
+                m_hasTraveler2 = value;
+            }
+        }
+
+        //US2908
+        public bool HasTablet
+        {
+            get
+            {
+                return m_hasTablet;
+            }
+            set
+            {
+                m_hasTablet = value;
+            }
+        }
+
+
+        /// <summary>
+        /// Gets or sets the maximum cards that can be sold to a Traveler.
+        /// </summary>
+        public short TravelerMaxCards
+        {
+            get
+            {
+                return m_travelerMaxCards;
+            }
+            set
+            {
+                m_travelerMaxCards = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the maximum cards that can be sold to a Tracker.
+        /// </summary>
+        public short TrackerMaxCards
+        {
+            get
+            {
+                return m_trackerMaxCards;
+            }
+            set
+            {
+                m_trackerMaxCards = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the maximum cards that can be sold to a fixed base.
+        /// </summary>
+        public short FixedMaxCards
+        {
+            get
+            {
+                return m_fixedMaxCards;
+            }
+            set
+            {
+                m_fixedMaxCards = value;
+            }
+        }
+
+        // Rally TA7729
+        /// <summary>
+        /// Gets or sets the maximum cards that can be sold to an Explorer.
+        /// </summary>
+        public short ExplorerMaxCards
+        {
+            get
+            {
+                return m_explorerMaxCards;
+            }
+            set
+            {
+                m_explorerMaxCards = value;
+            }
+        }
+
+        // PDTS 964
+        // Rally US765
+        /// <summary>
+        /// Gets or sets the maximum cards that can be sold to a Traveler II.
+        /// </summary>
+        public short Traveler2MaxCards
+        {
+            get
+            {
+                return m_traveler2MaxCards;
+            }
+            set
+            {
+                m_traveler2MaxCards = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the number of copies of payout receipts to print.
+        /// </summary>
+        public short PayoutReceiptCopies
+        {
+            get
+            {
+                return m_payoutReceiptCopies;
+            }
+            set
+            {
+                m_payoutReceiptCopies = value;
+            }
+        }
+
+        // Rally DE130
+        /// <summary>
+        /// Gets or sets whether to remove non-alphanumeric characters when a 
+        /// mag. card is swiped.
+        /// </summary>
+        public bool StripNonAlphanumeric
+        {
+            get
+            {
+                return m_stripNonAlphanumeric;
+            }
+            set
+            {
+                m_stripNonAlphanumeric = value;
+            }
+        }
+
+        // Rally US510
+        /// <summary>
+        /// Gets or sets whether pre-printed packs are being sold.
+        /// </summary>
+        public bool UsePrePrintedPacks
+        {
+            get
+            {
+                return m_usePrePrintedPacks;
+            }
+            set
+            {
+                m_usePrePrintedPacks = value;
+            }
+        }
+
+        // FIX: TA4779
+        /// <summary>
+        /// Gets or sets the operator's maximum card limit.
+        /// </summary>
+        public int MaxCardLimit
+        {
+            get
+            {
+                return m_maxCardLimit;
+            }
+            set
+            {
+                m_maxCardLimit = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets whether to print cards on the receipt.
+        /// </summary>
+        public bool PrintCardFaces
+        {
+            get
+            {
+                return m_printCardFaces;
+            }
+            set
+            {
+                m_printCardFaces = value;
+            }
+        }
+
+        // Rally TA5749
+        /// <summary>
+        /// Gets or sets which mode to print the card numbers for each game on the
+        /// receipt.
+        /// </summary>
+        public PrintCardNumberMode PrintCardNumbers
+        {
+            get
+            {
+                return m_printCardNumbers;
+            }
+            set
+            {
+                m_printCardNumbers = value;
+            }
+        }
+        // END: TA5749
+
+        /// <summary>
+        /// Gets or sets the first line of the receipt header.
+        /// </summary>
+        public string ReceiptHeaderLine1
+        {
+            get
+            {
+                return m_receiptHeaderLine1;
+            }
+            set
+            {
+                m_receiptHeaderLine1 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the second line of the receipt header.
+        /// </summary>
+        public string ReceiptHeaderLine2
+        {
+            get
+            {
+                return m_receiptHeaderLine2;
+            }
+            set
+            {
+                m_receiptHeaderLine2 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the third line of the receipt header.
+        /// </summary>
+        public string ReceiptHeaderLine3
+        {
+            get
+            {
+                return m_receiptHeaderLine3;
+            }
+            set
+            {
+                m_receiptHeaderLine3 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the first line of the receipt footer.
+        /// </summary>
+        public string ReceiptFooterLine1
+        {
+            get
+            {
+                return m_receiptFooterLine1;
+            }
+            set
+            {
+                m_receiptFooterLine1 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the second line of the receipt footer.
+        /// </summary>
+        public string ReceiptFooterLine2
+        {
+            get
+            {
+                return m_receiptFooterLine2;
+            }
+            set
+            {
+                m_receiptFooterLine2 = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the third line of the receipt footer.
+        /// </summary>
+        public string ReceiptFooterLine3
+        {
+            get
+            {
+                return m_receiptFooterLine3;
+            }
+            set
+            {
+                m_receiptFooterLine3 = value;
+            }
+        }
+        // END: TA4779
+
+        // FIX: DE1938
+        /// <summary>
+        /// Gets or sets the sales tax rate.
+        /// </summary>
+        public decimal TaxRate
+        {
+            get
+            {
+                return m_taxRate;
+            }
+            set
+            {
+                m_taxRate = value;
+            }
+        }
+        // END: DE1938
+
+        // Rally TA5748
+        /// <summary>
+        /// Gets or sets whether to play with paper.
+        /// </summary>
+        public bool PlayWithPaper
+        {
+            get
+            {
+                return m_playWithPaper;
+            }
+            set
+            {
+                m_playWithPaper = value;
+            }
+        }
+        // END: TA5748
+
+        // Rally TA6050
+        /// <summary>
+        /// Gets or sets whether packs sold to a player account must all be
+        /// used on the same machine.
+        /// </summary>
+        public bool ForcePackToPlayer
+        {
+            get
+            {
+                return m_forcePacksToPlayer;
+            }
+            set
+            {
+                m_forcePacksToPlayer = value;
+            }
+        }
+
+        // Rally TA6385
+        /// <summary>
+        /// Gets or sets whether Melange special games are enabled in the
+        /// system.
+        /// </summary>
+        public bool AllowMelangeSpecialGames
+        {
+            get
+            {
+                return m_allowSpecialGames;
+            }
+            set
+            {
+                m_allowSpecialGames = value;
+            }
+        }
+
+        // Rally TA7897
+        /// <summary>
+        /// Gets or sets whether Crystal Ball Bingo is enabled in the system.
+        /// </summary>
+        public bool CrystalBallEnabled
+        {
+            get
+            {
+                return m_cbbEnabled;
+            }
+            set
+            {
+                m_cbbEnabled = value;
+            }
+        }
+
+        // FIX: DE4052
+        /// <summary>
+        /// Gets or sets whether CBB Quick Picks are enabled in the system.
+        /// </summary>
+        public bool CBBQuickPickEnabled
+        {
+            get
+            {
+                return m_cbbQuickPickEnabled;
+            }
+            set
+            {
+                m_cbbQuickPickEnabled = value;
+            }
+        }
+
+        // Rally TA7465
+        /// <summary>
+        /// Gets or sets whether multiple currencies are defined in the system.
+        /// </summary>
+        public bool MultiCurrencies
+        {
+            get
+            {
+                return m_multiCurrency;
+            }
+            set
+            {
+                m_multiCurrency = value;
+            }
+        }
+
+        // Rally US1658
+        /// <summary>
+        /// Gets or sets whether to apply exchange rates when selling.
+        /// </summary>
+        public bool UseExchangeRateOnSale
+        {
+            get
+            {
+                return m_useExchangeRateOnSale;
+            }
+            set
+            {
+                m_useExchangeRateOnSale = value;
+            }
+        }
+
+        // Rally US1650
+        /// <summary>
+        /// Gets or sets whether to show the register closing report.
+        /// </summary>
+        public bool EnableRegisterClosingReport
+        {
+            get
+            {
+                return m_enableRegisterClosingReport;
+            }
+            set
+            {
+                m_enableRegisterClosingReport = value;
+            }
+        }
+
+        // US2828
+        /// <summary>
+        /// Gets the status of the active sales session setting
+        /// </summary>
+        public bool EnableActiveSalesSession
+        {
+            get
+            {
+                return (m_enableActiveSession);
+            }
+        }
+
+        /// US4028
+        /// <summary>
+        /// Gets the status of if card counts occur per product
+        /// </summary>
+        public bool CheckCardCountsPerProduct
+        {
+            get
+            {
+                return (m_checkProductCardCount);
+            }
+        }
+
+        // Rally US1854
+        /// <summary>
+        /// Gets or sets if 0 or below sales are allowed.
+        /// </summary>
+        public MinimumSaleAllowed MinimumSaleAllowed
+        {
+            get
+            {
+                return m_minimumSaleAllowed;
+            }
+            set
+            {
+                m_minimumSaleAllowed = value;
+            }
+        }
+
+        // US2057
+        /// <summary>
+        /// Gets or sets whether to show the keypad or keyboard when prompting
+        /// for passwords.
+        /// </summary>
+        public bool UsePasswordKeypad
+        {
+            get
+            {
+                return m_usePasswordKeypad;
+            }
+            set
+            {
+                m_usePasswordKeypad = value;
+            }
+        }
+
+        // US2139
+        /// <summary>
+        /// Gets or sets whether to print the points redeemed column header on
+        /// the receipt.
+        /// </summary>
+        public bool PrintPointsRedeemed
+        {
+            get
+            {
+                return m_printPtsRedeemed;
+            }
+            set
+            {
+                m_printPtsRedeemed = value;
+            }
+        }
+
+        // US1808
+        /// <summary>
+        /// Gets or sets whether to print the Register Sales report by package
+        /// or product.
+        /// </summary>
+        public bool PrintRegisterSalesByPackage
+        {
+            get
+            {
+                return m_printRegisterSalesByPackage;
+            }
+            set
+            {
+                m_printRegisterSalesByPackage = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or sets value if coupon management is true(enable) or false(disable) 
+        /// in system setting.
+        /// </summary>
+        public bool isCouponManagement
+        {
+            get
+            {
+                return m_isCouponManagement;
+            }
+            set
+            {
+                m_isCouponManagement = value;
+            }
+        }
+
+
+        /// <summary>
+        /// Get true or false. If true then pre tax else post tax.
+        /// </summary>
+        public bool rCouponTaxable
+        {
+            get
+            {
+                return m_rCouponTaxable;
+            }
+            set
+            {
+                m_rCouponTaxable = value;
+            }
+        }
+
+        //US4120
+        public int PlayerPinLength
+        {
+            get
+            {
+                return m_playerPinLength;
+            }
+        }
+
+        public bool NorthDakotaSalesMode
+        {
+            get
+            {
+                return m_northDakotaSalesMode;
+            }
+        }
+
+        //US4380
+        public bool EnableB3Management
+        {
+            get { return m_enableB3Management; }
+        }
+
+        public bool B3IsMultiOperator { get; private set; }
+        public bool B3IsCommonRng { get; private set; }
+        public bool B3AllowInSessBallChange { get; private set; }
+        public bool B3EnforceMix { get; private set; }
+        public bool B3IsDoubleAccount { get; private set; }
+
+        //US3509
+        public bool EnabledProductValidation
+        {
+            get { return m_enableProductValidation; }
+            private set { m_enableProductValidation = value; }
+        }
+
+        //US3509
+        public int ProductValidationCardCount
+        {
+            get { return m_productValidationCardCount; }
+            private set { m_productValidationCardCount = value; }
+        }
+
+        //US3509
+        public int ProductValidationMaxQuantity
+        {
+            get { return m_productValidationMaxQuantity; }
+            private set { m_productValidationMaxQuantity = value; }
+        }
+
+        //US4434
+        public bool AutoIssueBank
+        {
+            get { return m_autoIssueBank; }
+            private set { m_autoIssueBank = value; }
+        }
+
+        #endregion
+    }
+}

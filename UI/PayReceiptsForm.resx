@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_superPickList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Console, 10pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_superPickList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_superPickList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 70</value>
+  </data>
+  <data name="m_superPickList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>393, 179</value>
+  </data>
+  <data name="m_superPickList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_superPickList.Name" xml:space="preserve">
+    <value>m_superPickList</value>
+  </data>
+  <data name="&gt;&gt;m_superPickList.Type" xml:space="preserve">
+    <value>GTI.Controls.ColorListBox, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_superPickList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_superPickList.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="m_receiptListUpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 60</value>
+  </data>
+  <data name="m_receiptListUpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_receiptListUpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListUpButton.Name" xml:space="preserve">
+    <value>m_receiptListUpButton</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListUpButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListUpButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListUpButton.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="m_receiptListDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 196</value>
+  </data>
+  <data name="m_receiptListDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_receiptListDownButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListDownButton.Name" xml:space="preserve">
+    <value>m_receiptListDownButton</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListDownButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListDownButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_receiptListDownButton.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="m_keypad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt, style=Bold</value>
+  </data>
+  <data name="m_keypad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>512, 111</value>
+  </data>
+  <data name="m_keypad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 316</value>
+  </data>
+  <data name="m_keypad.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Name" xml:space="preserve">
+    <value>m_keypad</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Type" xml:space="preserve">
+    <value>GTI.Controls.Keypad, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="m_exitButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 520</value>
+  </data>
+  <data name="m_exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_exitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_exitButton.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;m_exitButton.Name" xml:space="preserve">
+    <value>m_exitButton</value>
+  </data>
+  <data name="&gt;&gt;m_exitButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_exitButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_exitButton.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="m_payButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_payButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 520</value>
+  </data>
+  <data name="m_payButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_payButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="m_payButton.Text" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="&gt;&gt;m_payButton.Name" xml:space="preserve">
+    <value>m_payButton</value>
+  </data>
+  <data name="&gt;&gt;m_payButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_payButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_payButton.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="m_pickTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="m_pickTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 45</value>
+  </data>
+  <data name="m_pickTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 15</value>
+  </data>
+  <data name="m_pickTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="m_pickTypeLabel.Text" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="m_pickTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_pickTypeLabel.Name" xml:space="preserve">
+    <value>m_pickTypeLabel</value>
+  </data>
+  <data name="&gt;&gt;m_pickTypeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_pickTypeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_pickTypeLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="m_pickNumbersLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_pickNumbersLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_pickNumbersLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 45</value>
+  </data>
+  <data name="m_pickNumbersLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 15</value>
+  </data>
+  <data name="m_pickNumbersLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="m_pickNumbersLabel.Text" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="m_pickNumbersLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_pickNumbersLabel.Name" xml:space="preserve">
+    <value>m_pickNumbersLabel</value>
+  </data>
+  <data name="&gt;&gt;m_pickNumbersLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_pickNumbersLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_pickNumbersLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="m_pricelLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="m_pricelLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_pricelLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 45</value>
+  </data>
+  <data name="m_pricelLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="m_pricelLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="m_pricelLabel.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="m_pricelLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_pricelLabel.Name" xml:space="preserve">
+    <value>m_pricelLabel</value>
+  </data>
+  <data name="&gt;&gt;m_pricelLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_pricelLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_pricelLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="m_scanBarcodeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_scanBarcodeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_scanBarcodeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 444</value>
+  </data>
+  <data name="m_scanBarcodeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 60</value>
+  </data>
+  <data name="m_scanBarcodeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="m_scanBarcodeButton.Text" xml:space="preserve">
+    <value>Scan Barcode</value>
+  </data>
+  <data name="&gt;&gt;m_scanBarcodeButton.Name" xml:space="preserve">
+    <value>m_scanBarcodeButton</value>
+  </data>
+  <data name="&gt;&gt;m_scanBarcodeButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_scanBarcodeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_scanBarcodeButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="m_winnersListUpButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_winnersListUpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 315</value>
+  </data>
+  <data name="m_winnersListUpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_winnersListUpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListUpButton.Name" xml:space="preserve">
+    <value>m_winnersListUpButton</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListUpButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListUpButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListUpButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="m_winnersListDownButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_winnersListDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 441</value>
+  </data>
+  <data name="m_winnersListDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="m_winnersListDownButton.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListDownButton.Name" xml:space="preserve">
+    <value>m_winnersListDownButton</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListDownButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListDownButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_winnersListDownButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_addWinnerNumbers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_addWinnerNumbers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_addWinnerNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 266</value>
+  </data>
+  <data name="m_addWinnerNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="m_addWinnerNumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="m_addWinnerNumbers.Text" xml:space="preserve">
+    <value>Add Winner Numbers</value>
+  </data>
+  <data name="&gt;&gt;m_addWinnerNumbers.Name" xml:space="preserve">
+    <value>m_addWinnerNumbers</value>
+  </data>
+  <data name="&gt;&gt;m_addWinnerNumbers.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_addWinnerNumbers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_addWinnerNumbers.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_removeWinnerNumbers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_removeWinnerNumbers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_removeWinnerNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 266</value>
+  </data>
+  <data name="m_removeWinnerNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="m_removeWinnerNumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="m_removeWinnerNumbers.Text" xml:space="preserve">
+    <value>Remove Winner Numbers</value>
+  </data>
+  <data name="&gt;&gt;m_removeWinnerNumbers.Name" xml:space="preserve">
+    <value>m_removeWinnerNumbers</value>
+  </data>
+  <data name="&gt;&gt;m_removeWinnerNumbers.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_removeWinnerNumbers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_removeWinnerNumbers.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 45</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_viewPlayerInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_viewPlayerInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_viewPlayerInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 266</value>
+  </data>
+  <data name="m_viewPlayerInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="m_viewPlayerInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="m_viewPlayerInfo.Text" xml:space="preserve">
+    <value>View Player's Info</value>
+  </data>
+  <data name="&gt;&gt;m_viewPlayerInfo.Name" xml:space="preserve">
+    <value>m_viewPlayerInfo</value>
+  </data>
+  <data name="&gt;&gt;m_viewPlayerInfo.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_viewPlayerInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_viewPlayerInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_superPickWinnersList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Console, 10pt</value>
+  </data>
+  <data name="m_superPickWinnersList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_superPickWinnersList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 322</value>
+  </data>
+  <data name="m_superPickWinnersList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 175</value>
+  </data>
+  <data name="m_superPickWinnersList.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;m_superPickWinnersList.Name" xml:space="preserve">
+    <value>m_superPickWinnersList</value>
+  </data>
+  <data name="&gt;&gt;m_superPickWinnersList.Type" xml:space="preserve">
+    <value>GTI.Controls.ColorListBox, GTIControls, Version=0.1.8.0, Culture=neutral, PublicKeyToken=63316906bb61f20d</value>
+  </data>
+  <data name="&gt;&gt;m_superPickWinnersList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_superPickWinnersList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 600</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>View Receipts</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PayReceiptsForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GTI.Modules.POS.UI.POSForm, POS, Version=0.2.3.0, Culture=neutral, PublicKeyToken=e8c837615f8266d6</value>
+  </data>
+</root>

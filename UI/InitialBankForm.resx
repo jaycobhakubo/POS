@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_panelMain.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_errorCountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="m_errorCountLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_errorCountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 304</value>
+  </data>
+  <data name="m_errorCountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_errorCountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_errorCountLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_errorCountLabel.Name" xml:space="preserve">
+    <value>m_errorCountLabel</value>
+  </data>
+  <data name="&gt;&gt;m_errorCountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_errorCountLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_errorCountLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_okButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="m_okButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_okButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 675</value>
+  </data>
+  <data name="m_okButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 52</value>
+  </data>
+  <data name="m_okButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_okButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;m_okButton.Name" xml:space="preserve">
+    <value>m_okButton</value>
+  </data>
+  <data name="&gt;&gt;m_okButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_okButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_okButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_currencyPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_currencyPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 245</value>
+  </data>
+  <data name="m_currencyPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>525, 381</value>
+  </data>
+  <data name="m_currencyPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_currencyPanel.Name" xml:space="preserve">
+    <value>m_currencyPanel</value>
+  </data>
+  <data name="&gt;&gt;m_currencyPanel.Type" xml:space="preserve">
+    <value>GTI.Modules.POS.UI.NoScrollBarsPanel, POS, Version=1.9.2.17, Culture=neutral, PublicKeyToken=5016b6e2829afc8a</value>
+  </data>
+  <data name="&gt;&gt;m_currencyPanel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_currencyPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_downButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_downButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_downButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 573</value>
+  </data>
+  <data name="m_downButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_downButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 52</value>
+  </data>
+  <data name="m_downButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_downButton.Name" xml:space="preserve">
+    <value>m_downButton</value>
+  </data>
+  <data name="&gt;&gt;m_downButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_downButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_downButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_upButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_upButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_upButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 246</value>
+  </data>
+  <data name="m_upButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_upButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 52</value>
+  </data>
+  <data name="m_upButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_upButton.Name" xml:space="preserve">
+    <value>m_upButton</value>
+  </data>
+  <data name="&gt;&gt;m_upButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_upButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_upButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_decimalButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_decimalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_decimalButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>868, 572</value>
+  </data>
+  <data name="m_decimalButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_decimalButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_decimalButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_decimalButton.Text" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="&gt;&gt;m_decimalButton.Name" xml:space="preserve">
+    <value>m_decimalButton</value>
+  </data>
+  <data name="&gt;&gt;m_decimalButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_decimalButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_decimalButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_clearButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_clearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_clearButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 572</value>
+  </data>
+  <data name="m_clearButton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_clearButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_clearButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_clearButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;m_clearButton.Name" xml:space="preserve">
+    <value>m_clearButton</value>
+  </data>
+  <data name="&gt;&gt;m_clearButton.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_clearButton.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_clearButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="m_button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 516</value>
+  </data>
+  <data name="m_button2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;m_button2.Name" xml:space="preserve">
+    <value>m_button2</value>
+  </data>
+  <data name="&gt;&gt;m_button2.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button2.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="m_button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>868, 516</value>
+  </data>
+  <data name="m_button3.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button3.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;m_button3.Name" xml:space="preserve">
+    <value>m_button3</value>
+  </data>
+  <data name="&gt;&gt;m_button3.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button3.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="m_button6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>868, 460</value>
+  </data>
+  <data name="m_button6.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button6.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;m_button6.Name" xml:space="preserve">
+    <value>m_button6</value>
+  </data>
+  <data name="&gt;&gt;m_button6.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button6.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="m_button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 460</value>
+  </data>
+  <data name="m_button5.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button5.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_button5.Name" xml:space="preserve">
+    <value>m_button5</value>
+  </data>
+  <data name="&gt;&gt;m_button5.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button5.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="m_button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 460</value>
+  </data>
+  <data name="m_button4.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button4.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;m_button4.Name" xml:space="preserve">
+    <value>m_button4</value>
+  </data>
+  <data name="&gt;&gt;m_button4.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button4.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button4.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="m_button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 404</value>
+  </data>
+  <data name="m_button7.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button7.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;m_button7.Name" xml:space="preserve">
+    <value>m_button7</value>
+  </data>
+  <data name="&gt;&gt;m_button7.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button7.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button7.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="m_button8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 404</value>
+  </data>
+  <data name="m_button8.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button8.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;m_button8.Name" xml:space="preserve">
+    <value>m_button8</value>
+  </data>
+  <data name="&gt;&gt;m_button8.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button8.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button8.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="m_button9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>868, 404</value>
+  </data>
+  <data name="m_button9.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button9.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;m_button9.Name" xml:space="preserve">
+    <value>m_button9</value>
+  </data>
+  <data name="&gt;&gt;m_button9.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button9.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button9.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="m_button0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 572</value>
+  </data>
+  <data name="m_button0.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button0.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button0.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_button0.Name" xml:space="preserve">
+    <value>m_button0</value>
+  </data>
+  <data name="&gt;&gt;m_button0.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button0.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button0.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="m_button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt, style=Bold</value>
+  </data>
+  <data name="m_button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 516</value>
+  </data>
+  <data name="m_button1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 52</value>
+  </data>
+  <data name="m_button1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_button1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_button1.Name" xml:space="preserve">
+    <value>m_button1</value>
+  </data>
+  <data name="&gt;&gt;m_button1.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_button1.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_button1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="m_titleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 20pt, style=Bold</value>
+  </data>
+  <data name="m_titleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_titleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 80</value>
+  </data>
+  <data name="m_titleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>884, 116</value>
+  </data>
+  <data name="m_titleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_titleLabel.Text" xml:space="preserve">
+    <value>Please enter the initial bank amount(s).</value>
+  </data>
+  <data name="m_titleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_titleLabel.Name" xml:space="preserve">
+    <value>m_titleLabel</value>
+  </data>
+  <data name="&gt;&gt;m_titleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_titleLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_titleLabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="m_panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="m_panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Name" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Type" xml:space="preserve">
+    <value>GTI.Controls.EliteGradientPanel, GTIControls, Version=1.3.11.893, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAqBAAAJ4EAAAwMAAAAQAgAKglAABGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAACBCGxAueyR5Oqkr1T+8Lv9AwS7/P8Et/0DB
+        Lv8/wC7/P8Au/0DBLv9AwS7/QMEu/z68Lv85qSvVLnskeSBCGxAueiN9Qsgv/0vrNP9M9Db/Tfc3/034
+        Nv89xCv/Kogf/z/MLf9N9zb/Tvc2/033Nv9M9Db/Ses0/0HIL/8ueiN9OKMp1UnoM/9M8zX/TPM0/zWo
+        KP84XDT/e2th/5N2Vf9bVD//M0Qq/yBVHP8qhR//PMIq/0vvNP9I5zP/N6Mp1Tu0K/9I7DT/L4wl/0hX
+        P/+OcnL/rXqA/69xZ//jkzb/66BE/9ibT/+8j1f/nHhO/2ZaRP8oWB//Sus0/zyzK/87tCv/b3lh/6t4
+        eP/Hd3v/yXR0/8qGfP+2iXP/wYBE/9iCH//XgBj/vI9E/9eUO//wqVf/V148/0nqM/88tCv/OrEq/7iM
+        jP/ig3//25F8/7yTdf+0m3f/n5SH/6F0Uf/WfB3/y4Aj/4+eY/+Bo3P/15RB/1ZaM/9I5jP/O7Er/zmt
+        Kv9tgWH/tqKQ/5KAYf+lnZH/koBt/9DAsP+wkXP/vXMy/8p2E/+rjDz/hJ5p/8eVTv9VWDP/Rt8x/zmt
+        Kv84qSn/RNsw/2+GcP+4qpn/o4lq/6qRdP+afV//q5yQ/4p1Zv/HdS3/0m8E/7t3Hv/dhyn/UVg0/0Tb
+        MP84qSn/NqUn/0LVLv9ErDb/n5aF/5+OfP+ml4v/opWK/6qcjP+2pY7/p4lu/5hkO//FbyP/134l/1JX
+        Mv9C1S//NqUo/zWhJ/9A0C3/QNAt/0qRQ/+goZj/rJqH/45+bf+floX/hnVm/7qyqv+YhoH/oWZn/8R2
+        O/9TVSz/P9Et/zShJ/8znCX/Psor/z7LK/8+yyz/Prov/4aPhf+qj4z/u4B9/7Z0cf+oamn/pGts/6Ji
+        aP/HeD7/U1Yu/z7LLP8znSb/M5kk/z3GKv89xyr/PcYr/ziaLP8kRif/b19c/7O5uP+ox8b/fUlI/8i5
+        uf+3naH/xHhD/1ZaNP89xiv/M5kl/zGTJP88wCr/PMIq/z6wLf+hqaf/2+rp/2Ggr/9H3v7/ZKWy/5Zh
+        Yf+6iIf/vIOC/92qgv9YbET/PL8q/zGSJP9Biy3YcsZO/3POUf9vy0//hqFy/8XFvf+mu7j/b5KD/1+a
+        Sf94jGH/hIpp/3aMYP91mWH/YbFH/2HBQf9JjzPaU3o5jJLDbv+h1n3/iM9b/3/NT/98zU3/ectK/3jK
+        Sf92ykf/c8lG/3LJRf9zyUf/cshF/27CRP9qrkH/SnMwiTRKMRKEn3Odl7uC6XOsU/9npkD/ZaU9/2mm
+        Pv9sqED/a6c//2mmPv9ppj//Y6Q7/2GgOv9dkzneTnMyhxs0GBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAgAAAA
+        AACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIGcXHSR1GXAogBy3Koge6iyMH/8sjh//LI4f/yyO
+        H/8sjh//LI4f/yyOH/8sjh//LI4f/yyOH/8sjh//LI4f/yyOH/8sjh//LI4f/yyOH/8sjh//LI4f/yyN
+        H/8sjB//Koge6iiAHLckdRlwIGcXHQAAAAAAAAAAAAAAACJsGDkpgxywMJwi/zewJv86vSn/PcIq/z3E
+        K/8+xCv/PcQr/z3EK/8+xCv/PsQq/z7EK/8+xCv/PcUq/z3EK/8+xCr/PcUr/z7FK/89xSv/PcQq/z7E
+        Kv8+xSr/PcQr/zzCKv86vCn/N7Am/zGcIv8pgx2wIWwYOQAAAAAgZhcdKYIcsDSlJP89xSv/RNkv/0bi
+        Mf9I5TP/SOcy/0joM/9I6DP/SOgy/0joMv9I5zL/R+Ux/z/LLP9C1C//R+Mx/0joMv9I6DL/SOgy/0jo
+        M/9I6DP/SOgy/0joMv9H5zP/SOYz/0biMf9E2S//PcUr/zSlJP8pghywIGYWHSRzGXAwmiL/PcIr/0fi
+        Mf9L8DT/TfQ1/032Nv9N9zb/Tfc2/073Nv9O9zb/Tfg2/0zxNf87vyn/LpQg/zSmJP8/ySz/RuEx/0z0
+        Nf9O+Db/Tfg2/073Nv9O9zb/Tfg2/034Nv9N9zb/TPQ1/0vwNP9G4TH/PcIr/zCaIv8kcxlwJ30ctzWs
+        Jf9D1C7/Su4z/031Nf9N9TX/TPY1/0z2Nv9N9jb/TfY2/0flMv80pSX/Nmow/2NoV/9fYE//OU02/yFL
+        IP8dXRr/J3sb/zGdI/88wCr/RNov/0rrM/9M9jX/TPY2/032Nv9M9jX/TPU2/0vtM/9C1C7/Nqwl/yd9
+        HLcphBzqObcp/0XcMP9L8TT/TPQ1/0zzNf9M9TX/TPU1/0LTLv8wkSX/PWQ4/3dxbf+mkJP/vJWH/+av
+        bP/VqHH/tphx/419ZP9fYU//O044/yRLJf8cWRr/JHUa/zCZIf86uyn/Q9Yv/0nrM/9M8zX/S/E0/0Xc
+        Mf85tyj/KYQc6iqHHf86vCj/RN8w/0vxNP9L8jX/Su4z/zvDKv8ufCb/T2NL/4t9ff+yk5P/touL/6Z2
+        ef+eaFj/244z/+OXO//nn0f/7KhW/+mtZf/Zqm7/vZpu/5eCZ/9rZVb/RVNA/ylIKf8cVBr/Im8Y/z3F
+        Kv9L8TT/Rd8x/zq7KP8qhx3/Kocd/zq6Kf9F3TD/Su80/zasJv8wbSr/XGZV/56Hh/+8kpP/uoSE/6xx
+        cf+lZ2f/oF9m/5pbTv/ZhiX/3Iwo/9iIKf/ZiSv/24ss/9WMLv/RmFH/7aNM/+epX//bqGv/wpxv/6GL
+        b/9XXEn/NKYl/0rvNP9F3TH/Orop/yqHHf8qhh3/Obko/0itOf9KikD/dWxn/7GNjf/JkZH/w39//7dt
+        bf+xZWX/rV5h/69fY//Ce3f/t4Fy/7F0Rf/NgCz/2ogm/9iGKP/WhST/0H4S/6qJUf/AikL/4Ycj/+KO
+        LP/mlTf/+bhp/6GNcf8znyb/Su0z/0XbMP86uSj/KoYd/ymEHf85tyj/d4do/7SSkv/alJT/y3h4/8Fp
+        af+8YGP/u15i/8Npav/PiYD/5LOZ/8uvjP/MsYf/y59//7RuOP/ahB//14Mk/9eEJf/UfRP/uocz/4+c
+        df/Ihy7/xYUy/76DOf/qm0L/mIJh/zKfJv9K6jP/Rdkv/zi3KP8phB3/KYMd/zi1KP+EjWz/w42N/9Nx
+        cv/GXWD/yGFk/9B3dP/fnYv/4bqZ//fcp//OtIb/b2hc/1lJNP+kfFD/tHJI/9V+HP/WgCD/2IAf/9l7
+        Ef/EgB7/haVz/4Smdf+Fnnj/t4U+/+yZPP+WgWD/MZ0m/0noM/9E1y//OLUo/ymDHP8ogRz/OLMn/4SO
+        bP/HjY7/23t8/9qIf//qtZn//Nur/8KqgP9lWED/imMz/5eCa//jzsr/ppmT/3JfRf+xe1v/xnIg/9h/
+        GP/MfCD/rYhI/4ifb/9+rHn/f614/4Sjcv/LfyH/6pY7/5aAYP8xmyb/SOYy/0PVLv84syf/KIEc/yd/
+        HP84sCf/c4Rl/7CYk//x1Ln/0bmR/4BuTP+fd0D/mod3/6uenP9gUUH/c2db//Xm2//p3tP/inhk/+a1
+        hv+0cEP/0ngM/8l6F/+0gTT/npBO/4ugZP9+qXP/fKV5/6WKTP/okjn/l35c/zCZJv9H4jH/QdIu/zex
+        Jv8ofxz/J34c/zauJv9DsDX/SaE//2mAXf+il4n/jIJ8/1A/K/+ckoz///7y/56Ui/+aeVT/taqa/7Gt
+        pf+5lnL/zqZ3/7KFav+4ZyL/2XgL/9Z1Df/Ucgf/xHoV/4Wdbv+SlFr/n4dO/8+WUv+YfFj/L5cl/0be
+        Mf9Azy3/Nq4m/yd+G/8nfBv/Nawm/z/NLf9F3DH/RJw6/7u5uP//+fH/h3hq/5d+X/+ysq3/pJWC/8eZ
+        ZP/Fmmz/2K2A/5mBaP9dVUz/ZldF/4tgS/+5ZRz/1XUL/9F0D//NcgT/nYhQ/7l8Lv/VbwP/3Y85/5V9
+        W/8vlST/Rdww/0DMLf81rCb/J3wb/yZ6Gv80qiX/Psos/0PZL/9EvjT/fYl7/8vKw/+kjG//tYdR/7WN
+        Yf+7l3D/b2JV/2BPPv+GblT/t6mm/+TTyf+Nhn//dmRQ/8GNbv+4aSv/0W8J/9BzAv+8dyD/xnMZ/9Fv
+        Cf/ijTH/lHxZ/y6UJP9D2i//Psos/zSqJf8mehr/Jnka/zSnJf8+xyz/Q9cv/0PWL/9HlD3/t6OJ/7ec
+        fP9lWU//ZlA4/4p9cP/k0s3/rqSd/1ZNQ/+lmZH/+vLk/83Kw/+Rfmf/9saR/7iNcf+fYTv/umQW/8pn
+        Af/TbgH/0W4F/+CKL/+Ue1n/LpIk/0PWL/8+xyz/NKcl/yZ5Gv8kdxr/M6Yk/zzFK/9B1C7/QdMt/0HN
+        L/9Vfkr/trSv/+vn4P+Lg37/bGFV/9jLwv/h3tf/nIp5/7iVbv+CeG3/mYx8/9+2iv+VfGL/ZFlK/2VU
+        RP+fdl3/vH1U/69mMv+5Yxf/4Igq/5R6V/8tkCP/QdQu/z3FK/8zpST/JHca/yR2Gv8yoyT/PMIq/0DR
+        Lf9B0S7/QdEt/0C/Mf9sgGz/29vV/8XBuv/GpID/inVd/25kWf/Dn3z/moFp/2BUSf9sVT7/m4No/7On
+        pP/WysH/jIiA/3hiUP/IloL/pHR3/5pYPf/ghSX/lHtW/yyOI/9A0i7/PMIq/zKjJP8kdhr/JHQa/zKi
+        I/87vyn/P84t/0DOLf9Azyz/QM4t/0K0M/9Ig0T/g4dz/8Kul/+QhXv/b2BU/2RYR/+3r6r/7eba/5OP
+        h/9iTUX/taej//Tw4f/Cw7r/eVRW/6FeYf+hZGv/oFs8/9+DI/+UeVX/LI0j/z/OLf86vyn/MaEj/yR0
+        Gv8kchn/MZ8i/zq8Kf8/yiz/P8os/z/LLP8/yyz/P8os/z/KLf8/rjH/e4F+//v27//e29H/a1tZ/5mD
+        f//OzML/o5mW/5lXWv+dYWL/k3Fx/5lqav+yZGT/r19f/69la/+jWz3/3oQk/5R5Vv8siiL/Psos/zq9
+        Kf8wnyL/JHIZ/yRxGP8wnCL/Oboo/z7IK/8+yCv/Pcks/z3JK/8+yCv/Psgt/z3ILf9Mj0T/iZKM/6Kf
+        nf+3dnf/s1ld/6BVWP+xWFn/yGZk/7tpaP+oWlz/nFNT/5pcXP+ba2v/l1lf/6ZdQP/hjDH/lXxb/yqI
+        Iv8+yCv/Obwo/zCdIv8kcRj/I28Y/zCbIf85uCj/PcYq/z7GK/89xir/PcYr/z7GKv89xiz/PcYr/zq4
+        Kv8kcxr/TVRF/9aXlP/ijoP/2peJ/9Oyov/Pyrn/pm9r/18mKP+mi4v/8e/v/+3t7f+PXmT/olpA/+ea
+        Rf+XgGH/Koch/z3GK/85uCj/MJsi/yNvF/8ibxj/MJkh/zm1KP89xCr/PcQr/zzDKv89wyv/PcQq/zy4
+        LP8ncB3/L00t/0NfR/8mSh7/cIN2/5rm5/955Ov/e/X//33W3v+JXFz/YCkp/7ulpf//////6unp/4RR
+        V/+iXkT/66JQ/5iDZf8phSH/PMMr/zm1KP8wmCL/Im4X/yFtGP8vlyH/OLIn/zzBKv88wSr/O8Eq/zzA
+        Kv89uSz/ZYFm/6i6uv/F6ur/vd/f/zxENf9Znqj/TdXz/0XL6P9r4vn/apGY/5NjY/9mNTT/flVV/9C/
+        v/+hfX7/iENI/7BtU//1tmv/nI1u/y2TIv88wCr/OLIn/y+XIf8ibRf/IWoX/y2TIP82ryb/O74q/zu+
+        Kf87vSr/O74p/zyzK/+Kl4////////D////t+/r/hK24/z2+4f84weX/U9Py/22zwv9PX03/uI2N/8B+
+        f/+0amr/vnJx/8l/ff/YlJD/5bmY//3fsv+Oj3b/OKkq/zu+Kf82ryf/LZMg/yFqF/8fZhbqTp00/3rC
+        Uv97zlT/ds5S/3LNUf9vzE//a8tM/2+iWP+8u7T/7+7t//38+//x/P7/oNXj/3q4yf+AqK3/Y5NS/1iu
+        P/+CiW7/qZmJ/7ajkv+qoIv/mp6B/42ad/+Bl27/eJJm/2SfTv9dxT//Y8ZE/2W7RP9Tnzj/L28f6yFg
+        FrhmoEH/mMhj/5jTZf+R1WX/jdNi/4jSYf+C0Fz/fc9Z/3q1Wv+Fo23/kKR9/4+ifP+Bn2b/cqFV/2mu
+        S/9jxUP/Y8ZB/2K7RP9itUX/ZLFG/2K0RP9huEL/YL1B/2PDQf9myEP/achE/23JSP92x07/d7tN/2Ke
+        QP8xaiC8JVsYc3+jTf+RvFj/lspc/5PPXP+N0Vr/iM9X/4TOVv+AzlL/fcxQ/3rLTv92y0v/c8pJ/3LJ
+        SP9vyEX/bchE/2zIQ/9rx0L/a8ZC/2rGQv9pxkH/acZB/2zGQv9ux0T/bshF/3DJRf9zx0b/dcZH/3e+
+        R/9wrUP/YJI6/yhdGnQgURUeUHwvvYqsVf+cwmj/sNOC/7LXhf+ezmn/kslY/4vHUf+IxlD/h8ZP/4TE
+        TP+ExE3/gsNM/4LDTP+Bw0v/f8JJ/37CSv99wkn/fsJJ/37CSv9+wkr/f8JK/4HDSv+Dw0z/hMNN/4HA
+        Sv98ukj/dq5D/2ubPv8/cii5IFEWHgAAAAAdUBI6TnkwvYqrX//G2Kv/2ubF/7zUlf+lxWv/nb5Z/5q8
+        V/+Wu1T/lrtS/5q8U/+bvVT/nb1V/56+Vv+evlb/nb1W/5u9U/+avFT/mLxU/5i7Uv+UuVD/kbhQ/5K4
+        T/+Qt07/ibFM/3+oSP9vl0D/QXIouR1QEzoAAAAAAAAAAAAAAAAXSRAdIVcXckJzMsBpklfwaZNR/1qI
+        Pv9TgjP/VIMx/1WCMP9WgzD/W4Uy/1yGMv9chjT/Xocz/1+INP9dhzP/W4Yy/1mFMf9YhDL/V4Qx/1WC
+        L/9SgS7/UIAt/019K/9CdSbtNmohvSRZF3MXShAdAAAAAAAAAADAAAADgAAAAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABwAAAAygAAAAwAAAAYAAAAAEA
+        IAAAAAAAgCUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJXcaCiiAHFYriR6XLY8fzS6U
+        IPEvlyH/L5gh/zCZIf8wmSH/MJkh/zCZIf8wmSH/L5kh/y+ZIf8vmSH/MJkh/zCZIf8wmSH/MJkh/zCZ
+        If8vmSH/MJkh/zCZIf8wmSH/MJkh/zCZIf8wmSH/MJkh/zCZIf8wmSH/MJkh/zCZIf8wmCH/L5gh/y+X
+        If8ulCDxLY8fzSuJHpcogRxWJXcaCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnfhtFK4weqzCa
+        If80pST/Nq4l/zi0J/85tyf/Orko/zq5KP86uSj/Orkp/zq5Kf86uij/Orkp/zq5Kf86uij/Oroo/zq5
+        Kf86uSn/Orkp/zq6KP86uSn/Orkp/zq5KP86uin/Orop/zq6Kf86uin/Orop/zq5KP86uSn/Oroo/zq6
+        Kf85uSj/Obko/zm3J/84syf/Nq4m/zOlJP8wmSL/LIwfqyd+G0UAAAAAAAAAAAAAAAAAAAAAAAAAACiA
+        HFktkyDVM6Uj/zi1J/88wCr/P8os/0DPLf9B0S3/QdEu/0LTLf9C1C7/QtQu/0LULv9C1C7/Q9Qu/0PT
+        Lv9C1C7/QtQu/0PULv9C1C7/Q9Qu/0LULv9C1C7/QtMu/0LULv9C1C7/QtQu/0LVLv9C1C7/QtQu/0PU
+        Lv9C1C7/QtQu/0PULv9C0y3/QdMt/0LRLv9Azy3/Psks/zy/Kv84tCf/M6Qj/y2SINUogBxZAAAAAAAA
+        AAAAAAAAJ30bRS2RINU0piT/Oroo/z/LLP9D1y7/Rt4w/0biMf9H5TH/SOUy/0jmMv9I5jL/SOYz/0jn
+        Mv9I5zL/SOYy/0jlMv9I5TL/SOYy/0nmM/9I5jL/SOcy/0jnM/9I5zL/SOYy/0jmMv9I5zL/SOcy/0jm
+        Mv9I5jP/SOYz/0jnMv9I5zL/SOcy/0nmMv9H5jP/SOUy/0jmMf9G4jH/Rd8w/0PXLv8/yyz/Orop/zSm
+        Jf8tkSDVJ30bRQAAAAAldRoKK4oeqzOiI/86uij/Qc4t/0XdMP9I5jL/Sewz/0vwNP9M8TT/TPI1/0zz
+        Nf9M8jX/TPM2/0zzNf9M8zX/TPI1/0zzNf9M8zX/TPI1/0rwM/9F3DD/Rdsw/0nqNP9M8zX/TPM0/0zz
+        Nf9M8zX/TPM1/0zyNf9L8jb/S/I2/0zzNf9M8zX/TPM1/0vyNf9L8jb/TPE1/0vxNP9K8DT/Su0z/0jn
+        Mv9F3jD/Qc4u/zq6Kf8zoiP/K4oeqyV1GgoofxtWL5Yh/zeyJ/8/ySz/Rdww/0rqM/9L8jX/TPU1/072
+        Nv9O9jb/Tfc1/033Nv9N+Db/Tfc2/073Nv9N+Db/Tfg2/034Nv9M8zX/QtQu/zKhI/8mehr/Jnka/y2R
+        IP80qiX/PcUq/0PbMP9J7DP/TvY2/074Nv9N+DX/Tfg1/073Nv9O9zb/Tfg2/034Nv9N+Db/Tfg2/032
+        Nv9N9jb/S/Q1/0vxNf9J6TP/Rdww/z/JLP83sif/L5ch/yh/HFYqhh2XM6Ik/zu9Kv9C0y3/SOQx/0vw
+        Nf9M9Db/TfU1/032Nf9N9jb/TfY1/032Nf9N9zb/TfY2/032Nv9N9jX/SOoz/zzDK/8tgiH/M1Uv/0hS
+        Q/84SDr/LEIw/x5GHf8aTxX/Hl8V/yR0Gf8rih7/M6Ik/zu9Kf9E1i7/Secy/0zyNP9N9jX/TfY2/033
+        Nv9M9zb/Tfc2/032Nv9N9jb/TPY1/0z1Nf9L8DT/SOQy/0LTLv87vSr/M6Ek/yqGHpcrjB/NNKkk/z7E
+        Kv9F2i//SOky/0vyNP9N9DX/TfQ1/031Nf9M9TX/TPY1/0z2Nv9N9TX/TfY2/0bhMf82ryf/K3Yh/zdS
+        Nf9kYWL/k4eJ/76jkv/KqX//p5F1/4J2aP9eXlX/QEw//ylDLP8fRh7/GUwV/xxYFP8ibhj/KoUd/zKe
+        Iv86uCj/QdAt/0fkMf9K7zX/TfU2/031Nf9M9jb/TPU1/030Nv9M8TT/SOgy/0TaL/8+xCr/Nakk/yuM
+        H80sjx/xNq4n/z7JLP9F3TD/Sesz/0zzNf9M9DX/TPM1/0z0Nf9M9DX/TPM1/0vyNf9D1S//Mp0k/ytj
+        Jf9BU0H/cWtr/6COjv+3mpr/s4+S/66Ccv/pqlv/7a9k/+mzb//fsXf/y6d6/6yUdf+Ie2r/ZGJY/0VQ
+        Rf8tRS//H0Mf/xtLGP8cVxX/IWsX/ymCHP8wmiL/OLMn/0HNLP9G4DH/Su00/0zyNf9M8jX/Seo0/0Xd
+        Mf8+ySz/Nq4m/yyPH/EtkR//N7Am/z/KLP9F3jD/Sesy/0vxNf9L8jX/S/I1/0zyNP9K6jL/Psgs/y6J
+        Iv8xWC3/UlZR/4J5ef+qlJT/uZiY/7OKi/+nenr/nG1x/5xnU//ckTb/3ZQ7/96XQf/hnEn/5qVT/+ut
+        YP/qsWv/47J0/9Gqef+0mXX/j4Bt/2tnXv9MUkz/M0Y2/yVDKP8fRxz/G1UT/yFpF/8mehr/MZ0i/0be
+        Mf9M8TX/Susz/0beMP8/yiv/NrAm/y2RH/8tkR//N7Em/z/JLP9E3DD/SOkz/0vwNP9L8DT/Rt8x/zi1
+        J/8qeh//MFMu/2BeXv+Rg4P/tZiY/76Vlf+0hIX/qHV2/6Ntbf+iaWn/nGRo/5pgTP/Ziiz/24st/9mL
+        Lf/ZjC//2o0y/9uQN//dkzz/4ZlD/9ydS//kp13/7rBm/+Sxcf/TqXb/uJp2/5iGcP90bGP/S1NI/y9F
+        Mf8jQSL/ImMY/0DNLP9L8DT/Sekz/0XcMf8/ySz/N7Am/y2RH/8tkB//N7Am/z7JLP9F3DD/Sekz/0vv
+        NP80pSX/KmYj/z1QO/9sZmb/ooyM/7+Zmf/BkZH/tn+A/61ycv+pa2z/qGho/6hnZ/+oZ2f/omNo/5xg
+        S//ejCn/3Ywp/9mJKv/YiSr/2Igq/9mIKv/ZiSz/1ocl/86EIf+1i1b/2JA7/+CXP//jnkv/6KZX/+qt
+        Y//lr23/16x3/8Klgv+UhnT/MFgs/0DOLf9K7zT/SOk0/0TcMf8/ySz/N7Am/y2QH/8tkCD/Nq8m/z/I
+        K/9E2i//SdE3/ziDMf9JVEj/gXR0/6+Rkf/HmZr/xoyM/7t7e/+0cHD/smpr/7BoaP+vZ2f/sGdn/61j
+        Zv+sYGP/rWVp/5FWTf+zbC//zH8t/9mIKf/YiCj/2Ico/9mHKP/Yhyj/0IIe/9J+EP+wh0z/qY1f/9uG
+        Jf/aii3/2Ywx/9qPNv/dlDz/4p1L//O5cv/Pr4j/M1Uy/0DMLf9K7TT/R+cz/0PaMP8/yCv/N68m/y2Q
+        IP8sjx//Nq0m/z7GK/9D2C//Vm5R/5SCgv/Cmpv/0ZeX/8qHh//Bdnf/vG5u/7ppaf+4Z2j/uGdn/7hl
+        Zv+2YGT/tV9i/79yb//XnYr/8cyp/9u5nP+4koL/k2BU/8t8Kf/ahyT/14Um/9eFJv/YhSf/04Mh/89+
+        Ev/ChCz/jJqA/7ONS//cgh7/2YQk/9yEIP/WhCT/1oku/+aiUv/Go3j/M1Uy/0DLLP9K7DP/SOYy/0TY
+        L/8+xiv/Nq0m/yyPIP8sjh//Nq0m/z3FK/9C1y7/fXZw/+avr//SiYn/xnNz/8NrbP/CaWj/wWdn/8Bm
+        Z/+/Y2b/vl9j/8FnaP/OhXr/5LSa//fYsf/VwJj/r5x5/8apff/0xYP/sXxh/7tvK//bhSH/14Ij/9aD
+        I//XgyP/1oIi/85+Ff/OfRX/mJlo/4Sjf/+8izr/04Eg/7WJQ/+oiFT/04Mn/+acSf/Fn3L/M1Uy/z/K
+        LP9J6jP/R+Qy/0PXL/89xSv/Na0m/yyOHv8sjR//Nasm/z3EK/9C1i7/fXds/96Zmv/NdHX/yWdo/8hn
+        aP/IZWb/xmFk/8ZhZP/NdHD/3p+M//LMqf//6b3//+m3/8uvhP9lWUj/Sz8v/1pBJP+qgEz/vYhm/61l
+        M//ahB3/1YAg/9aAIP/WgCD/1oEh/9B9F//Vdwf/q49E/3yqf/+GpHP/jZ5s/4OegP+nilT/2oEf/+Ob
+        R//EnnH/M1Uy/z7IK/9I6DL/R+Ix/0PWLv89xCr/Nasl/yyNHv8rjB//Naol/zzCKv9B1S7/fHVr/9+V
+        lv/QcXL/y2Nl/8pfY//NaWr/2Yt//+u5n//32bL/0r6V/6+ZdP/En23/36hj/4NyXP+fl5f/pZmW/1ZQ
+        Sv9oUDL/uo1j/59hRv/Vfh3/1X8e/9V/H//Wfx3/2X0Y/9F7F/+4hS//lJ1e/4Crd/+BrHf/gKl5/4Sh
+        d/+8hTX/2oAe/+OaR//EnnH/M1Uy/z3HK/9I5zL/R+Ex/0PVLv89wir/Naol/yuMHv8rix7/Nagl/zzA
+        Kv9B0i7/fXdt/+OanP/Pc3b/0Xl1/+Ghj//wy6n/+uS3///irP/LqXj/YlI+/0g4JP9nRyL/lXFD/4yF
+        g//64Nf/+93P/6+knv9VSj3/tY5f/6t1Yf+6bCP/2X8Z/9N8Gv/Oexv/tII+/5STaP9/o37/fKh6/4Kq
+        dP+CqnT/gal1/4ahcP/JfyL/2H4c/+KXRP/EnG//M1Qz/z3GK/9I5TL/Rt8x/0LTLv88wCr/Nakl/yuL
+        Hv8rih3/Nacl/zy/Kv9A0S7/fHNu/+3Auv/30rv//OS//93Hnf+dh2L/nXlL/8mRS/+FcFb/l4+R/5KK
+        iP9SSD3/ZU0x/4J9eP/449f/++TR/+XUx/9kXVf/vpVn/+SxhP+ZW0H/0XkV/856EP/IeRP/uX4t/6eI
+        SP+UlV//gqJx/3yqd/+AqnP/gady/4Cjdv+jjE3/13oZ/+KWQf/Dm27/M1Qz/z3DK/9G4zH/RN0x/0HQ
+        Lv87vyn/NKck/yuJHv8qiR3/NKUk/zu9Kf9Azy3/UXRL/4KCeP+wrZz/0reN/455W/9SSDz/TTgf/3RV
+        L/+Efnr/+uLZ//zg0v+Ti4f/ZVE5/3RmVv+8t7L///3u/9jUzP98b2P/6LeC///Umf+6hnD/rmIm/9h8
+        Ef/RdxT/0ncN/9J1Cv/Ndg3/wXwb/6eNPv9/pXL/f6Ny/4Cgc/+BmXr/sIVI/+WTO//Dmmz/M1My/zzB
+        K/9G4DH/RNow/0DOLf87vin/NKUk/yqJHv8qhx7/M6Qk/zq7Kf9AzCz/RNMx/0W2N/9DdT7/eXRq/6mm
+        o//Lvrv/cGpl/1RBKf90bmj/8+HW///14//EurL/dWNN/9Gibf+RgnL/nZyZ/4uHgf/BnXj/zaJ0/7WR
+        a//Gnnj/l2NS/8JrGf/XeRD/0XYU/9J3Ff/RdRL/znQH/8x1Cv+Ml2T/gJ11/6uGOv+ugjj/n4ha/8+V
+        Uf/FmGj/M1Mz/zzAKv9G3jH/RNgw/0DMLf86vCn/M6Uk/yqIHf8qhh7/MqMk/zm6Kf8/yyz/Q9gw/0Xd
+        Mf9GwjX/ZGlr/+DY1P//8OT/zb62/2RWRf96Zkv/oJ6c/9fa1/+Sk5L/qIll//G7fv/mtYD/zaZ7/+i5
+        iP+4lG3/W1BB/09FN/9nVD3/i21W/4xVQf/FaxX/1ncN/9F0Ef/RdBL/y3UN/81zBP+iiEn/jJJs/8x1
+        E//UcAX/z3YU/9mRQP/CmGr/MlMy/zu/Kf9F3TD/Q9cw/0DLLf85uin/MqMk/yqGHf8phRz/MqIk/zm5
+        Kf8/yiv/QtYu/0TbMP9FzzL/V2dY/8jHxP///PD/1c7H/3lqWP/ep2f/r5Br/4N3af+rj3D/vpVm/39k
+        Rv+DZkj/vpZr/9KrgP9+dnH/nJGP/5OJhv9eWVX/W006/5V0XP+WXk3/uGQY/9Z1Cf/Rcw7/zHMN/8ty
+        A/+2eij/n4JS/9JxC//Qcg7/0XUT/9+POP/BmGn/MlIy/zu9Kf9E2zD/QtUu/z/KK/85uSn/MqIk/ymF
+        HP8pgxz/MaAj/zi3KP8+yCv/QdMu/0PZL/9D2C//SI4+/3h8ev+7vLf/kI2I/62KYf+2ilf/sohZ/9qo
+        cv/crnr/dGhb/2FdWf9NR0D/YEw3/3NiUf+0qKb//+PW//vf0P/MvrT/VVNQ/4pwUv/gsoj/pnBd/6lb
+        JP/RcAv/03MJ/8pyBv/DcxH/uXUo/9FwCv/PcAz/0HMS/96NN//Bl2j/MlIy/zq7Kf9D2S//QdMu/z7I
+        K/84tyj/MaAj/ymEHP8pghz/MZ8j/zi1KP8+xiv/QdEu/0PXL/9C2C//Q9Iw/09pSv+6qZL/5r+Q/6CD
+        YP9USTz/TkEw/3tfQP9/cF7/s6em/+rRyP+xpJ7/W1ZR/1xOPf+OiIb/+eXZ///p2P//8+T/e3t6/492
+        XP/+zZf/+MmX/7SEb/+ZWjv/vGQU/9FvBv/ScQX/0G8I/89vCv/Obgr/z3IQ/92MNv/Blmf/MlEy/zq5
+        Kf9D1y//QdEu/z7GK/84tSf/MZ8j/ymCHP8oghz/MZ0i/zi0J/89xCr/QNAt/0LVLv9C1S7/QtUu/0Sw
+        Nv9zb2P/0Luf/5mVk/+to6D/gnt4/1JHPP9aUUf/yby3///r3v//8eH/op2Z/2xdTf+ag2v/mJSP/9fP
+        xv/U0Mn/eXdy/9ivhP/is4T/pYRh/5d6WP+Pb1j/jWBR/51ZN/+yXBb/x2YH/89sBP/TbwP/z3AN/9yK
+        NP/AlWb/MlEy/zm4Kf9C1S//QNAu/z3EK/84tCf/MZ0j/yiCHP8ngRz/MJwi/zeyJ/88wir/P84t/0HT
+        Lv9B0y7/QdQt/0HULv9EmTn/Zmpp/9fSz///8+j/+ufa/4B9ev9sXEr/iH93/9DHwP/x7+T/oqKg/5qD
+        bP/xwIv/mX5h/2pgVf92a17/yqeC//jHk/+Bbln/VVBK/1BLRP9TSDf/fGVK/7aQcv+6iXP/pGxV/59f
+        P/+mXCv/ym4Q/92JMP/AlGb/MlIy/zi2J/9B0y7/QM4t/z3CKv83syf/MJwi/yeBHP8nfxz/L5si/zex
+        J/88wSn/P8ws/0DRLf9A0i7/QdEu/0DRLf9B0S3/RnVC/5OXlv/s5+D///3y/52enf+skXX/1K2C/35x
+        Yv90b2n/jn5u/+u9jv+mh2f/X1FC/1dJOf9nUTr/rIdi/6SMcv+RiYn/zru0/8q7sf+Df3z/T0Y8/5t7
+        W//lt4//0J2E/6h2cv+IU1X/wmgT/96ILf+/lGX/MlEy/ze0J/9A0i7/P80t/zzBKf82sCf/L5oi/yd/
+        HP8nfRz/L5oh/zavJv87vyn/Psss/0DQLf9A0C3/QM8t/0DPLf9Azy3/Qrwy/05pS/93fHz/l5ub/7iv
+        of/1z6b/sJFw/2VWQ/9YRzb/hmlL/6OHaf+AeHX/q5yY/5+Vj/9cWFT/ZFE8/3NpWv/LvLj//+fa///q
+        2f/57d//cXBu/2lFRP+cYmP/nmNl/6BmaP+RWFP/wmgS/96ILf+/k2T/MlEy/zezJ/9A0C3/Psos/zu+
+        Kf82rib/L5ki/yd9HP8mfRv/L5gh/zatJv87vij/Pskr/z/OLf8/zi3/QM0s/0DOLP8/zi3/QM0s/0HH
+        L/9DnDf/RnJB/4V+cf+6qpb/kIyI/5yTj/98dXH/VEo+/1VPRP+7sKz//+3f///v3//Sy8L/X1ZR/3lU
+        Tf+Gf37/2tHI//Ho2//c3dH/enJx/5JZWv+oZWb/p2Zm/6hnaP+SV1P/wGYR/92GK/+/kmP/MlAy/zex
+        J/9AzSz/Pcgr/zq9KP82rSb/L5gi/yZ9HP8mfBv/L5Yh/zWrJv86vCj/Pscr/z/MLf8/zC3/QMss/0DM
+        LP8/zC3/P8ss/z/MLf8/yy3/P8st/0CeNf9YYWD/49rX///x5v/+8eP/lpWP/11LRv+GfXv/1s7E//Hs
+        3//KzcT/cl5f/6dcXv+aX2D/fmZl/4Fzcv95Y2T/m2Bh/7RoaP+yaGj/tGhp/7Fnaf+VV1P/wGYS/92G
+        LP+/kmP/Mk8y/zWvJ/8+yyz/Pccr/zq8KP80rCb/LpYg/yZ8HP8mehv/LpUg/zOpJP85uSj/PcQr/z/J
+        K/8/yiz/Psks/z7KLP8/yiz/Psos/z7JLP8/yiz/P8kt/z7GLf9SalD/rbCv/+bh3P/n597/m56a/5Ba
+        XP+fXl//fWRk/4R1c/9+Y2P/qmNk/7pnaP+3Zmf/tGRk/7BjZP+3Z2f/umho/69gYf+jVVb/oFVW/7Zo
+        av+WV1T/wWoW/9+KMf/AlWf/MU8y/zWtJv8+ySz/PcUr/zq6KP80qiX/LpQg/yZ6Gv8leRv/LpMg/zOp
+        JP85uCj/PMMq/z7IK/8+yCz/Psgs/z3IK/8+yCz/Psgr/z7ILP8+yCz/Psgs/z7ILP9CpzT/UmhR/3d8
+        ff93fHz/pX+A/8d2dv/EaWv/vmJl/7ZcX/++XmL/wV9i/8BiY/+4aGj/sWZm/6BZWv+PTE3/hEZG/4ZT
+        Uv+YcXH/jWlp/5JOT/+aWlf/xHAg/+GRPP/BmGz/MU4y/zWtJv8+yCz/PMMr/zm4KP80qCX/LpQg/yV5
+        Gv8leBr/LpIg/zOnJP84tij/O8Eq/z3GK/8+xiz/PsYr/z3GK/89xiv/PcYr/z7GK/89xiv/PcYs/z3G
+        K/8+xiz/O7Mq/y1yI/9CTkH/v5GR/92Mjf/OcHD/1HFs/9t9cf/gj37/4aWQ/+XCqP/DhHz/fUFD/1sn
+        J/+JY2P/4NjY//Dt7f//////xra2/307Pf+bW1n/x3gr/+SZSP/DnHL/MU4x/zWrJf89xiv/O8Eq/zi2
+        KP8zqCT/LZIg/yV4Gv8leBr/LZEf/zOmJP84tSj/O8Ap/z3FKv89xCv/PcUr/zzFKv89xCv/PcUr/z3F
+        Kv89xSv/PcUr/zKlI/8nfxz/H2cW/x1YFf8iTxz/ZmVf/8usn//jzLT/zdO9/7vi0v+q7eP/nvn1/5Pm
+        5f+gcW7/cTw9/10nJ/+hgYH/////////////////xLOz/349P/+aXFn/yoA1/+mhUv/FoHj/MU4x/zWq
+        Jf88xSv/OsAq/zi1KP8zpST/LZEg/yV4Gf8ldhn/LJAf/zOkI/83syj/Or4q/zzDKv88wyv/PcMq/zzD
+        K/89wyr/PMMq/z3DK/89viv/M5Qm/yZMIP83QzX/V2Fe/214eP8nTSH/LFAj/22Rk/965fP/Xtzw/1vd
+        8v9m4PL/eu///22wuP+TYmP/fEtL/2AqKv+cenr/////////////////rpaW/3s7Pf+aXFn/zIQ8/+qm
+        Wf/Go3v/ME0w/zSpJf89wyv/O74q/zezJ/8zpCP/LZAf/yV2Gf8jdRr/LI4f/zKiI/83sif/Orwp/zzB
+        Kv87wSr/O8Eq/zvBKv88wSr/PMEq/z2+K/9McEf/dH99/5asrP+w0tL/zvj4/7LV1P8yPyz/P0w8/3K/
+        z/9d1vD/T8zl/1PP5/9l2Ov/feT1/195ff+abW3/fVBQ/2UyMv9vQED/08fH//Tz8//KvLz/aTo5/5BN
+        Tv+ZWlj/z4pE/+2tY//Ip4H/MVUv/ze1J/88wSr/Orwp/zeyJ/8zoiP/K44f/yR1Gf8jcxn/K40f/zGh
+        Iv83ryb/Orop/zvAKv87wCr/O8Ap/zu/Kv87wCn/O78p/z2yLf9sdnD/5/39/+P////Z////2////8zr
+        6v9VU1L/WIeT/1zP7P9CweD/PcDf/0rF4f9s3fT/c7TB/05LS/+vhYb/lGRk/28+Pv9vNzj/fkVG/5tk
+        ZP+QTk//nlZW/7xrbv+wc2X/4q1x//rKkf/RuZr/MWEt/zvAKv87vyn/Oboo/zavJv8xoCP/K40f/yNz
+        Gf8jchj/K4oe/zGeI/81rib/Obco/zu9Kf86vir/Or4p/zu9Kf86vin/Or4p/zy3K/9aaln/5/Dw//b/
+        ///r////6v////X///+qxsz/PbXX/za53f82uNv/Pr/f/1vR7v92x9n/VGla/0VfQP+zkpL/4qKj/8qC
+        g//NfX//0YCB/9SDhP/dkY//4puY/+Kjnf/xy6r/+9qw//3nwv+1qJb/PHw0/zu+Kf86vin/OLgo/zWu
+        Jv8xnSL/Kooe/yNyGf8ibhjxKYYd/zCbIv80qiX/OLUo/zq7Kf86vCn/Orwp/zq8Kf86vCn/Orwp/zq8
+        Kf9Aijb/gYCA/+7s7P//////////////////////u+78/2vP7P9cxuX/acbf/3u3x/9XamP/P58x/z+Y
+        NP92amv/uZaX/8Cal//UsKf/0LKm/8Stov+6qp3/q6CU/6Kbj/+QjYP/fn90/3d5bf9UbE7/Pasv/zq8
+        Kf86uyn/OLUo/zSqJf8wmyL/KYYd/yJuGPEhaxfNKoMe/2KsQf+SyGD/n9Nq/57Ya/+e2W3/mdds/5bW
+        af+S1Wf/jdRl/4nTYf+F0l//ha9l/5aZgP/Au7T/2dbS/9/c2v/f3tz/2NPN/7e1sP+WmZL/hYt3/3iN
+        YP9ssU3/Z8hE/2jGRf9soVH/bZNU/3CTWf93jmD/co5c/2+RVf9qmFH/Z5xN/2ekS/9prUr/a7dK/2y+
+        S/9wxkv/cstL/3bMTv99zVT/f8lW/37BU/9wsUr/Qo4s/yFrF80fZRaXPIUm/4y5Wv+x0nL/wd1+/8fi
+        hf/E44b/wOKF/7vig/+24IH/sN59/6vdev+m3Hb/odpx/53Pcf+aunH/max1/5endP+Vo3P/jaVr/4my
+        Yv+FvFz/gcRY/37NVP99zlL/fM1Q/3vNUP95zE3/ectM/3nLTP94ykz/d8tK/3fLSf94y0v/d8tL/3nL
+        TP96zU3/fc1P/4DPU/+Ez1X/iNFZ/5DSXf+b1GX/mc5i/5HFXP+BtFT/VZE3/x9lFpcjXxdXT4gz/4Gu
+        UP+Ywl3/sdNs/7fYcf+53HP/sttw/7HccP+u22//p9ps/6PYaf+g12j/nNZk/5jVYv+V02D/kdNc/4/S
+        Wv+L0Fj/idBX/4fPVf+Fz1P/hM9S/4LOUP+BzlD/gM1O/3/NTf9/zEz/fsxM/37MTP9+zEz/fcxL/33M
+        S/9/zEz/gMxN/4LNT/+Czk//g85P/4fOUf+JzlL/jM9T/5HOVv+UzFf/kMVU/4G3Tf9wpkX/UYkz/xxe
+        FVZCaycMWoU2u2qcQP+DsU7/nMRd/6/RaP+11mz/utlv/7jabv+02Wv/r9hp/6zXZ/+q1mX/p9Zi/6TU
+        YP+h017/oNJd/53SXP+b0Vv/mdBa/5jQWf+Xz1j/lc9X/5POVv+TzlT/ks5V/5HOVP+RzlX/kc5U/5PP
+        VP+SzlP/kM5U/5HNVP+Uzlb/l9BW/5rPWP+b0Vr/mtFZ/5nQV/+bz1n/ms5Y/5fLVv+SxlP/h7tN/3Wq
+        RP9klzz/UIAwuBpWEwoAAAABV3sxVWaRQuB2pE7/lbxo/7PRg//A2Yr/v9iA/77XdP+7123/u9Zr/7zX
+        bP+71mr/uNVp/7bVaP+01GX/sdJj/7DTZP+w0mP/rtFi/63SYv+t0mL/rdFi/6vQYf+q0V//qdBf/6fP
+        Xv+n0F7/ps9e/6fQXv+mz13/p89e/6XNXf+nz17/qNBe/6jPXv+q0F7/q9Bg/6XOXP+kzVz/nslZ/5XB
+        U/+JuU7/eatF/2WZPP9eiznfXX43VwAAAAAAAAAAAAAAAniVXHl3nVnkoL+F/83fuv/d6cv/0eKy/8PX
+        kP+80nr/vdJu/7/Sbv/D1G7/xdNu/8PTbP+/0mn/vtFn/73QZ/+/0Wj/v9Fo/8DSaP/A0mf/wtJp/8LS
+        af/A0mj/v9Fn/8DSaf++0Wf/uc9m/7rPZf+4zmX/uc9k/7jOZP+0zWP/scxh/6/LX/+syV7/qsld/6rI
+        Xf+fw1f/lrxT/4ezTP96qEb/ZZc8/1yJN99kgzxwAAAABQAAAAAAAAAAAAAAAAAAAAVOejtSbpZYwpG0
+        gf+40Kn/ttCg/6fFhP+iwHH/nr1i/6nCZv+yxWr/uMhq/7nHZ/+5x2X/usdj/7rHYv+8yGP/vslk/7/J
+        Zf++yWX/vshk/8DJZf/Dy2b/v8ll/77JZf++yWT/ucZi/7jGYf+1xWD/scNe/67BXP+pv1r/obtX/5y5
+        VP+ZuFH/k7RO/4ywTP+Bqkf/dqND/2mZPP9bjDf/T34vuFB2L1MAAAACAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAUXQxDUx7PWRdi06rWYtH2FCGPPRPhTf/UYcz/1iLN/9cjTn/YZA6/2OQOf9kkDn/ZZA3/2iS
+        Of9pkjn/apM5/2qTOf9pkzr/a5M6/2yUOv9ulTv/a5Q6/2yUOv9okjj/ZpE3/2KPNf9fjjX/XYw0/1mK
+        Mf9XiTD/U4cu/06FLf9Ngyz/SYEq/0R9J/9BeifzP3cl00R1KKJMdixkg41GEgAAAAIAAAAAAAAAAAAA
+        AADwAAAAAA8AAOAAAAAABwAAwAAAAAADAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAB
+        AADAAAAAAAMAAOAAAAAABwAA8AAAAAAPAAA=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Initial Bank Amount</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>InitialBankForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GTI.Modules.POS.UI.POSForm, POS, Version=1.9.2.17, Culture=neutral, PublicKeyToken=5016b6e2829afc8a</value>
+  </data>
+</root>

@@ -1,0 +1,1656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="m_kioskIdleTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>259, 17</value>
+  </metadata>
+  <metadata name="m_kioskCardInstructionsFlashTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_panelMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_panelMain.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="m_btnAdvTest1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_btnAdvTest1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnAdvTest1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnAdvTest1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 559</value>
+  </data>
+  <data name="m_btnAdvTest1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnAdvTest1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 36</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_btnAdvTest1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="m_btnAdvTest1.Text" xml:space="preserve">
+    <value>$1</value>
+  </data>
+  <data name="m_btnAdvTest1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest1.Name" xml:space="preserve">
+    <value>m_btnAdvTest1</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest1.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest1.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_btnAdvTest10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_btnAdvTest10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnAdvTest10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnAdvTest10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 559</value>
+  </data>
+  <data name="m_btnAdvTest10.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnAdvTest10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 36</value>
+  </data>
+  <data name="m_btnAdvTest10.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="m_btnAdvTest10.Text" xml:space="preserve">
+    <value>$10</value>
+  </data>
+  <data name="m_btnAdvTest10.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest10.Name" xml:space="preserve">
+    <value>m_btnAdvTest10</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest10.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest10.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_btnAdvTest5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_btnAdvTest5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnAdvTest5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnAdvTest5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 559</value>
+  </data>
+  <data name="m_btnAdvTest5.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnAdvTest5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 36</value>
+  </data>
+  <data name="m_btnAdvTest5.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="m_btnAdvTest5.Text" xml:space="preserve">
+    <value>$5</value>
+  </data>
+  <data name="m_btnAdvTest5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest5.Name" xml:space="preserve">
+    <value>m_btnAdvTest5</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest5.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest5.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnAdvTest5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_btnHelp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_btnHelp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 680</value>
+  </data>
+  <data name="m_btnHelp.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_btnHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_btnHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="m_btnHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="m_btnHelp.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnHelp.Name" xml:space="preserve">
+    <value>m_btnHelp</value>
+  </data>
+  <data name="&gt;&gt;m_btnHelp.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnHelp.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnHelp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_timeoutProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_timeoutProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 755</value>
+  </data>
+  <data name="m_timeoutProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 10</value>
+  </data>
+  <data name="m_timeoutProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Name" xml:space="preserve">
+    <value>m_timeoutProgress</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_timeoutProgress.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_btnDevice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_btnDevice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 583</value>
+  </data>
+  <data name="m_btnDevice.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 60</value>
+  </data>
+  <data name="m_btnDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="m_btnDevice.Text" xml:space="preserve">
+    <value> $2.00</value>
+  </data>
+  <data name="m_btnDevice.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnDevice.Name" xml:space="preserve">
+    <value>m_btnDevice</value>
+  </data>
+  <data name="&gt;&gt;m_btnDevice.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnDevice.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnDevice.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 26.25pt, style=Bold</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 592</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 42</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.Text" xml:space="preserve">
+    <value>Playing on:</value>
+  </data>
+  <data name="m_lblKioskPlayingOn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskPlayingOn.Name" xml:space="preserve">
+    <value>m_lblKioskPlayingOn</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskPlayingOn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskPlayingOn.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskPlayingOn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="m_btnCancelSale.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 15.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnCancelSale.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnCancelSale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 680</value>
+  </data>
+  <data name="m_btnCancelSale.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnCancelSale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 55</value>
+  </data>
+  <data name="m_btnCancelSale.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="m_btnCancelSale.Text" xml:space="preserve">
+    <value>Cancel Sale</value>
+  </data>
+  <data name="m_btnCancelSale.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelSale.Name" xml:space="preserve">
+    <value>m_btnCancelSale</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelSale.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelSale.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelSale.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="m_btnContinueSale.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 15.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnContinueSale.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnContinueSale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 680</value>
+  </data>
+  <data name="m_btnContinueSale.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_btnContinueSale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 55</value>
+  </data>
+  <data name="m_btnContinueSale.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="m_btnContinueSale.Text" xml:space="preserve">
+    <value>Continue Shopping</value>
+  </data>
+  <data name="m_btnContinueSale.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnContinueSale.Name" xml:space="preserve">
+    <value>m_btnContinueSale</value>
+  </data>
+  <data name="&gt;&gt;m_btnContinueSale.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnContinueSale.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnContinueSale.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="m_btnCurrency.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_btnCurrency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 580</value>
+  </data>
+  <data name="m_btnCurrency.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 51</value>
+  </data>
+  <data name="m_btnCurrency.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="m_btnCurrency.Text" xml:space="preserve">
+    <value>USD</value>
+  </data>
+  <data name="&gt;&gt;m_btnCurrency.Name" xml:space="preserve">
+    <value>m_btnCurrency</value>
+  </data>
+  <data name="&gt;&gt;m_btnCurrency.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnCurrency.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnCurrency.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="m_btnFinishTender.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 24pt, style=Bold</value>
+  </data>
+  <data name="m_btnFinishTender.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnFinishTender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 607</value>
+  </data>
+  <data name="m_btnFinishTender.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnFinishTender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 90</value>
+  </data>
+  <data name="m_btnFinishTender.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="m_btnFinishTender.Text" xml:space="preserve">
+    <value>Complete Sale</value>
+  </data>
+  <data name="m_btnFinishTender.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnFinishTender.Name" xml:space="preserve">
+    <value>m_btnFinishTender</value>
+  </data>
+  <data name="&gt;&gt;m_btnFinishTender.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnFinishTender.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnFinishTender.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="m_lblExchangeRate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_lblExchangeRate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt</value>
+  </data>
+  <data name="m_lblExchangeRate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblExchangeRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 715</value>
+  </data>
+  <data name="m_lblExchangeRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="m_lblExchangeRate.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="m_lblExchangeRate.Text" xml:space="preserve">
+    <value>Exchange rate</value>
+  </data>
+  <data name="&gt;&gt;m_lblExchangeRate.Name" xml:space="preserve">
+    <value>m_lblExchangeRate</value>
+  </data>
+  <data name="&gt;&gt;m_lblExchangeRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblExchangeRate.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_lblExchangeRate.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="m_lblPlayerPoints.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_lblPlayerPoints.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt</value>
+  </data>
+  <data name="m_lblPlayerPoints.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblPlayerPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 648</value>
+  </data>
+  <data name="m_lblPlayerPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 22</value>
+  </data>
+  <data name="m_lblPlayerPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="m_lblPlayerPoints.Text" xml:space="preserve">
+    <value>Points:   25000</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerPoints.Name" xml:space="preserve">
+    <value>m_lblPlayerPoints</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerPoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerPoints.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerPoints.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="m_lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_lblPlayerName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt</value>
+  </data>
+  <data name="m_lblPlayerName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblPlayerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 607</value>
+  </data>
+  <data name="m_lblPlayerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 22</value>
+  </data>
+  <data name="m_lblPlayerName.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="m_lblPlayerName.Text" xml:space="preserve">
+    <value>Player:   Richard Kappele</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerName.Name" xml:space="preserve">
+    <value>m_lblPlayerName</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerName.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_lblPlayerName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="m_keypad.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="m_keypad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt, style=Bold</value>
+  </data>
+  <data name="m_keypad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 235</value>
+  </data>
+  <data name="m_keypad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 316</value>
+  </data>
+  <data name="m_keypad.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_keypad.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Name" xml:space="preserve">
+    <value>m_keypad</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Type" xml:space="preserve">
+    <value>GTI.Controls.Keypad, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_keypad.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        ALkgjymDAgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.ImagePressed" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 680</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_btnSwapLeftRightHanded.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;m_btnSwapLeftRightHanded.Name" xml:space="preserve">
+    <value>m_btnSwapLeftRightHanded</value>
+  </data>
+  <data name="&gt;&gt;m_btnSwapLeftRightHanded.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnSwapLeftRightHanded.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnSwapLeftRightHanded.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="m_btnCancelTendering.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 8.25pt, style=Bold</value>
+  </data>
+  <data name="m_btnCancelTendering.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnCancelTendering.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 465</value>
+  </data>
+  <data name="m_btnCancelTendering.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_btnCancelTendering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_btnCancelTendering.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelTendering.Name" xml:space="preserve">
+    <value>m_btnCancelTendering</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelTendering.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelTendering.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_btnCancelTendering.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="m_tenderButtonMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="m_tenderButtonMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="m_tenderButtonMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>636, 559</value>
+  </data>
+  <data name="m_tenderButtonMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>363, 188</value>
+  </data>
+  <data name="m_tenderButtonMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;m_tenderButtonMenu.Name" xml:space="preserve">
+    <value>m_tenderButtonMenu</value>
+  </data>
+  <data name="&gt;&gt;m_tenderButtonMenu.Type" xml:space="preserve">
+    <value>GTI.Controls.ButtonMenu, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_tenderButtonMenu.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_tenderButtonMenu.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="m_buttonRemoveLine.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_buttonRemoveLine.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 28pt, style=Bold</value>
+  </data>
+  <data name="m_buttonRemoveLine.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_buttonRemoveLine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 93</value>
+  </data>
+  <data name="m_buttonRemoveLine.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_buttonRemoveLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_buttonRemoveLine.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;m_buttonRemoveLine.Name" xml:space="preserve">
+    <value>m_buttonRemoveLine</value>
+  </data>
+  <data name="&gt;&gt;m_buttonRemoveLine.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_buttonRemoveLine.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_buttonRemoveLine.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="m_dueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_dueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Console, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_dueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_dueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 531</value>
+  </data>
+  <data name="m_dueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 19</value>
+  </data>
+  <data name="m_dueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_dueLabel.Text" xml:space="preserve">
+    <value>Due</value>
+  </data>
+  <data name="&gt;&gt;m_dueLabel.Name" xml:space="preserve">
+    <value>m_dueLabel</value>
+  </data>
+  <data name="&gt;&gt;m_dueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_dueLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_dueLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="m_dueAmountLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="m_dueAmountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt</value>
+  </data>
+  <data name="m_dueAmountLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_dueAmountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 521</value>
+  </data>
+  <data name="m_dueAmountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 34</value>
+  </data>
+  <data name="m_dueAmountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="m_dueAmountLabel.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="m_dueAmountLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;m_dueAmountLabel.Name" xml:space="preserve">
+    <value>m_dueAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;m_dueAmountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_dueAmountLabel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_dueAmountLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="m_buttonScrollDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_buttonScrollDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 348</value>
+  </data>
+  <data name="m_buttonScrollDown.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_buttonScrollDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_buttonScrollDown.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollDown.Name" xml:space="preserve">
+    <value>m_buttonScrollDown</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollDown.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollDown.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollDown.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="m_buttonScrollUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_buttonScrollUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 212</value>
+  </data>
+  <data name="m_buttonScrollUp.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="m_buttonScrollUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 55</value>
+  </data>
+  <data name="m_buttonScrollUp.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollUp.Name" xml:space="preserve">
+    <value>m_buttonScrollUp</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollUp.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollUp.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_buttonScrollUp.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="m_statusTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_statusTextbox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_statusTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>640, 19</value>
+  </data>
+  <data name="m_statusTextbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="m_statusTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 192</value>
+  </data>
+  <data name="m_statusTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;m_statusTextbox.Name" xml:space="preserve">
+    <value>m_statusTextbox</value>
+  </data>
+  <data name="&gt;&gt;m_statusTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_statusTextbox.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_statusTextbox.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="m_tendersList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_tendersList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Console, 14.25pt, style=Bold</value>
+  </data>
+  <data name="m_tendersList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_tendersList.ItemHeight" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="m_tendersList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_tendersList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="m_tendersList.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>473, 432</value>
+  </data>
+  <data name="m_tendersList.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="m_tendersList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 427</value>
+  </data>
+  <data name="m_tendersList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_tendersList.Name" xml:space="preserve">
+    <value>m_tendersList</value>
+  </data>
+  <data name="&gt;&gt;m_tendersList.Type" xml:space="preserve">
+    <value>GTI.Controls.ColorListBox, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_tendersList.Parent" xml:space="preserve">
+    <value>m_tendersPanel</value>
+  </data>
+  <data name="&gt;&gt;m_tendersList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_tendersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 93</value>
+  </data>
+  <data name="m_tendersPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 427</value>
+  </data>
+  <data name="m_tendersPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_tendersPanel.Name" xml:space="preserve">
+    <value>m_tendersPanel</value>
+  </data>
+  <data name="&gt;&gt;m_tendersPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_tendersPanel.Parent" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_tendersPanel.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="m_panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="m_panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Name" xml:space="preserve">
+    <value>m_panelMain</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Type" xml:space="preserve">
+    <value>GTI.Controls.EliteGradientPanel, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_panelMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_panelKiosk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="m_panelKiosk.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="m_picCreditCardDevice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_picCreditCardDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 258</value>
+  </data>
+  <data name="m_picCreditCardDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 421</value>
+  </data>
+  <data name="m_picCreditCardDevice.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_picCreditCardDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="m_picCreditCardDevice.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_picCreditCardDevice.Name" xml:space="preserve">
+    <value>m_picCreditCardDevice</value>
+  </data>
+  <data name="&gt;&gt;m_picCreditCardDevice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_picCreditCardDevice.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_picCreditCardDevice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_btnTest10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_btnTest10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnTest10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnTest10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 566</value>
+  </data>
+  <data name="m_btnTest10.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnTest10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 68</value>
+  </data>
+  <data name="m_btnTest10.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="m_btnTest10.Text" xml:space="preserve">
+    <value>$10</value>
+  </data>
+  <data name="m_btnTest10.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest10.Name" xml:space="preserve">
+    <value>m_btnTest10</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest10.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest10.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_btnTest5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_btnTest5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnTest5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnTest5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 452</value>
+  </data>
+  <data name="m_btnTest5.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnTest5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 68</value>
+  </data>
+  <data name="m_btnTest5.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="m_btnTest5.Text" xml:space="preserve">
+    <value>$5</value>
+  </data>
+  <data name="m_btnTest5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest5.Name" xml:space="preserve">
+    <value>m_btnTest5</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest5.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest5.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_btnTest1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="m_btnTest1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 21.75pt, style=Bold</value>
+  </data>
+  <data name="m_btnTest1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnTest1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 335</value>
+  </data>
+  <data name="m_btnTest1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnTest1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 68</value>
+  </data>
+  <data name="m_btnTest1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="m_btnTest1.Text" xml:space="preserve">
+    <value>$1</value>
+  </data>
+  <data name="m_btnTest1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest1.Name" xml:space="preserve">
+    <value>m_btnTest1</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest1.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest1.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnTest1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_simpleKioskProgress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="m_simpleKioskProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_simpleKioskProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 756</value>
+  </data>
+  <data name="m_simpleKioskProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 10</value>
+  </data>
+  <data name="m_simpleKioskProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;m_simpleKioskProgress.Name" xml:space="preserve">
+    <value>m_simpleKioskProgress</value>
+  </data>
+  <data name="&gt;&gt;m_simpleKioskProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_simpleKioskProgress.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_simpleKioskProgress.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 36pt, style=Bold</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>792, 689</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 67</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="m_btnSimpleKioskHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="&gt;&gt;m_btnSimpleKioskHelp.Name" xml:space="preserve">
+    <value>m_btnSimpleKioskHelp</value>
+  </data>
+  <data name="&gt;&gt;m_btnSimpleKioskHelp.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnSimpleKioskHelp.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnSimpleKioskHelp.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 27.75pt, style=Bold</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 161</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 106</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Text" xml:space="preserve">
+    <value>Please follow the instructions on
+the card processing device.</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="m_lblKioskCardInstructions.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskCardInstructions.Name" xml:space="preserve">
+    <value>m_lblKioskCardInstructions</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskCardInstructions.Type" xml:space="preserve">
+    <value>GTI.Controls.OutlinedLabel, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskCardInstructions.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskCardInstructions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="m_btnKioskQuit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="m_btnKioskQuit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 36pt, style=Bold</value>
+  </data>
+  <data name="m_btnKioskQuit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnKioskQuit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 689</value>
+  </data>
+  <data name="m_btnKioskQuit.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnKioskQuit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 67</value>
+  </data>
+  <data name="m_btnKioskQuit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_btnKioskQuit.Text" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskQuit.Name" xml:space="preserve">
+    <value>m_btnKioskQuit</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskQuit.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskQuit.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskQuit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="m_lblKioskInstructions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_lblKioskInstructions.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 36pt, style=Bold</value>
+  </data>
+  <data name="m_lblKioskInstructions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblKioskInstructions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 161</value>
+  </data>
+  <data name="m_lblKioskInstructions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>973, 212</value>
+  </data>
+  <data name="m_lblKioskInstructions.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_lblKioskInstructions.Text" xml:space="preserve">
+    <value>Insert bills
+
+or</value>
+  </data>
+  <data name="m_lblKioskInstructions.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskInstructions.Name" xml:space="preserve">
+    <value>m_lblKioskInstructions</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskInstructions.Type" xml:space="preserve">
+    <value>GTI.Controls.OutlinedLabel, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskInstructions.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskInstructions.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="m_lblKioskTotalDue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_lblKioskTotalDue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 36pt, style=Bold</value>
+  </data>
+  <data name="m_lblKioskTotalDue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_lblKioskTotalDue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 74</value>
+  </data>
+  <data name="m_lblKioskTotalDue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>973, 74</value>
+  </data>
+  <data name="m_lblKioskTotalDue.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="m_lblKioskTotalDue.Text" xml:space="preserve">
+    <value>Amount Due: $100,000.00</value>
+  </data>
+  <data name="m_lblKioskTotalDue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskTotalDue.Name" xml:space="preserve">
+    <value>m_lblKioskTotalDue</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskTotalDue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskTotalDue.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_lblKioskTotalDue.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="m_btnKioskCard.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="m_btnKioskCard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 36pt, style=Bold</value>
+  </data>
+  <data name="m_btnKioskCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btnKioskCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 421</value>
+  </data>
+  <data name="m_btnKioskCard.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="m_btnKioskCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>505, 213</value>
+  </data>
+  <data name="m_btnKioskCard.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_btnKioskCard.Text" xml:space="preserve">
+    <value>Press here to pay with Credit/Debit card</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskCard.Name" xml:space="preserve">
+    <value>m_btnKioskCard</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskCard.Type" xml:space="preserve">
+    <value>GTI.Controls.ImageButton, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskCard.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_btnKioskCard.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="m_picLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="m_picLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="m_picLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_picLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 15</value>
+  </data>
+  <data name="m_picLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 48</value>
+  </data>
+  <data name="m_picLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;m_picLogo.Name" xml:space="preserve">
+    <value>m_picLogo</value>
+  </data>
+  <data name="&gt;&gt;m_picLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_picLogo.Parent" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_picLogo.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="m_panelKiosk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_panelKiosk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="m_panelKiosk.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="m_panelKiosk.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_panelKiosk.Name" xml:space="preserve">
+    <value>m_panelKiosk</value>
+  </data>
+  <data name="&gt;&gt;m_panelKiosk.Type" xml:space="preserve">
+    <value>GTI.Controls.EliteGradientPanel, GTIControls, Version=1.3.11.1024, Culture=neutral, PublicKeyToken=8379638106a1f521</value>
+  </data>
+  <data name="&gt;&gt;m_panelKiosk.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_panelKiosk.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 768</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Tender</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Name" xml:space="preserve">
+    <value>m_kioskIdleTimer</value>
+  </data>
+  <data name="&gt;&gt;m_kioskIdleTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_kioskCardInstructionsFlashTimer.Name" xml:space="preserve">
+    <value>m_kioskCardInstructionsFlashTimer</value>
+  </data>
+  <data name="&gt;&gt;m_kioskCardInstructionsFlashTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FlexTenderingForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GTI.Modules.POS.UI.POSForm, POS, Version=1.11.0.1, Culture=neutral, PublicKeyToken=5016b6e2829afc8a</value>
+  </data>
+</root>

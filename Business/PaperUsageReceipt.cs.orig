@@ -1,0 +1,644 @@
+﻿#region Copyright
+// This is an unpublished work protected under the copyright laws of the
+// United States and other countries.  All rights reserved.  Should
+// publication occur the following will apply:  © 2016 Fortunet
+// International, Inc.
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
+using GTI.Modules.Shared;
+using System.Linq;
+
+
+namespace GTI.Modules.POS.Business
+{
+    internal class PaperUsageReceipt : Receipt//
+    {
+
+        protected const int SmallHeaderColumn1Length = 8;
+        protected const int SmallHeaderColumn2Length = 11;
+        protected const int SmallHeaderColumn3Length = 7;
+        protected const int SmallHeaderColumn4Length = 5;
+        protected const int SmallBodyColumn1Length = 20; // Rally TA7465
+
+        #region Local Variables
+
+        private List<PaperUsageItem> m_paperUsageItems;
+        private int m_Session;
+        private string m_OperatorName;
+        private DateTime m_startDateTime = new DateTime();
+        private DateTime m_TodaysDateTime = new DateTime();
+        private int m_machineId;
+        private string m_version;
+        #endregion
+
+        #region Constructor
+
+        internal PaperUsageReceipt(List<PaperUsageItem> items)//type 1 for paperusage; 2 for unscanned packs
+        {
+            m_paperUsageItems = items;
+        }
+
+        #endregion
+
+        #region Properties
+
+        public int Session
+        {
+            get { return m_Session; }
+            set { m_Session = value; }
+        }
+
+
+        public string OperatorName
+        {
+            get { return m_OperatorName; }
+            set { m_OperatorName = value; }
+        }
+
+        public DateTime StartDateTime
+        {
+            get { return m_startDateTime; }
+            set { m_startDateTime = value; }
+        }
+
+        public DateTime TodaysDateTime
+        {
+            get { return m_TodaysDateTime; }
+            set { m_TodaysDateTime = value; }
+        }
+
+
+        public int MachineId
+        {
+            get { return m_machineId; }
+            set { m_machineId = value; }
+        }
+
+        public string Version
+        {
+            get { return m_version; }
+            set { m_version = value; }
+        }
+
+
+        #endregion
+
+        #region Methods
+
+        private string FixLongText(string detail, int CharacterLength)
+        {
+            if (detail.Length > CharacterLength)
+            {
+                detail = detail.Substring(0, CharacterLength - 1);
+                detail = detail + "…";
+            }
+
+            return detail;
+        }
+
+        protected virtual void PrintHeader()
+        {
+
+            m_printer.AddLine("Paper Usage for Session " + m_Session.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(m_OperatorName, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Version " + m_version, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Date         :" + m_startDateTime.Date.ToShortDateString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Station: " + m_machineId.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+        /// <summary>
+        /// Prints the body for paper usage.
+        /// </summary>
+        protected virtual void PrintBodyPaperUsage()
+        {
+            //Add item header
+            m_printer.AddLine(" Pack", StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(" Name".PadRight(SmallHeaderColumn1Length) + "Start".PadLeft(SmallHeaderColumn3Length) + "End".PadLeft(SmallHeaderColumn3Length) + "S/R".PadLeft(SmallHeaderColumn3Length) + "  Total".PadRight(SmallHeaderColumn2Length), StringAlignment.Near, m_fontSmall);
+
+            //Add item detail and save total quantity issued, total quantity sold and total gross
+            string tempPaperDetail = "";
+            int tempTotalIssued = 0;
+            int tempTotalSold = 0;
+            decimal tempTotalGross = 0M;
+            foreach (PaperUsageItem pui in m_paperUsageItems)
+            {
+
+                tempPaperDetail = "";
+                tempPaperDetail += FixLongText(pui.Name, SmallBodyColumn1Length).PadRight(SmallHeaderColumn1Length);
+                tempPaperDetail += FixLongText(pui.AuditStart.ToString(), SmallHeaderColumn3Length).PadLeft(SmallHeaderColumn3Length);
+                tempPaperDetail += FixLongText((pui.AuditEnd + 1).ToString(), SmallHeaderColumn3Length).PadLeft(SmallHeaderColumn3Length);
+                tempPaperDetail += FixLongText(pui.Damaged.ToString(), SmallHeaderColumn3Length).PadLeft(SmallHeaderColumn3Length);
+                tempPaperDetail += FixLongText("  $" + string.Format("{0}", decimal.Round((pui.Price * pui.Quantity), 2).ToString("F")), SmallHeaderColumn2Length).PadRight(SmallHeaderColumn2Length);
+                m_printer.AddLine(tempPaperDetail, StringAlignment.Near, m_fontSmall);
+                tempTotalIssued += (pui.AuditEnd - pui.AuditStart) + 1;
+                tempTotalSold += ((pui.AuditEnd - pui.AuditStart) + 1) - (pui.SkipList.Count(i => i >= pui.AuditStart && i <= pui.AuditEnd));
+                tempTotalGross += (pui.Price * pui.Quantity);
+            }
+
+            string temp = "";
+            temp = string.Empty.PadRight(m_fontMediumMaxChars, '-');
+            m_printer.AddLine(temp, StringAlignment.Center, m_fontMedium);
+
+            tempPaperDetail = "";
+            tempPaperDetail += "Issued" + " ";
+            tempPaperDetail += tempTotalIssued.ToString() + "  ";
+            tempPaperDetail += "Sold" + " ";
+            tempPaperDetail += tempTotalSold.ToString() + "  ";
+            tempPaperDetail += "Gross" + " ";
+            tempPaperDetail += tempTotalGross.ToString();
+            m_printer.AddLine(tempPaperDetail, StringAlignment.Near, m_fontSmall);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+
+
+        /// <summary>
+        /// Prints the receipt's footer lines.
+        /// </summary>
+        protected virtual void PrintFooter()
+        {
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Cashier", StringAlignment.Near, m_fontSmall);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Supervisor", StringAlignment.Near, m_fontSmall);
+
+        }
+
+        /// <summary>
+        /// Print preview.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        /// <exception cref="System.ArgumentNullException">printer</exception>
+        public void PrintPreview(Printer printer, bool merchantCopy = false)
+        {
+            if (printer == null)
+                throw new ArgumentNullException("printer");
+
+            m_printer = printer;
+            m_printer.Margins = new Margins((int)m_printer.HardMarginX, (int)m_printer.HardMarginX, (int)m_printer.HardMarginY, (int)m_printer.HardMarginY);
+
+            SetTextSizes(m_printer.Using58mmPaper);
+
+            // Clear the the current lines from the printer object.
+            m_printer.ClearLines();
+
+            // Print the receipt's header.
+            PrintHeader();
+
+            PrintBodyPaperUsage();
+            //print footer
+            PrintFooter();
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(m_TodaysDateTime.ToShortDateString() + " " + m_TodaysDateTime.ToString("HH:mm:ss"), StringAlignment.Center, m_fontSmall);
+
+        }
+
+
+        /// <summary>
+        /// Prints to the specified printer.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="copies">The copies.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        public void Print(Printer printer, short copies, bool merchantCopy = false)
+        {
+            PrintPreview(printer, merchantCopy);
+
+            for (int x = 0; x < copies; x++)
+            {
+                m_printer.Print();
+            }
+        }
+
+        #endregion
+    }
+
+
+
+    internal class PaperUsageUnscannedPackReceipt : Receipt
+    {
+
+        protected const int SmallHeaderColumn1Length = 8;
+        protected const int SmallHeaderColumn2Length = 11;
+        protected const int SmallHeaderColumn3Length = 7;
+        protected const int SmallHeaderColumn4Length = 5;
+        protected const int SmallBodyColumn1Length = 20; // Rally TA7465
+
+        #region Local Variables
+
+        private List<PaperUsageItem> m_paperUsageItems;
+        private int m_Session;
+        private string m_OperatorName;
+        private DateTime m_startDateTime = new DateTime();
+        private DateTime m_TodaysDateTime = new DateTime();
+        private int m_machineId;
+        private string m_version;
+        #endregion
+
+        #region Constructor
+
+        internal PaperUsageUnscannedPackReceipt(List<PaperUsageItem> items)//type 1 for paperusage; 2 for unscanned packs
+        {
+            m_paperUsageItems = items;
+
+        }
+
+        #endregion
+
+        #region Properties
+
+        public int Session
+        {
+            get { return m_Session; }
+            set { m_Session = value; }
+        }
+
+
+        public string OperatorName
+        {
+            get { return m_OperatorName; }
+            set { m_OperatorName = value; }
+        }
+
+        public DateTime StartDateTime
+        {
+            get { return m_startDateTime; }
+            set { m_startDateTime = value; }
+        }
+
+        public DateTime TodaysDateTime
+        {
+            get { return m_TodaysDateTime; }
+            set { m_TodaysDateTime = value; }
+        }
+
+
+        public int MachineId
+        {
+            get { return m_machineId; }
+            set { m_machineId = value; }
+        }
+
+        public string Version
+        {
+            get { return m_version; }
+            set { m_version = value; }
+        }
+
+
+        #endregion
+
+        #region Methods
+
+        private string FixLongText(string detail, int CharacterLength)
+        {
+            if (detail.Length > CharacterLength)
+            {
+                detail = detail.Substring(0, CharacterLength - 1);
+                detail = detail + "…";
+            }
+
+            return detail;
+        }
+
+        protected virtual void PrintHeader()
+        {
+
+            m_printer.AddLine("Unscanned Pack for Session " + m_Session.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(m_OperatorName, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Version " + m_version, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Date         :" + m_startDateTime.Date.ToShortDateString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Station: " + m_machineId.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+
+
+        /// <summary>
+        /// Prints the body for unscanned packs.
+        /// </summary>
+        protected virtual void PrintBodyUnscannedPacks()
+        {
+            //Add item header
+            m_printer.AddLine(" Pack", StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(" Name".PadRight(12) + "Serial#".PadRight(12) + "Pack#".PadRight(12), StringAlignment.Near, m_fontMedium);
+
+            //Add item detail and save total quantity issued, total quantity sold and total gross
+            string tempPaperDetail = "";
+
+            foreach (PaperUsageItem pui in m_paperUsageItems)
+            {
+                foreach (var unscannedPackNumber in pui.UnscannedList)
+                {
+                    tempPaperDetail = "";
+                    tempPaperDetail = "";
+                    tempPaperDetail += FixLongText(pui.Name, 12).PadRight(12);
+                    tempPaperDetail += FixLongText(pui.Serial.ToString(), 12).PadRight(12);
+                    tempPaperDetail += FixLongText((unscannedPackNumber).ToString(), 12).PadRight(12);
+                    m_printer.AddLine(tempPaperDetail, StringAlignment.Near, m_fontMedium);
+                }
+            }
+
+            string temp = "";
+            temp = string.Empty.PadRight(m_fontMediumMaxChars, '-');
+            m_printer.AddLine(temp, StringAlignment.Center, m_fontMedium);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+
+        /// <summary>
+        /// Prints the receipt's footer lines.
+        /// </summary>
+        protected virtual void PrintFooter()
+        {
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Cashier", StringAlignment.Near, m_fontSmall);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Supervisor", StringAlignment.Near, m_fontSmall);
+
+        }
+
+        /// <summary>
+        /// Print preview.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        /// <exception cref="System.ArgumentNullException">printer</exception>
+        public void PrintPreview(Printer printer, bool merchantCopy = false)
+        {
+            if (printer == null)
+                throw new ArgumentNullException("printer");
+
+            m_printer = printer;
+            m_printer.Margins = new Margins((int)m_printer.HardMarginX, (int)m_printer.HardMarginX, (int)m_printer.HardMarginY, (int)m_printer.HardMarginY);
+
+            SetTextSizes(m_printer.Using58mmPaper);
+
+            // Clear the the current lines from the printer object.
+            m_printer.ClearLines();
+
+            // Print the receipt's header.
+            PrintHeader();
+
+
+            PrintBodyUnscannedPacks();
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(m_TodaysDateTime.ToShortDateString() + " " + m_TodaysDateTime.ToString("HH:mm:ss"), StringAlignment.Center, m_fontSmall);
+
+        }
+
+
+        /// <summary>
+        /// Prints to the specified printer.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="copies">The copies.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        public void Print(Printer printer, short copies, bool merchantCopy = false)
+        {
+            PrintPreview(printer, merchantCopy);
+
+            for (int x = 0; x < copies; x++)
+            {
+                m_printer.Print();
+            }
+        }
+
+        #endregion
+    }
+
+    internal class PaperUsageStartReceipt : Receipt
+    {
+
+        protected const int SmallHeaderColumn1Length = 8;
+        protected const int SmallHeaderColumn2Length = 11;
+        protected const int SmallHeaderColumn3Length = 7;
+        protected const int SmallHeaderColumn4Length = 5;
+        protected const int SmallBodyColumn1Length = 20; // Rally TA7465
+
+        #region Local Variables
+
+        private List<PaperUsageItem> m_paperUsageItems;
+        private int m_Session;
+        private string m_OperatorName;
+        private DateTime m_startDateTime = new DateTime();
+        private DateTime m_TodaysDateTime = new DateTime();
+        private int m_machineId;
+        private string m_version;
+        #endregion
+
+        #region Constructor
+
+        internal PaperUsageStartReceipt(List<PaperUsageItem> items)//type 1 for paperusage; 2 for unscanned packs
+        {
+            m_paperUsageItems = items;
+
+        }
+
+        #endregion
+
+        #region Properties
+
+        public int Session
+        {
+            get { return m_Session; }
+            set { m_Session = value; }
+        }
+
+
+        public string OperatorName
+        {
+            get { return m_OperatorName; }
+            set { m_OperatorName = value; }
+        }
+
+        public DateTime StartDateTime
+        {
+            get { return m_startDateTime; }
+            set { m_startDateTime = value; }
+        }
+
+        public DateTime TodaysDateTime
+        {
+            get { return m_TodaysDateTime; }
+            set { m_TodaysDateTime = value; }
+        }
+
+
+        public int MachineId
+        {
+            get { return m_machineId; }
+            set { m_machineId = value; }
+        }
+
+        public string Version
+        {
+            get { return m_version; }
+            set { m_version = value; }
+        }
+
+
+        #endregion
+
+        #region Methods
+
+        private string FixLongText(string detail, int CharacterLength)
+        {
+            if (detail.Length > CharacterLength)
+            {
+                detail = detail.Substring(0, CharacterLength - 1);
+                detail = detail + "…";
+            }
+
+            return detail;
+        }
+
+        protected virtual void PrintHeader()
+        {
+
+            m_printer.AddLine("Starting Paper Numbers for Session " + m_Session.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(m_OperatorName, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Version " + m_version, StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Date         :" + m_startDateTime.Date.ToShortDateString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine("Station: " + m_machineId.ToString(), StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+
+
+        /// <summary>
+        /// Prints the body for unscanned packs.
+        /// </summary>
+        protected virtual void PrintBodyUnscannedPacks()
+        {
+            //Add item header
+            m_printer.AddLine(" Pack", StringAlignment.Near, m_fontSmall);
+            m_printer.AddLine(" Name".PadRight(12) + "Serial#".PadRight(12) + "Pack#".PadRight(12), StringAlignment.Near, m_fontMedium);
+
+            //Add item detail and save total quantity issued, total quantity sold and total gross
+            string tempPaperDetail = "";
+
+            foreach (PaperUsageItem pui in m_paperUsageItems)
+            {
+                foreach (var unscannedPackNumber in pui.UnscannedList)
+                {
+                    tempPaperDetail = "";
+                    tempPaperDetail = "";
+                    tempPaperDetail += FixLongText(pui.Name, 12).PadRight(12);
+                    tempPaperDetail += FixLongText(pui.Serial.ToString(), 12).PadRight(12);
+                    tempPaperDetail += FixLongText((unscannedPackNumber).ToString(), 12).PadRight(12);
+                    m_printer.AddLine(tempPaperDetail, StringAlignment.Near, m_fontMedium);
+                }
+            }
+
+            string temp = "";
+            temp = string.Empty.PadRight(m_fontMediumMaxChars, '-');
+            m_printer.AddLine(temp, StringAlignment.Center, m_fontMedium);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+        }
+
+
+        /// <summary>
+        /// Prints the receipt's footer lines.
+        /// </summary>
+        protected virtual void PrintFooter()
+        {
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Cashier", StringAlignment.Near, m_fontSmall);
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontMedium);
+            m_printer.AddLine("X" + string.Empty.PadRight(20, '_'), StringAlignment.Near, m_fontMedium);
+            m_printer.AddLine("Supervisor", StringAlignment.Near, m_fontSmall);
+
+        }
+
+        /// <summary>
+        /// Print preview.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        /// <exception cref="System.ArgumentNullException">printer</exception>
+        public void PrintPreview(Printer printer, bool merchantCopy = false)
+        {
+            if (printer == null)
+                throw new ArgumentNullException("printer");
+
+            m_printer = printer;
+            m_printer.Margins = new Margins((int)m_printer.HardMarginX, (int)m_printer.HardMarginX, (int)m_printer.HardMarginY, (int)m_printer.HardMarginY);
+
+            SetTextSizes(m_printer.Using58mmPaper);
+
+            // Clear the the current lines from the printer object.
+            m_printer.ClearLines();
+
+            // Print the receipt's header.
+            PrintHeader();
+
+
+            PrintBodyUnscannedPacks();
+
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(string.Empty, StringAlignment.Center, m_fontExtraHuge);
+            m_printer.AddLine(m_TodaysDateTime.ToShortDateString() + " " + m_TodaysDateTime.ToString("HH:mm:ss"), StringAlignment.Center, m_fontSmall);
+
+        }
+
+
+        /// <summary>
+        /// Prints to the specified printer.
+        /// </summary>
+        /// <param name="printer">The printer.</param>
+        /// <param name="copies">The copies.</param>
+        /// <param name="merchantCopy">if set to <c>true</c> [merchant copy].</param>
+        public void Print(Printer printer, short copies, bool merchantCopy = false)
+        {
+            PrintPreview(printer, merchantCopy);
+
+            for (int x = 0; x < copies; x++)
+            {
+                m_printer.Print();
+            }
+        }
+
+        #endregion
+    }
+     
+}
